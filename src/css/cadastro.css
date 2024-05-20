@@ -1,0 +1,164 @@
+.container-cadastro {
+  display: flex;
+  background-image: url("../assets/img2/curva.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+.card-cadastro {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.card-cadastro-img {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.card-cadastro {
+  padding: 0.5rem 1rem;
+}
+.card-cadastro-img img {
+  width: 100%;
+  height: 100%;
+}
+.card-cadastro h2 {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+}
+.card-cadastro a {
+  text-decoration: none;
+}
+.icons-cadastro{
+  display: flex;
+  gap: 10px;
+}
+.icons-cadastro .fa-brands {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s all;
+  font-size: 2rem;
+}
+.icons-cadastro .fa-instagram{
+  border: 2px solid #d5407e;
+  color: #d5407e;
+}
+.icons-cadastro .fa-facebook-f {
+  border: 2px solid #007ab3;
+  color: #007ab3;
+}
+.icons-cadastro .fa-google {
+  border: 2px solid #e33629;
+  color: #e33629;
+}
+.icons-cadastro .fa-github {
+  border: #1f1d1d 2px solid;
+  color: #1f1d1d;
+}
+.icons-cadastro .fa-github:hover {
+  background-color: #1f1d1d;
+  color: var(--branco);
+}
+.icons-cadastro .fa-facebook-f:hover {
+  background-color: #007ab3;
+  color: var(--branco);
+}
+.icons-cadastro .fa-google:hover {
+  background-color: #e33629;
+  color: var(--branco);
+}
+.icons-cadastro .fa-instagram:hover {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  color: var(--branco);
+}
+.card-cadastro form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2.5rem;
+  align-items: center;
+}
+.card-cadastro form input,
+select {
+  border: none;
+  margin: 5px;
+  width: 85%;
+  font-size: 1rem;
+  padding: 0.7rem 0.2rem;
+  outline: none;
+  border-radius: 0.8rem;
+  background-color: var(--cinza-claro);
+  color: var(--preto);
+}
+.card-cadastro form input::placeholder {
+  color: var(--cinza);
+}
+.card-cadastro form #cadastrar {
+  background-color: var(--preto-night);
+  color: var(--branco);
+  width: 40%;
+}
+.mudarCor {
+  color: var(--preto-night);
+}
+@media (max-width: 850px) {
+  
+  .card-cadastro-img {
+    display: none;
+  }
+  .card-cadastro {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+  }
+  .card-cadastro form #cadastrar {
+    width: 50%;
+  }
+  .card-cadastro h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 350px) {
+
+  .card-cadastro,
+  form {
+    padding: 0.2rem;
+  }
+  .icons-cadastro .fa-brands{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .fa-brands {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1.2rem;
+  }
+  .icon-cadastro{
+    padding: 0;
+    font-size: 1rem;
+  }
+  .card-cadastro form input,
+  select {
+    width: 100%;
+  }
+  .card-cadastro form #cadastrar {
+    width: 100%;
+  }
+  .card-cadastro h2 {
+    font-size: 2rem;
+  }
+}

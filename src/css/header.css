@@ -1,0 +1,134 @@
+/*header*/
+.navbar-brand{
+    min-width: 7rem;
+}
+.navbar-brand img{
+    width: 100%;
+}
+.navbar{
+padding: 0.6rem 1.2rem;
+background-color: var(--branco);
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.offcanvas-body .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offcanvas-body .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+/*nav-link*/
+.nav-link{
+    font-family: "Lato", sans-serif;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+/*fim navlink*/
+.form-inline{
+    display: flex;
+    gap: 5px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 0.1rem;
+    border: none;
+    border-radius: 0.8rem;
+    width: 18rem;
+    height: 3rem;
+}
+.form-control{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 90%;
+}
+.navbar-toggler{
+    border: none;
+}
+.dropdown-menu{
+    background-color: var(--branco);
+}
+#idiomas{
+    font-size: 1rem;
+}
+#btn-search{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+.links-navbar{
+    display: flex;
+    gap: 10px;
+}
+.icon-header{
+
+    font-size: 1.3rem;
+}
+.offcanvas-body{
+    align-items: center;
+}
+.btn-header{
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#clear-mode{
+display: none;
+}
+#idiomas{
+    text-decoration: none;
+    color: var(--preto);
+    font-family: "Lato", sans-serif;
+}
+.navbar-brand{
+    width: 150px;
+}
+.navbar-brand img{
+    width: 100%;
+    height: 100%;
+}
+/*carrosel*/
+.carousel-inner{
+    width: 100%;
+    height: 70vh;
+}
+.carousel-item img{
+    width: 100vh;
+  
+}
+.icon-header{
+    color: var(--preto);
+}
+@media(min-width:991px){
+    .nav-link{
+        position: relative;
+    }
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--vermelho);
+        visibility: hidden;
+        transition: 0.3s  ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link.active:hover::before{
+        width: 100%;
+        visibility: visible;
+    }
+    
+}

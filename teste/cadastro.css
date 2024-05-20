@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*geral*/
+:root{
+    --amarelo:#ffca3e;
+    --verde-claro:#D9F8BA;
+    --verde:#8CD673;
+    --preto:#000000;
+    --vermelho:#990000;
+    --branco:#f5f5f5;
+    --preto-night:#131212;
+    text-decoration: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--preto);
+}
+body{
+    background-color: var(--branco);
+}
+.title{
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-optical-sizing: auto;
+}
+:root{
+    --amarelo:#ffca3e;
+    --verde-claro:#D9F8BA;
+    --verde:#8CD673;
+    --preto:#000000;
+    --vermelho:#990000;
+    --branco:#f5f5f5;
+    --preto-night:#131212;
+    --cinza: #525252;
+    --cinza-claro:#d0d0d0;
+}
+.container-cadastro{
+    display: flex;
+    background-image: url('/src/img/curva.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.card-cadastro, .card-cadastro-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.card-cadastro{
+    padding: 0.5rem 1rem;
+}
+.card-cadastro-img img{
+    width: 100%;
+    height: 100%;
+}
+.card-cadastro h2{
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+}
+.fa-brands{
+    width: 3.75rem;
+    height:3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s all;
+}
+.fa-instagram{
+border: 2px solid #D5407E;
+color: #D5407E;
+}
+.fa-facebook-f, .fa-linkedin-in{
+    border: 2px solid #007AB3;
+    color: #007AB3;
+}
+.fa-google{
+    border: 2px solid #E33629;
+    color: #E33629;
+}
+.fa-facebook-f:hover, .fa-linkedin-in:hover{
+background-color: #007AB3;
+color: var(--branco);
+}
+.fa-google:hover{
+    background-color: #E33629;
+    color: var(--branco);
+}
+.fa-instagram:hover{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: var(--branco);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2.5rem;
+    align-items: center;
+   
+}
+form input, select{
+    border: none;
+    margin: 5px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0.2rem;
+    outline: none;
+    border-radius: 0.8rem;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+}
+form input::placeholder{
+color: var(--cinza);
+}
+form #cadastrar{
+    background-color: var(--preto-night);
+    color: var(--branco);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+@media screen and (max-width:850px){
+    .card-cadastro-img{
+        display: none;
+    }
+    .card-cadastro{
+        width: 100%;
+        padding: 0.5rem 0.2rem;
+    }
+}
+@media screen and (max-width:350px){
+    .card-cadastro,form{
+        padding: 0.2rem;
+    }
+    .fa-brands{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .icon{
+        font-size: 1.5rem;
+    }
+}

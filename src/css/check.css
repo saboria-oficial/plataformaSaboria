@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  :root{
+    --amarelo:#ffca3e;
+    --verde-claro:#D9F8BA;
+    --verde:#8CD673;
+    --preto:#000000;
+    --vermelho:#990000;
+    --branco:#f5f5f5;
+    --preto-night:#131212;
+    text-decoration: none;
+}
+  body,
+  input {
+    font-family: "Raleway", sans-serif;
+  }
+  .container-check {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('../assets/img2/curvaDireita.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .container-check .form-container-check{
+    background-color: #D9F8BA;
+    border-radius: 20px;
+    width: 35rem;
+    height: 60vh;
+  }
+  .container-check .title{
+    margin-top: 23px;
+    font-weight: 650;
+  }
+  .container-check .btn {
+    width: 11.5rem;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    height: 3rem;
+    border-radius: 49px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 5px 0;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .container-check .voltar1{
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.3rem;
+  }
+   .container-check .voltar1 a{
+    text-decoration: none;
+    color: #525252;
+    font-size: 1rem;
+  }
+  .container-check .check{
+margin-top: -20px;
+    height: 33vh;
+  }
+  .container-check .check .image{
+    max-width: 100%;
+    top: 0;
+    width: 22rem;
+  }

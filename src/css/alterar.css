@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  :root{
+    --amarelo:#ffca3e;
+    --verde-claro:#D9F8BA;
+    --verde:#8CD673;
+    --preto:#000000;
+    --vermelho:#990000;
+    --branco:#f5f5f5;
+    --preto-night:#131212;
+    text-decoration: none;
+}
+  body,
+  input {
+    font-family: "Raleway", sans-serif;
+  }
+  .container-alterar {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('../assets/img2/curvaDireita.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container-alterar .forms-container-alterar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  } 
+  .container-alterar .alterar {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 74%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+  }
+  
+  .container-alterar form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .container-alterar form.sign-up-form {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .container-alterar form.email {
+    z-index: 2;
+  }
+  
+  .container-alterar .title {
+    font-size: 2.2rem;
+    font-weight: 650;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  .container-alterar .subtitle h5{
+    margin-right: 13rem;
+    margin-top: 0.3rem;
+}
+.container-alterar .h51{
+  margin-right: 2rem;
+}
+  .container-alterar .input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 8px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: flex;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+.container-alterar .input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 8px;
+    width: 100%; 
+    padding: 0 8px; 
+    box-sizing: border-box;
+}
+
+.container-alterar .input-field input::placeholder {
+    color: #aaaaaa;
+    font-weight: 500;
+}
+
+  .container-alterar .social-text {
+    padding: 0.7rem 0;
+    font-size: 1rem;
+  }
+  
+  .container-alterar .icons{
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+  }
+  
+   .container-alterar .btn {
+    width: 10.5rem;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    height: 3rem;
+    border-radius: 49px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .container-alterar .voltar{
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.5rem;
+  }
+   .container-alterar .voltar a{
+    color: black;
+    font-size: 1.1rem;
+  }
+  .container-alterar .voltar1{
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1.7rem;
+  }
+   .container-alterar .voltar1 a{
+    color: #525252;
+    font-size: 1rem;
+  }
+  .container-alterar .fa-brands{
+    width: 1.75rem;
+    height:1.75rem;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s all;
+}
+.container-alterar .fa-instagram{
+border: 2px solid #D5407E;
+color: #D5407E;
+}
+.container-alterar .fa-facebook-f, .fa-linkedin-in{
+    border: 2px solid #007AB3;
+    color: #007AB3;
+}
+.container-alterar .fa-google{
+    border: 2px solid #E33629;
+    color: #E33629;
+}
+.container-alterar .fa-facebook-f:hover, .fa-linkedin-in:hover{
+background-color: #007AB3;
+color: var(--branco);
+}
+.container-alterar .fa-google:hover{
+    background-color: #E33629;
+    color: var(--branco);
+}
+.container-alterar .fa-instagram:hover{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: var(--branco);
+} 
+
+  .container-alterar .card-voltar-img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container-alterar .card-voltar-img img{
+    width: 85%;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+  
+  @media (max-width: 870px) {
+    .container-alterar {
+      min-height: 800px;
+      height: 100vh;
+    }
+    .container-alterar .alterar {
+      width: 100%;
+      top: 95%;
+      transform: translate(-50%, -100%);
+      transition: 1s 0.8s ease-in-out;
+    }
+  
+    .container-alterar .alterar {
+      left: 50%;
+    }
+    .container-alterar:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+    .container-alterar .alterar {
+      top: 5%;
+      transform: translate(-50%, 0);
+    }
+  }
+  @media (max-width: 570px) {
+    form {
+      padding: 0 1.5rem;
+    }
+    .container-alterar {
+      padding: 1.5rem;
+    }
+    .container-alterar:before {
+      bottom: 72%;
+      left: 50%;
+    }
+  }

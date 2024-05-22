@@ -1,0 +1,23 @@
+import React from 'react'
+import '../css/parcerias.css'
+import CardP from './CardP.jsx'
+import logonutriacess from '../assets/img2/logonutriacess.svg'
+import connecthealth from '../assets/img2/connecthealth.svg'
+
+const Parceria = (props) => {
+return(
+
+<div className='container-parcerias'>
+            <h2  className="title-parceria">NOSSAS PARCERIAS</h2>
+
+            <p className='line'></p>
+            <div className='content-parceria'>
+            <CardP img={logonutriacess} text={'Fundada no primeiro semestre de 2023 por alunos do Instituto Proa, a NutriAcess é uma plataforma que visa a democratização a consultas nutricionais a preço social, comprometidos em oferecer um serviço acessível e de qualidade para todos os nossos pacientes.'}/>
+            <CardP img={connecthealth} text={'Somos uma Multiplataforma que visa levar informações e consultas online para pacientes que sofrem de transtornos alimentares ou sofrem de algum problema psicológico, por isso trabalhamos ligados a psicologia e a nutrição... pois para comer bem deve-se estar saudável mentalmente também.'}/>
+            <CardP img={logonutriacess} text={'uydtbytuqnxyictive83qi ujomeiuvtbw4ynv5tcuwjipçrn4klbhkyq 6 ç5vucpioq4,lkmjnthtjlvhk6u,kwti33nvuyhi4 ngilwmfcçkvlr ewhbvcjtoçkp~wf4uwoiknligvytiqbv67o5pn48'}/>
+            </div>
+            </div>
+        )
+}
+         
+export default Parceria

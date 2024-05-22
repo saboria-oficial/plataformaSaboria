@@ -2,9 +2,10 @@ import React from 'react';
 import '../css/header.css';
 import logo from '../assets/img2/logotipo-amarelo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
+import {  faSun } from '@fortawesome/free-regular-svg-icons';
+import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import { faUser} from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
 const Header = () => {
   return (
     <div>
@@ -50,7 +51,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="">
+                    <a className="nav-link" href="../html/cadastro.html">
                       Sobre
                     </a>
                   </li>
@@ -100,7 +101,7 @@ const Header = () => {
                   </button>
                 </form>
                <div className="links-navbar">
-                  <a href="./html/cadastro.html" id="perfil" className="icon-header">
+                  <a href=''  id="perfil" className="icon-header">
                     <FontAwesomeIcon icon={faUser} />
                   </a>
                   <a href="" id="dark-mode" className="icon-header">
@@ -118,7 +119,9 @@ const Header = () => {
           </div>
         </nav>
       </header>
+      
     </div>
+   
   );
 };
 

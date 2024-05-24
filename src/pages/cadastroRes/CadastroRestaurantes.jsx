@@ -4,13 +4,15 @@ import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import imagemCadastro from '../assets/img2/CadastroRestaurante.svg'
-
-
- import '../css/cadastro.css'
+import imagemCadastro from '../../assets/img2/CadastroRestaurante.svg'
+import { Link } from 'react-router-dom';  
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+ import '../../css/cadastro.css'
 const CadastroRestaurantes = () => {
   return (
     <div>
+        <Header/>
       <div class="container-cadastro">
     <div class="card-cadastro">
         <h2 class="title">Criar Conta</h2>
@@ -33,36 +35,48 @@ const CadastroRestaurantes = () => {
             <p>ou</p>
             <p class="line"></p>
         </div>
-<a href="">
     <p>Cadastre-se</p>
-</a>
+
         <form>
             <input type="text" placeholder="Nome do Estabelecimento" id="nome" name="nome" required/> 
-            <select name="restricao" id="restricao" required>
-                <option selected disabled>selecione as restrições que você atende</option>
-                <option value="" >Laticinios</option>
-                <option value="">Frutos do mar</option>
-                <option value="">Amêndoas</option>
-                <option value="">Ovo</option>
-                 <option value="">Graões</option>
-                <option value="">Trigo</option>
-                <option value="">Soja</option>
-            </select>
             <input type="text" placeholder="qual é a sua culinária" required/> 
             <input type="email" placeholder="email" required/>
             <input type="text" placeholder="cep" required/>
             <input type="tel" placeholder="telefone" required/>
             <input type="text" placeholder="cnpj" required/> 
             <input type="password" placeholder="senha" required/> 
+            <div className="alergias">
+              <label htmlFor="">
+                Quais restrições alimentares o seu restaurante atende?
+              </label>
+           
+              <div>
+                  <input type="checkbox" name="Laticinios" id="Laticinios" />
+                  <label htmlFor="Laticinios">Laticinios</label>
+                  <input type="checkbox" name="FrutosDoMar" id="FrutosDoMar" />
+                  <label htmlFor="FrutosDoMar">Frutos do mar</label>
+                  <input type="checkbox" name="Amendoas" id="Amendoas" />
+                  <label htmlFor="Amendoas">Amêndoas</label>
+                  <input type="checkbox" name="Ovo" id="Ovo" />
+                  <label htmlFor="Ovo">Ovo</label>
+                  <input type="checkbox" name="Graos" id="Graos" />
+                  <label htmlFor="Graos">Grãos</label>
+                  <input type="checkbox" name="Trigo" id="Trigo" />
+                  <label htmlFor="Trigo">Trigo</label>
+                  <input type="checkbox" name="Soja" id="Soja" />
+                  <label htmlFor="Soja">Soja</label>
+              </div>
+            </div>
 
             <input type="submit" id="cadastrar" value="Cadastrar"/> 
         </form>
-      <a href="" className='mudarCor'>Login</a>
+      <Link to="/loginRes" className="link">Login</Link>
     </div>
 <div class="card-cadastro-img">
     <img src={imagemCadastro} alt=""/>
 </div>
    </div>
+   <Footer/>
     </div>
   )
 }

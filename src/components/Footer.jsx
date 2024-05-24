@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 import logoPreta from '../assets/img2/logotipo-preto.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
@@ -19,37 +19,57 @@ const Footer = () => {
         <div class="card-footer">
           <ul>
             <p>Menu</p>
-            <a href="">
+            <Link to='/'>
               <li>Início</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to='/sobre' >
               <li>Sobre</li>
-            </a>
-            <a href="">
+            </Link>
+            <Link to='/restaurantes'>
               <li>Restaurantes</li>
-            </a>
+            </Link>
           </ul>
         </div>
         <div class="card-footer">
           <ul>
-            <a href="">
-              <a href="">
+           
+              <Link to='/localiza'>
                 <li>Localização</li>
-              </a>
-            </a>
-            <a href="">
-              <a href="">
-                <li>Fale conosco</li>
-              </a>
-            </a>
-            <a href="">
-              <a href="">
-                <li>Login</li>
-              </a>
-            </a>
-            <a href="">
-              <li>FAQ</li>
-            </a>
+              </Link>
+         
+           
+              <Link to='/planos' >
+                <li>Planos</li>
+              </Link>
+           
+ 
+              <li className="dropdown">
+                    <Link
+                      to='/'
+                      className=""
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                    Login
+                    </Link>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link to='/login' className="dropdown-item">
+                          Login Clientes
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/loginRes' className="dropdown-item">
+                          Login Restaurantes
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+           
+            <Link to='/blog'>
+              <li>Blog</li>
+            </Link>
           </ul>
         </div>
         <div class="card-footer">

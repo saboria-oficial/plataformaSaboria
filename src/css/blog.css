@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Geral */
+.container-blog{
+    padding: 0.6rem 0rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    flex-direction: column;
+    background-image: url('../assets/img2/curvaDireita.webp');
+    background-repeat: repeat-Y;
+    background-size: cover;
+}
+.title-blog{
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    font-weight: 750;
+    margin-bottom: 0.5rem;
+    }
+    .line-blog{
+        width: 30%;
+        border-bottom: 2px solid var(--verde-escuro) ;
+    }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .blog-item {
+      
+        box-sizing: border-box;
+        margin: 10px;
+        background-color: var(--branco);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: ease-in 0.3s;
+      }
+      
+      .blog-item img {
+        width: 100%;
+        height: auto;
+      }
+      .blog-item:hover{
+scale: 1.1;
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
+      .blog-item h2 {
+        padding: 10px;
+        font-size: 1.2em;
+        color: var(--cinza);
+      }
+      
+      @media (max-width:750px){
+          .blog-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    @media (max-width:580px){
+        .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width:370px){
+    .blog-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+}

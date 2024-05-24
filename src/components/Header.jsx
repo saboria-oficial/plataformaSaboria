@@ -1,20 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Certifique-se de que isso está sendo importado corretamente
 import '../css/header.css';
 import logo from '../assets/img2/logotipo-amarelo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faSun } from '@fortawesome/free-regular-svg-icons';
-import { faMoon } from '@fortawesome/free-regular-svg-icons';
-import { faUser} from '@fortawesome/free-regular-svg-icons';
+import { faSun, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
 const Header = () => {
   return (
     <div>
       <header>
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link to='/' className="navbar-brand">
               <img src={logo} alt="logotipo amarelo da Saboria" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -33,9 +33,9 @@ const Header = () => {
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div className="offcanvas-header">
-                <a className="navbar-brand" href="#">
+                <Link to='/' className="navbar-brand">
                   <img src={logo} alt="logotipo amarelo da Saboria" />
-                </a>
+                </Link>
                 <button
                   type="button"
                   className="btn-close"
@@ -46,45 +46,45 @@ const Header = () => {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="">
+                    <Link to='/' className="nav-link active" aria-current="page">
                       Ínicio
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="../html/cadastro.html">
+                    <Link to='/sobre' className="nav-link">
                       Sobre
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="">
+                    <Link to='/restaurantes' className="nav-link">
                       Restaurantes
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#planos">
+                    <Link to='/planos' className="nav-link">
                       Planos
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
+                    <Link
+                      to='/'
                       className="nav-link dropdown-toggle"
-                      href="#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Fale Conosco
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#forms">
+                        <Link to='/formulario' className="dropdown-item">
                           Formulário
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link to='/faque' className="dropdown-item">
                           FAQ
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -99,18 +99,39 @@ const Header = () => {
                   <button type="button" id="btn-search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </button>
+
                 </form>
-               <div className="links-navbar">
-                  <a href=''  id="perfil" className="icon-header">
-                    <FontAwesomeIcon icon={faUser} />
-                  </a>
-                  <a href="" id="dark-mode" className="icon-header">
+                <div className="links-navbar">
+                <li className="icon-header dropdown">
+                    <Link
+                      to='/'
+                      className="icon-header "
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                     <FontAwesomeIcon icon={faUser} />
+                    </Link>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link to='/login' className="dropdown-item">
+                          Login Clientes
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/loginRes' className="dropdown-item">
+                          Login Restaurantes
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <a id="dark-mode" className="icon-header">
                     <FontAwesomeIcon icon={faMoon} />
                   </a>
-                  <a href="" id="clear-mode" className="icon-header">
+                  <a id="clear-mode" className="icon-header">
                     <FontAwesomeIcon icon={faSun} />
                   </a>
-                  <a href="" id="idiomas" className="title">
+                  <a id="idiomas" className="title">
                     PT | EN
                   </a>
                 </div>
@@ -119,9 +140,7 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      
     </div>
-   
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/check.css'
-import check from '../assets/img2/check.webp'
-
+import '../../css/check.css'
+import check from '../../assets/img2/check.webp'
+import { Link } from 'react-router-dom';
 const Check = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Check = () => {
               <div className="check">
                 <img src={check} className='image' alt="check" />
               </div>
-              <input type="submit" value="Voltar para login" className="btn solid" />
+              <Link  to="/"><input type="submit" value="Voltar para login" className="btn solid" /></Link>
               <div className="voltar1">
                 <a href="#">Política de privacidade</a>
               </div>

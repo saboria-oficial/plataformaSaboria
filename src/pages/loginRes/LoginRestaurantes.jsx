@@ -4,12 +4,15 @@ import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import imagemCadastro from '../assets/img2/CadastroRestaurante.svg'
-
-import '../css/cadastro.css'
+import imagemCadastro from '../../assets/img2/CadastroRestaurante.svg'
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../css/cadastro.css'
+import { Link } from 'react-router-dom';
 const LoginRestaurantes = () => {
   return (
     <div>
+      <Header/>
     <div class="container-cadastro">
     <div class="card-cadastro-img">
   <img src={imagemCadastro} alt=""/>
@@ -25,7 +28,7 @@ const LoginRestaurantes = () => {
 
           <input type="submit" id="cadastrar" value="Cadastrar"/> 
       </form>
-    <a href="" className='mudarCor'>Criar Conta </a>
+    <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
 
 
     <p>ou inscreva-se pelas redes sociais</p>
@@ -49,6 +52,7 @@ const LoginRestaurantes = () => {
 
   </div>
  </div>
+ <Footer/>
   </div>
   )
 }

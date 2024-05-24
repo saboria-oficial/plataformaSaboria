@@ -65,6 +65,8 @@ background-color: var(--branco);
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
+    color: var(--preto-night);
+ 
 }
 .links-navbar{
     display: flex;
@@ -88,8 +90,9 @@ display: none;
 }
 #idiomas{
     text-decoration: none;
-    color: var(--preto);
+    color: var(--cinza);
     font-family: "Lato", sans-serif;
+    cursor: pointer;
 }
 .navbar-brand{
     width: 150px;
@@ -108,7 +111,9 @@ display: none;
   
 }
 .icon-header{
-    color: var(--preto);
+    color: var(--cinza);
+    cursor: pointer;
+    margin-right: 0.1rem;
 }
 @media(min-width:991px){
     .nav-link{

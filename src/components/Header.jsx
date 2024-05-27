@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Certifique-se de que isso está sendo importado corretamente
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';  
 import '../css/header.css';
 import logo from '../assets/img2/logotipo-amarelo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,8 @@ import { faSun, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+
+
   return (
     <div>
       <header>
@@ -77,12 +80,12 @@ const Header = () => {
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
-                        <Link to='/formulario' className="dropdown-item">
+                        <Link to="/ " className="dropdown-item">
                           Formulário
                         </Link>
                       </li>
                       <li>
-                        <Link to='/faque' className="dropdown-item">
+                        <Link to='/faq' className="dropdown-item">
                           FAQ
                         </Link>
                       </li>
@@ -125,8 +128,8 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <a id="dark-mode" className="icon-header">
-                    <FontAwesomeIcon icon={faMoon} />
+                  <a id="dark-mode" className="icon-header"> 
+                    <FontAwesomeIcon icon={faMoon}  />
                   </a>
                   <a id="clear-mode" className="icon-header">
                     <FontAwesomeIcon icon={faSun} />

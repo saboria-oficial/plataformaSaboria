@@ -38,8 +38,8 @@ const Footer = () => {
               </Link>
          
            
-              <Link to='/planos' >
-                <li>Planos</li>
+              <Link to='/parcerias' >
+                <li>Parcerias</li>
               </Link>
            
  

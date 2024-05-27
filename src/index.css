@@ -35,3 +35,29 @@ body{
 .link{
     color: var(--cinza); 
 }
+/* ===== Scrollbar CSS ===== */
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--amarelo);
+  border-radius: 10px;
+  border: 3px solid var(--branco);
+}
+
+.comentarios-list::-webkit-scrollbar, .nav-intolerancia::-webkit-scrollbar, 
+.row-card::-webkit-scrollbar{
+  width: 13px;
+}
+.comentarios-list::-webkit-scrollbar-track, .nav-intolerancia::-webkit-scrollbar-track , .row-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+.comentarios-list::-webkit-scrollbar-thumb,  .nav-intolerancia::-webkit-scrollbar-thumb, .row-card::-webkit-scrollbar-thumb
+ {
+  background-color: var(--cinza-claro);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}

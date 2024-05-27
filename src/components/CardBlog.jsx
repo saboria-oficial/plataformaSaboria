@@ -13,7 +13,7 @@ import blog10 from '../assets/img2/blog10.png'
 import blog11 from '../assets/img2/blog11.png'
 import blog12 from '../assets/img2/blog12.png'
 
-const BlogPage = (props) => {
+const CardBlog = () => {
   const blogs = [
     { title: 'Receitas', image: blog1 },
     { title: 'Quais as principais restrições alimentares?', image: blog2 },
@@ -43,4 +43,4 @@ const BlogPage = (props) => {
     </div>
   );
 };
-export default BlogPage;
+export default CardBlog;

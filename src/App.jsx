@@ -12,6 +12,7 @@ import Planos from './pages/planos/Planos.jsx'
 import Blog from './pages/blog/Blog.jsx'
 import Faq from "./pages/faq/faq.jsx";
 import Parceria from "./pages/parceria/Parceria.jsx";
+import Sobre from "./pages/sobre/Sobre.jsx";
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
       <Route path="/blog" element={<Blog/>}></Route>
       <Route path="/Faq" element={<Faq/>}></Route>
       <Route path="/parcerias" element={<Parceria/>}></Route>
+      <Route path="/sobre" element={<Sobre/>}></Route>
     </Routes>
     </Router>
   );

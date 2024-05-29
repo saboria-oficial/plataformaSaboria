@@ -50,7 +50,7 @@ const Header = () => {
                 <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
                   <li className="nav-item">
                     <Link to='/' className="nav-link active" aria-current="page">
-                      Ínicio
+                      Início
                     </Link>
                   </li>
                   <li className="nav-item">

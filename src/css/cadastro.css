@@ -59,18 +59,18 @@
   color: #d5407e;
 }
 .icons-cadastro .fa-facebook-f {
-  border: 2px solid #007ab3;
+  border: 2px solid transparent;
   color: #007ab3;
 }
 .icons-cadastro .fa-google {
   border: 2px solid #e33629;
   color: #e33629;
 }
-.icons-cadastro .fa-github {
-  border: #1f1d1d 2px solid;
+ .fa-github {
+  border: transparent 2px solid;
   color: #1f1d1d;
 }
-.icons-cadastro .fa-github:hover {
+ .icon-cadastro .fa-github:hover {
   background-color: #1f1d1d;
   color: var(--branco);
 }

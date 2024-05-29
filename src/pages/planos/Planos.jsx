@@ -5,6 +5,7 @@ import Footer from '../../components/Footer'
 import CardPlano from '../../components/CardPlano.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import {faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 const Planos = () => {
     return (
       <div>
@@ -13,9 +14,14 @@ const Planos = () => {
           <CardPlano title="Menu de Entrada" valorTitle="0.00" valo vantagem1="Ver a localização do restaurante
 " vantagem2="ver os pratos"
 vantagem3="Adicionar a intolerancia" vantagem4="Acesso ao nosso suporte"
-
-          check1={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check2={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
-          check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+vantagem5="Acesso ao delivery do restaurante"
+vantagem6="Descontos (voucher e cupons)"
+vantagem7="Acesso as nossas parcerias"
+check1={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check2={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check5={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
+check6={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
+check7={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
           />
 
 
@@ -23,12 +29,13 @@ vantagem3="Adicionar a intolerancia" vantagem4="Acesso ao nosso suporte"
 " vantagem2="ver os pratos"
 vantagem3="Adicionar a intolerancia" vantagem4="Acesso ao nosso suporte"
 vantagem5="Acesso ao delivery do restaurante"
-vantagem6="Comunidade de Novidades/blog"
-          check1={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check2={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
-          check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
-
-          check5={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
-          check6={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+vantagem6="Descontos (voucher e cupons)"
+vantagem7="Acesso as nossas parcerias"
+check1={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check2={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check5={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check6={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
+check7={<FontAwesomeIcon icon={faCircleXmark}className="false"></FontAwesomeIcon>}
           />
          
 
@@ -38,7 +45,7 @@ vantagem6="Comunidade de Novidades/blog"
 " vantagem2="ver os pratos"
 vantagem3="Adicionar a intolerancia" vantagem4="Acesso ao nosso suporte"
 vantagem5="Acesso ao delivery do restaurante"
-vantagem6="Descontos (voucher e cumpos)"
+vantagem6="Descontos (voucher e cupons)"
 vantagem7="Acesso as nossas parcerias"
           check1={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check2={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
           check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}

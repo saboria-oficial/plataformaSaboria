@@ -1,17 +1,4 @@
-:root{
-    --amarelo:#ffca3e;
-    --amarelo2:#FED356;;
-    --verde-claro:#D9F8BA;
-    --verde:#8CD673;
-    --preto:#000000;
-    --vermelho:#990000;
-    --branco:#f5f5f5;
-    --preto-night:#131212;
-    --cinza:#525252;
-    --verde2:#1BA96C;
-    --cinza-claro:#e6e6e6;
-    --verde-escuro:#093824;
-}
+
 .container-planos{
     padding: 0.2rem 1rem;
     width: 100%;
@@ -99,7 +86,10 @@ align-items: start;
     color: var(--verde2);
     font-size: 1.2rem;
 }
-@media (max-width:840px){
+.false{
+    color: var(--vermelho);
+}
+@media (max-width:900px){
     .container-planos{
         grid-template-columns: repeat(2, 1fr);
     }

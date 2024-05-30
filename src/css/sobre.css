@@ -12,18 +12,84 @@
     --cinza-claro:#e6e6e6;
     --verde-escuro:#093824;
 }
-
-.logoTitulo{
+.identidadeVisual{
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    top: 12rem;
+    font-weight: 650;
+    color: var(--verde-escuro2);
+}
+/* fontes Utilizadas */
+.fontesUtilizadas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.coluna {
+    width: 45%;
+}
+h2, h3, h4, p {
+    margin: 0;
+    padding: 10px 0;
+}
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+.amarelo {
+    color: var(--amarelo);
+    font-size: 3.5rem;
+}
+.vermelho {
+    color: var(--vermelho);
+}
+.normal {
+    font-weight: 400;
+}
+.medium {
+    font-weight: 500;
+}
+.semibold {
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+.fontExemplo {
+    margin-top: 20px;
+}
+/* Divisor */
+.divisao{
+    border: 0.6rem solid var(--amarelo);
+    margin: 3rem 0;
+}
+.divisao2{
+    border: 3rem solid var(--amarelo);
+    position: relative;
+    top: 13rem;
+    margin: 3rem 0;
+}
+/* Logo */
+.tituloLogo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
-    height: 10rem;
+    height: 30rem;
     background-image: url('../../src/assets/img2/curvaR.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
 }
-.logoTitulo h2{
+.textoLogo h2 {
+    text-align: center;
+    position: relative;
+    top: 14rem;
+    font-size: 3rem;
     font-weight: 650;
     color: var(--cinza);
+    z-index: 1;
 }
 .logoCompleta{
     background-color: var(--verde);
@@ -34,8 +100,22 @@
     justify-content: center;
     align-items: center;
 }
+.logoCompleta2{
+    position: relative;
+    top: 13rem;
+    background-color: var(--amarelo);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .logoCompleta img{
-    width: 75%;
+    width: 60%;
+}
+.logoCompleta2 img{
+    width: 60%;
 }
 .logoSignificado h3{
     text-align: center;
@@ -79,8 +159,17 @@
     height: 4rem;
 }
 /*icones*/
+.tituloPaleta{
+    position: absolute;
+    margin-bottom: 19rem;
+    text-align: center;
+    letter-spacing:0.1rem;
+    font-size: 2rem;
+    color: var(--cinza);
+}
 .sobre-icons{
     padding: 0.6rem;
+    margin-top: 8rem;
     gap: 0.5rem;
     display: grid;
     grid-template-columns: repeat(6,1fr);
@@ -108,20 +197,27 @@
     display: grid;
     width: 100%;
     justify-items: center;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 0.3rem;
     padding: 0.4rem 1em;
 }
 .card-dev{
-    width: 100%;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+ width: 95%;
+ display: flex;
+ gap: 0.5rem;
 }
 .dev-img{
-    width: 40%;
-    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    overflow: hidden;
     border: 0.5rem solid var(--verde);
+}
+.dev-img img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .card-dev h2{
     font-weight: bold;
@@ -129,6 +225,7 @@
     font-size: 1.5rem;
 }
 .dev-content{
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -139,28 +236,30 @@
     align-items: center;
     font-size: 3rem;
 }
-.card-dev img{
-  width: 100%;
-  border-radius: 50%;
-}
-
-@media (max-width:750px){
-    .dev-img{
-        width: 55%;
-    }  
+@media (max-width:1200px){
+    .container-dev{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 @media (max-width:750px){
     .sobre-icons{
         grid-template-columns: repeat(3,1fr);
     }
-    .container-dev{
-        grid-template-columns: repeat(2,1fr);
+    .dev-img{
+        width: 8rem;
+        height: 8rem;
     }
 }
+@media (max-width:600px){
+    .dev-img{
+        width: 6rem;
+        height: 6rem;
+    } 
+}
 @media (max-width:470px){
-    .container-dev{
-        grid-template-columns: repeat(1,1fr);
-    }
+   .container-dev{
+    grid-template-columns: repeat(1,1fr);
+   }
 }
 @media (max-width:400px){
     .sobre-icons{

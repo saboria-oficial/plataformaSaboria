@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('../assets/img2/curvaDireita.webp');
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 2.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -101,7 +101,16 @@ margin-bottom: 3rem;
     text-decoration: none;
     margin-top: 1.5rem;
   }
-
+  .btn-redefinir{
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    color: var(--branco);
+    background-color: var(--preto);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 2rem;
+  }
 .container-redefinir .card-voltar h2{
     font-size: 3rem;
     margin-bottom: 0.2rem;

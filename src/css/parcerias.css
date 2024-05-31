@@ -10,9 +10,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('../assets/img2/curvaDireita.webp');
-    background-repeat: repeat-Y;
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 2.png');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -18rem;
 }
 .title-parceria{
 font-size: 2rem;

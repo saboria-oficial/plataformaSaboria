@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Desenvolvedores from "../../components/desenvolvedores";
 
+import ODS from "../../components/CardODS"
 //imagens dos devs
 import dev1 from '../../assets/img2/dev1.jpg'
 import dev2 from '../../assets/img2/dev2.webp'
@@ -22,6 +23,12 @@ import Sabor from '../../assets/img2/saborLogo.webp'
 import IA from '../../assets/img2/IALogo.webp'
 import Pin from '../../assets/img2/PinLogo.webp'
 import Prato from '../../assets/img2/pratoLogo.webp'
+import missao from '../../assets/img2/missao.webp'
+import visao from '../../assets/img2/visao.webp'
+import valores from '../../assets/img2/valores.webp'
+import ODS2 from '../../assets/img2/ods2.svg'
+import ODS3 from '../../assets/img2/ods3.svg'
+import ODS12 from '../../assets/img2/ods12.svg'
 //icones
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils} from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +36,40 @@ const Sobre = () => {
   return (
     <div className="container-sobre">
       <Header />
+    <div className="container-MVV">
+    <div className="cardMVV missao">
+      <div className="mvv-img">
+        <img src={missao}/>
+      </div>
+      <div className="mvv-content ">
+        <h2>MISSÃO</h2>
+        <p>Nossa plataforma de geolocalização de restaurantes oferece uma experiência inclusiva e segura, com diversidade e delivery, garantindo a satisfação dos clientes.</p>
+      </div>
+    </div> 
+
+    <div className="cardMVV visao">
+      <div className="mvv-img">
+        <img src={visao}/>
+      </div>
+      <div className="mvv-content ">
+        <h2>VISÃO</h2>
+        <p>Conectamos clientes com restrições alimentares a restaurantes seguros e deliciosos.</p>
+      </div>
+    </div>
+
+    <div className="cardMVV valores">
+      <div className="mvv-img">
+        <img src={valores}/>
+      </div>
+      <div className="mvv-content ">
+        <h2>VALORES</h2>
+        <p>Respeito, integridade, inclusão, segurança e transparência.</p>
+      </div>
+    </div>
+    </div>
+    <div className="desenvolvedores">
+                <h2>DESENVOLVEDORES</h2>
+            </div>
 <div className="container-dev"><Desenvolvedores nome="Carlos Bonfim" cargo="Dev. Front-end" github="https://github.com/Carlos-bonfim26" linkedin="https://www.linkedin.com/in/carlosbonfim26/" img={dev1}/>
 
 <Desenvolvedores nome="Yan Rodrigues" cargo="Scrum Master, Dev. Front-end" github="https://github.com/Yan-MR" linkedin="https://www.linkedin.com/in/yanmrodrigues/" img={dev2}/>
@@ -45,53 +86,78 @@ const Sobre = () => {
 
 <Desenvolvedores nome="Joaldo Santos" cargo="Dev. Back-end" github="https://github.com/JoaldoSanth" linkedin="https://www.linkedin.com/in/joaldo-santos-b173722b8/" img={dev8}/>
 </div>
-<div className="divisao2"></div>
-<div className="identidadeVisual">IDENTIDADE VISUAL</div>
+<div className="containerODS">
+            <div className="headerODS">
+                <h2>OBJETIVO DE DESENVOLVIMENTO SUSTENTÁVEL</h2>
+            </div>
+            <div className="contentODS">
+                <ODS
+                    descricao="ODS 2 - Fome Zero e Agricultura Sustentável: Ao proporcionar meios para que pessoas com restrições alimentares encontrem comida adequada com mais facilidade, o projeto contribui indiretamente para o combate à fome e promove uma abordagem mais sustentável na produção e distribuição de alimentos."
+                    backgroundColor="#f2cc8f"
+                    imagemODS={ODS2}
+                />
+                <ODS
+                    descricao="ODS 3 - Saúde e Bem-Estar: O projeto visa facilitar a vida das pessoas com restrições alimentares, garantindo que elas tenham acesso a alimentos seguros e adequados às suas necessidades, o que está diretamente ligado à promoção da saúde e do bem-estar."
+                    backgroundColor="#c5e1a5"
+                    imagemODS={ODS3}
+                />
+                <ODS
+                    descricao="ODS 12 - Consumo e Produção Responsáveis: Ao ajudar as pessoas a fazerem escolhas alimentares mais conscientes e seguras, o projeto promove o consumo responsável e incentiva práticas mais sustentáveis na indústria alimentícia."
+                    backgroundColor="#f2cc8f"
+                    imagemODS={ODS12}
+                />
+            </div>
+        </div>
+<div className="divisao2">
+  <h2>IDENTIDADE VISUAL</h2>
+</div>
+
 <div className="logoCompleta2">
         <img src={logoAmarelo} alt="logotipo verde" />
       </div>
 <div class="tituloLogo">
-        <div class="textoLogo"><h2>Fontes utilizadas</h2></div>
+      <h2>Fontes utilizadas</h2>
     </div>
 <div class="fontesUtilizadas">
         <div class="coluna lato">
             <h2 class="amarelo">Lato</h2>
             <h3 class="vermelho">SUBTÍTULO</h3>
             <p>A SaborIA é uma plataforma de geolocalização que visa a inclusão de pessoas que possuem intolerância alimentar de forma simples</p>
-            <div class="fontExemplo">
+            <div class="fontExemplo medium">
                 <h4>Medium</h4>
-                <p class="medium">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo">
+            <div class="fontExemplo semibold">
                 <h4>SemiBold</h4>
-                <p class="semibold">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p >ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo">
+            <div class="fontExemplo bold">
                 <h4>Bold</h4>
-                <p class="bold">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
         </div>
         <div class="coluna raleway">
             <h2 class="amarelo">Raleway</h2>
             <h3 class="vermelho">SUBTÍTULO</h3>
             <p>Com nossa plataforma, a vida de pessoas com restrição alimentar 'alergias e intolerâncias' é facilitada. Assim, você se sente seguro'a' ao comer seu prato favorito.</p>
-            <div class="fontExemplo">
+            <div class="fontExempl mediumo">
                 <h4>Medium</h4>
-                <p class="medium">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo">
+            <div class="fontExemplo semibold">
                 <h4>SemiBold</h4>
-                <p class="semibold">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo">
+            <div class="fontExemplo bold">
                 <h4>Bold</h4>
-                <p class="bold">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
+                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
         </div>
     </div>
       <div className="divisao"></div>
-      <div className="sobre-icons title">
-        <div className="tituloPaleta">Paleta de cores</div>
+      <div className="tituloPaleta title">Paleta de cores</div>
+      <div className="sobre-icons ">
+       
         <div>
          <FontAwesomeIcon icon={faUtensils} className="icon-sobre" color="var(--vermelho)"/>
           <h3>#990000</h3>
@@ -118,7 +184,7 @@ const Sobre = () => {
         </div>
       </div>
       <div class="tituloLogo">
-        <div class="textoLogo"><h2>A logo da SaborIA</h2></div>
+        <div class="textoLogo"><h2>A logotipo da Sabor.IA</h2></div>
     </div>
       <div className="logoSignificado">
         <div>

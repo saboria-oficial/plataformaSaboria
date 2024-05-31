@@ -13,6 +13,7 @@ import Blog from './pages/blog/Blog.jsx'
 import Faq from "./pages/faq/faq.jsx";
 import Parceria from "./pages/parceria/Parceria.jsx";
 import Sobre from "./pages/sobre/Sobre.jsx";
+import Restaurantes from "./pages/restaurantes/Restaurantes.jsx";
 function App() {
   return (
     <Router>
@@ -30,6 +31,7 @@ function App() {
       <Route path="/Faq" element={<Faq/>}></Route>
       <Route path="/parcerias" element={<Parceria/>}></Route>
       <Route path="/sobre" element={<Sobre/>}></Route>
+      <Route path="/Restaurantes" element={<Restaurantes/>}></Route>
     </Routes>
     </Router>
   );

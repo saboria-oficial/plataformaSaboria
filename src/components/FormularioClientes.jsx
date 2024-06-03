@@ -1,6 +1,7 @@
 import React from 'react'
 import imgFormulario from '../assets/img2/formularioClientes.svg'
 import '../css/formulario.css'
+import { Link } from "react-router-dom";
 const FormularioClientes = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const FormularioClientes = () => {
                 <input type="text" name='restricaoCliente' id='restricaoCliente' placeholder='qual a sua restrição?'/>
                 
                 <textarea name="comentarioCliente" id="comentarioCliente" rows={8} cols={40} placeholder='Como podemos te ajudar?'></textarea>
-                <button typr='submit'>enviar</button>
+                <Link className="linkin" to="/Enviado"><button type='submit'>enviar</button></Link>
             </form>
         </div>
         <div className="imgClientes">

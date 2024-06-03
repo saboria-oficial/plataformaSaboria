@@ -2,6 +2,7 @@ import React from "react";
 //components
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 import CardRestaurante from "../../components/CardRestaurante.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,6 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 //imagens
 import burguer from '../../assets/img2/burguerVegano.jpg';
+import domino from '../../assets/img2/dominosLogo.png'
 import imgRestaurante from "../../assets/img2/restauranteGenerico.avif";
 //css
 import "../../css/restaurantes.css";
@@ -23,16 +25,20 @@ const Restaurantes = () => {
       <button className="restaurante-back"><FontAwesomeIcon icon={faAngleLeft}/></button>
         <h2>RESTAURANTES</h2>
         <div className="container2-restaurantes">
+          <Link to="/PaginaRestaurante">
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={domino}
           />
+          </Link>
+          <Link to="/PagRestaurantePremium">
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={domino}
           />
+          </Link>
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}

@@ -22,7 +22,7 @@ const Redefinir = () => {
             <div className="input-field">
               <input type="text" placeholder="Email" required />
             </div>
-            <Link><input type="submit" value="Enviar" className="btn-redefinir"/></Link>
+            <Link className="linkin" to="/alterar"><input type="submit" value="Enviar" className="btn-redefinir"/></Link>
             <div className="voltar">
               <Link to="/login" className="link">
                 Voltar

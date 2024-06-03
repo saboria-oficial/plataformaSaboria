@@ -99,9 +99,9 @@ const Header = () => {
                     placeholder="busque pratos"
                     aria-label="Search"
                   />
-                  <button type="button" id="btn-search">
+                  <Link to="/Pesquisa"><button type="button" id="btn-search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                  </button>
+                  </button></Link>
 
                 </form>
                 <div className="links-navbar">

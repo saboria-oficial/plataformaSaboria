@@ -1,0 +1,279 @@
+/* configurações favoritos */
+.linkPerfil{
+    text-decoration: none;
+    color: var(--preto);
+}
+.containerPerfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 7.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.tituloPerfil{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.detalhesPerfil{
+    width: 80%;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 20rem;
+}
+.configPerfil h3{
+    margin: 0;
+    padding: 0.1rem 0.6rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--cinza-claro);
+}
+.avatarPerfil{
+    display: flex;
+}
+.avatarPerfil img{
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.restaurantesPerfil{
+    display: grid;
+   grid-template-columns: repeat(5, 1fr);
+}
+.configPerfil span{
+    font-size: 1rem;
+    padding: 0 0.4rem 0 0.1rem;
+    color: var(--vermelho);
+}
+.textoPerfil{
+    margin: 1.3rem ;
+}
+@media (max-width: 1150px ) {
+    .detalhesPerfil{
+gap: 10rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}
+@media (max-width: 915px ) {
+    .detalhesPerfil{
+        gap: 3rem;
+            }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+@media (max-width: 730px ) {
+    .detalhesPerfil{
+        width: 95%;
+        gap: 0.5rem;
+            }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+@media (max-width: 675px ) {
+    .detalhesPerfil{
+        width: 100%;
+        scale: 0.9;
+        gap: 0.1rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media (max-width: 540px ) {
+    .detalhesPerfil{
+        display: flex;
+        flex-direction: column;
+    }
+    .avatarPerfil img{
+        margin-bottom: 1rem;
+    }
+    .detalhesPerfil{
+        width: 100%;
+        scale: 0.9;
+        gap: 0.1rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media (max-width: 420px ) {
+    .restaurantesPerfil{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .avatarPerfil img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    }
+}
+@media (max-width: 360px ) {
+    .avatarPerfil img{
+    margin-top: 1.9rem;
+        width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+/* fim favoritos */
+
+/*configurações clientes*/
+.container-config{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.config-perfil{
+    display: flex;
+    justify-content: space-around;
+   background-color: #fff;
+   padding: 1rem;
+   border-radius: 1rem;
+    width: 80%;
+}
+.client-config-info{
+    display: flex;
+    gap: 0.7rem;
+}
+.config-perfil .config-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+.config-perfil img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.menu-config{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--cinza-claro);
+    padding: 0 0.2rem ;
+    justify-content: center;
+   height: fit-content;
+   border-radius: 1rem;
+
+}
+.menu-config p{
+ font-size: 1.1rem;
+ padding:0.3rem 1rem ;
+ border-bottom: 2px solid var(--cinza-claro);
+ color: var(--preto);
+ font-weight: 500;
+
+ cursor: pointer;
+}
+.container-config span{
+    color: var(--vermelho);
+}
+.container-form-config{
+    width: 80%;
+    background-color: #fff;
+    margin-top: 5%;
+    padding: 1rem;
+    border-radius: 1rem;
+  
+}
+.container-form-config form{
+    display: grid;
+    gap:  2rem;
+    grid-template-columns:repeat(2,1fr);
+}
+.container-form-config form input{
+    outline: none;
+  border: none;
+  color: var(--cinza);
+  font-size: 1.2rem;
+
+  border-bottom: 1px solid var(--preto);
+  height: fit-content;
+}
+.opcoesGenero{
+    display: flex;
+    flex-direction: row;
+    gap: 0 1rem;
+}
+.input-special{
+    display: flex;
+    justify-content: space-between;
+align-items: end;
+}
+.input-special button{
+  
+    cursor: pointer;
+    border: none;
+    color: var(--vermelho);
+    background-color: transparent;
+    margin-left: 0.2rem;
+}
+.input-special input{
+    width: 91%;
+}
+#eye{
+    display: none;
+}
+@media (max-width:750px){
+    .container-form-config ,.config-perfil{
+        width: 92%;
+    }
+    .config-perfil img{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+@media (max-width:600px){
+    .container-form-config form{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width:500px){
+    .config-perfil{
+      flex-direction: column;
+    }
+    .config-perfil img{
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width:350px){    
+.client-config-info{
+    gap: 0.2rem;
+    flex-direction: column;
+}
+.opcoesGenero{
+    flex-direction: column;
+}
+}
+

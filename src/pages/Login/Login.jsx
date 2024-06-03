@@ -32,7 +32,7 @@ const Login = () => {
                   <input type="password" placeholder="Senha" required />
                 </div>
                 <Link className="link" to="/redefinir">esqueceu sua senha?</Link>
-                <input type="submit" value="Entrar" className="btn solid" />
+                <Link to="/perfilFav"><input type="submit" value="Entrar" className="btn solid" /></Link>
                 <p className="social-text">
                   Ou faça login com suas redes sociais
                 </p>

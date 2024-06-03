@@ -78,6 +78,7 @@
     text-align: center;
     text-decoration: none;
     margin-top: 1.7rem;
+    cursor: pointer;
   }
    .container-alterar .voltar1 a{
     color: var(--cinza);

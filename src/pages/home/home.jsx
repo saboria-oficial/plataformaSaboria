@@ -118,7 +118,7 @@ const Home = () => {
         </div>
       </div>
       <div className='scrolar'>
-        <Comentarios />
+        <Comentarios nome="DEPOIMENTOS"/>
       </div>
       <FormularioClientes id="formulario-link"/>
       <div className='container-parcerias2' >

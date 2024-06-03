@@ -1,12 +1,13 @@
 import React from 'react';
-import '../css/comentarios.css'
+import '../css/avaliacoes.css'
 import '../css/home.css'
 import joaoKleber from '../assets/img2/joaoKleber.jpg'
 import barreto from '../assets/img2/barreto.jpg'
 import guri from '../assets/img2/guri.jpg'
-const Comentario = ({ imagem, nome, idade, condicao, comentario, rating }) => {
+
+const Avaliacao = ({ imagem, nome, idade, condicao, comentario, rating }) => {
   return (
-    <div className="comentario-card">
+    <div className="avaliacao-card">
       <div className="user-info">
         <img className="user-image" src={imagem} alt={nome} />
         <div>
@@ -20,13 +21,13 @@ const Comentario = ({ imagem, nome, idade, condicao, comentario, rating }) => {
   );
 };
 
-const Comentarios = (props) => {
+const Avaliacoes = (props) => {
   return (
-    <div className="comentarios-container">
-      <h2 className="comentarios-header">{props.nome}</h2>
-      <div className="comentarios-list">
+    <div className="avaliacoes-container">
+      <h2 className="avaliacoes-header">{props.nome}</h2>
+      <div className="avaliacoes-list">
        
-        <Comentario
+        <Avaliacao
           imagem={joaoKleber}
           nome="João Kleber"
           idade={21}
@@ -34,7 +35,7 @@ const Comentarios = (props) => {
           comentario="Antes dessa plataforma eu passava horas para achar um local que eu pudesse comer em segurança. Eu consigo economizar muito tempo hoje em dia."
           rating={5}
         />
-        <Comentario
+        <Avaliacao
           imagem={guri}
           nome="Lucas Almeida"
           idade={18}
@@ -42,7 +43,7 @@ const Comentarios = (props) => {
           comentario="Com certeza usarei o site novamente para descobrir novos lugares e recomendo para todos os meus amigos."
           rating={5}
         />
-        <Comentario
+        <Avaliacao
           imagem={barreto}
           nome="Ana Pereira"
           idade={29}
@@ -50,7 +51,7 @@ const Comentarios = (props) => {
           comentario="Pude pesquisar restaurantes por tipo de alergia e localização o que facilitou muito a nossa escolha."
           rating={5}
         />
-          <Comentario
+        <Avaliacao
           imagem={joaoKleber}
           nome="João Kleber"
           idade={21}
@@ -58,7 +59,7 @@ const Comentarios = (props) => {
           comentario="Antes dessa plataforma eu passava horas para achar um local que eu pudesse comer em segurança. Eu consigo economizar muito tempo hoje em dia."
           rating={5}
         />
-        <Comentario
+        <Avaliacao
           imagem={guri}
           nome="Lucas Almeida"
           idade={18}
@@ -66,7 +67,7 @@ const Comentarios = (props) => {
           comentario="Com certeza usarei o site novamente para descobrir novos lugares e recomendo para todos os meus amigos."
           rating={5}
         />
-        <Comentario
+        <Avaliacao
           imagem={barreto}
           nome="Ana Pereira"
           idade={29}
@@ -75,9 +76,8 @@ const Comentarios = (props) => {
           rating={5}
         />
       </div>
-
     </div>
   );
 };
 
-export default Comentarios;
+export default Avaliacoes;

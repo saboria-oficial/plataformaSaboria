@@ -115,6 +115,12 @@ margin-bottom: 3rem;
     font-size: 3rem;
     margin-bottom: 0.2rem;
 }
+.linkin{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+}
 @media (max-width:900px){
   .card-voltar-img{
     width: 47%;

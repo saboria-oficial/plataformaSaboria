@@ -9,11 +9,17 @@ import Alterar from './pages/alterar/Alterar.jsx'
 import Redefinir from './pages/redefinir/Redefinir.jsx'
 import Check from './pages/check/Check.jsx'
 import Planos from './pages/planos/Planos.jsx'
+import PerfilFav from './pages/perfil/PerfilFav.jsx'
 import Blog from './pages/blog/Blog.jsx'
 import Faq from "./pages/faq/faq.jsx";
 import Parceria from "./pages/parceria/Parceria.jsx";
 import Sobre from "./pages/sobre/Sobre.jsx";
 import Restaurantes from "./pages/restaurantes/Restaurantes.jsx";
+import Enviado from "../src/components/Enviado.jsx";
+import PagRestaurantePremium from "./pages/restaurantes/pagRestaurantePremium.jsx";
+import PaginaRestaurante from "./pages/restaurantes/paginaRestaurante.jsx";
+import PerfilConfig from "./pages/perfil/PerfilConfig.jsx";
+import Pesquisa from "./pages/pesquisa/Pesquisa.jsx";
 function App() {
   return (
     <Router>
@@ -32,6 +38,12 @@ function App() {
       <Route path="/parcerias" element={<Parceria/>}></Route>
       <Route path="/sobre" element={<Sobre/>}></Route>
       <Route path="/Restaurantes" element={<Restaurantes/>}></Route>
+      <Route path="/perfilConfig" element={<PerfilConfig/>}></Route>
+      <Route path="/perfilFav" element={<PerfilFav/>}></Route>
+      <Route path="/Enviado" element={<Enviado/>}></Route>
+      <Route path="/PagRestaurantePremium" element={<PagRestaurantePremium/>}></Route>
+      <Route path="/PaginaRestaurante" element={<PaginaRestaurante/>}></Route>
+      <Route path="/Pesquisa" element={<Pesquisa/>}></Route>
     </Routes>
     </Router>
   );

@@ -42,31 +42,201 @@ font-weight: bold;
     color: var(--vermelho);
     border: none;
 }
+
+
+
+/*pagina restaurantes*/
+
+.card-carrosel{
+    padding: 1rem;
+    background-color: #e6e6e6a4;
+    color: var(--branco);
+    height: 15rem;
+    width: fit-content;
+    border-radius: 1.5rem;
+    text-align: center;
+    transform: translateX(200%) translateY(-300%);
+    font-weight: bold;
+    position: absolute;
+}
+.card-carrosel h2{
+    font-size: 3rem;
+}
+.card-carrosel h4{
+    font-size: 1.5rem;
+}
+.card-carrosel h3{
+    color: var(--preto-night);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+.pag-perfil-res{
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.pag-perfil-res img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.pag-perfil-res h2{
+    font-weight: 800;
+    font-size: 2rem;
+}
+.links-res{
+    display: flex;
+    justify-content: space-around;
+}
+.link-res{
+    margin: 0.6rem;
+    color: var(--preto-night);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.perfil-res-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    width: 100%;
+}
+.pratos-res-clientes{
+display: flex;
+flex-direction: column;
+}
+.res-res-clientes{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    scale: 0.7;
+}
+.pagina-res span{
+    margin-right: 0.15rem;
+    color: var(--vermelho);
+}
+.info-perfil-clientes{
+    text-align: center;
+    font-weight:600;
+    width: 100%;
+}
+.alergias-atendidas{
+display: flex;
+justify-content: center;
+align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+   
+}
+.info-perfil-clientes h3{
+    font-weight: 700;
+}
+iframe{
+    height: 15rem;
+    width: 80%;
+}
+.mapa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--cinza);
+    padding: 1rem;
+}
+.menu-info-res{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
 @media (max-width:1200px){
     .container2-restaurantes .card-restaurante{
      width: 10rem;
      height: 10rem;
+    }
+    .card-carrosel{
+        transform: translateX(120%) translateY(-220%);
     }
 }
 @media (max-width:980px){
 .container2-restaurantes{
     grid-template-columns: repeat(3,1fr);
 }
+.card-carrosel{
+    transform: translateX(70%) translateY(-150%);
+}
+}
+@media (max-width:700px){
+    .card-carrosel{
+        height: fit-content;
+    }
+    .card-carrosel h2{
+        font-size: 2rem;
+    }
+    .card-carrosel h4{
+        font-size: 1.2rem;
+    }
+    .card-carrosel h3{
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        
+      font-size: 1.7rem;
+    }
 }
 @media (max-width:600px){
     .container2-restaurantes .card-restaurante{
         width: 7.5rem;
         height: 7.5rem;
        }
+       .card-carrosel{
+        transform: translateX(50%) translateY(-110%);
+    }
+    .pag-perfil-res{
+        flex-direction: column;
+    }
+    .perfil-res-content{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 @media (max-width:475px){
     .container2-restaurantes{
         grid-template-columns: repeat(2,1fr);
     }
+    .card-carrosel h2{
+        font-size: 1.5rem;
+    }
+    .card-carrosel h4{
+        font-size: 0.8rem;
+    }
+    .card-carrosel h3{
+        margin-top: 0.3rem;
+        margin-bottom: 0.7rem;
+      font-size: 1rem;
+    }
 }
-@media (max-width:475px){
+@media (max-width:400px){
     .container2-restaurantes .card-restaurante{
         width: 5rem;
         height: 5rem;
+       }
+       .card-carrosel{
+        transform:  translateX(50%) translateY(-130%);
+       }
+      .menu-info-res{
+        grid-template-columns: repeat(1,1fr);
+      }
+     .links-res{
+        flex-direction: column;
+     }
+}
+@media (max-width:340px){
+    .container2-restaurantes .card-restaurante{
+        width: 5rem;
+        height: 5rem;
+       }
+       .card-carrosel{
+        display: none;
        }
 }

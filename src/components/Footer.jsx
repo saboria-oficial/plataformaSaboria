@@ -66,7 +66,9 @@ const Footer = () => {
                       </li>
                     </ul>
                   </li>
-           
+                  <Link to='/PlanoRes'>
+              <li>aiaiaiai</li>
+            </Link>
             <Link to='/blog'>
               <li>Blog</li>
             </Link>

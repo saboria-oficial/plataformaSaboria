@@ -191,8 +191,10 @@ gap: 10rem;
  border-bottom: 2px solid var(--cinza-claro);
  color: var(--preto);
  font-weight: 500;
-
  cursor: pointer;
+}
+.menu-config a{
+    text-decoration: none;
 }
 .container-config span{
     color: var(--vermelho);
@@ -277,3 +279,9 @@ align-items: end;
 }
 }
 
+/* Perfil restaurantes */
+
+.containerRes{
+    display: flex;
+    background-color: cadetblue;
+}

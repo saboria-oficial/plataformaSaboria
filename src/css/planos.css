@@ -89,6 +89,7 @@ align-items: start;
 .false{
     color: var(--vermelho);
 }
+
 @media (max-width:900px){
     .container-planos{
         grid-template-columns: repeat(2, 1fr);
@@ -107,3 +108,4 @@ align-items: start;
         font-size: 0.8rem;
     }
 }
+

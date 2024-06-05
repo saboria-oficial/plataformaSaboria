@@ -103,7 +103,7 @@ const PagRestaurantePremium = () => {
           </div>
           <div className="pratos-res-clientes">
             <div className="titulo-res-clientes">
-              <h2>Pratos sem leite mais visitados</h2>
+              <h2>Pratos mais visitados</h2>
             </div>
             <div className="res-res-clientes">
               <CardRestaurante

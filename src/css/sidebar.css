@@ -1,0 +1,113 @@
+#user_avatar{
+    width: 3.12rem;
+    height: 3.12rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+#sidebar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cinza-claro);
+    height: 100vh;
+    border-radius: 0rem 1.12rem 1.12rem 0rem;
+    transition: all .5s;
+    min-height: 5.1rem;
+}
+#sidebar_content{
+    padding: 0.75rem;
+}
+#user{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#user img{
+    border-radius: 100%;
+}
+#user_avatar{
+    width: 3.12rem;
+    height: 3.12rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+}
+#user_infos{
+    display: flex;
+    flex-direction: column;
+}
+#user_infos span:last-child{
+    color: var(--cinza);
+    font-size: 0.75rem;
+}
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    list-style: none;
+}
+.side-item{
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+.side-item.active{
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.001rem;
+}
+.side-item:hover:not(.active){
+    background-color: var(--cinza-claro);
+}
+.side-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cinza);
+    gap: 0.5rem;
+}
+.side-item span{
+    font-size: 1rem;
+}
+.side-item .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--preto);
+}
+.side-item.active .icon{
+    color: var(--vermelho);
+}
+#open_btn{
+    position: absolute;
+    top: 2.7rem;
+    right: -0.9rem;
+    background-color: var(--vermelho);
+    border-radius: 100%;
+    width: 1.9rem;
+    height: 1.9rem;
+    box-shadow: 0.01rem 0.01rem 0.2rem 0.01rem;
+    border: none;
+    cursor: pointer;
+}
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.9rem;
+    transition: width .6s;
+    height: 0;
+}
+#sidebar .open-sidebar{
+    min-width: 15%;
+}
+#sidebar.open-sidebar .item-description{
+    width: 9.3rem;
+    height: auto;
+}
+#sidebar.open-sidebar .side-item a{
+    justify-content: flex-start;
+    gap: 1.9rem;
+}

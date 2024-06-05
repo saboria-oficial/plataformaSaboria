@@ -19,7 +19,9 @@ import Enviado from "../src/components/Enviado.jsx";
 import PagRestaurantePremium from "./pages/restaurantes/pagRestaurantePremium.jsx";
 import PaginaRestaurante from "./pages/restaurantes/paginaRestaurante.jsx";
 import PerfilConfig from "./pages/perfil/PerfilConfig.jsx";
+import PerfilRes from "./pages/perfil/PerfilRest.jsx";
 import Pesquisa from "./pages/pesquisa/Pesquisa.jsx";
+import PlanosRes from "./pages/planos/PlanosRes.jsx";
 function App() {
   return (
     <Router>
@@ -44,6 +46,8 @@ function App() {
       <Route path="/PagRestaurantePremium" element={<PagRestaurantePremium/>}></Route>
       <Route path="/PaginaRestaurante" element={<PaginaRestaurante/>}></Route>
       <Route path="/Pesquisa" element={<Pesquisa/>}></Route>
+      <Route path="/PerfilRes" element={<PerfilRes/>}></Route>
+      <Route path="/PlanoRes" element={<PlanosRes/>}></Route>
     </Routes>
     </Router>
   );

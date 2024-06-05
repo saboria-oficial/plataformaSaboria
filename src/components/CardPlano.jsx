@@ -1,20 +1,24 @@
 import React from 'react'
-import '../css/planos.css'
+import '../css/planoRes.css'
 
 const CardPlano = (props) => {
 
   return (
 
     <div className='card-planos-client'>
-      <h2>{props.title}</h2>
+    
       <div className='preco'>
+      <h2>{props.title}</h2>
         <h2>{props.valorTitle}</h2>
         <div>
           <p>usuário <br />
           /mês</p>
         </div>
-      </div>
+    
+    
+    </div>
       <p>total de R${props.valorTitle * 12}/mês colaborados anualmente</p>
+    
       <div className="planoBtn  experiment">
         <button>Experimentar plano grátis</button>
       </div>

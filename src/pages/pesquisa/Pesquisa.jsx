@@ -22,16 +22,20 @@ const Pesquisa = () => {
   useEffect(() => {
     let into = document.getElementById('into');
     let setinha = document.getElementById('setinha');
+    
     if (visivel) {
       into.style.display = 'flex';
       setinha.style.transform = "rotate(-180deg)"
+      
     } else {
       into.style.display = 'none';
       setinha.style.transform = "rotate(0deg)"
     }
+    
   }, [visivel]);
 
   const toggleVisibilidade = () => {
+  
     setVisivel(!visivel);
   };
  
@@ -47,6 +51,7 @@ const Pesquisa = () => {
       filter.forEach(el => el.style.display = 'flex');
       btnFilter.style.display = 'none';
       backFilter.style.display = 'flex';
+     
     } else {
       filter.forEach(el => el.style.display = 'none');
       btnFilter.style.display = 'flex';

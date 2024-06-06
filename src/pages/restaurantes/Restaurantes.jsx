@@ -13,7 +13,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 //imagens
 import burguer from '../../assets/img2/burguerVegano.jpg';
-import domino from '../../assets/img2/dominosLogo.png'
+import pizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg'
+import sorveteria1 from '../../assets/img2/logo_le-botteghe-di-leonardo1.webp'
 import imgRestaurante from "../../assets/img2/restauranteGenerico.avif";
 //css
 import "../../css/restaurantes.css";
@@ -29,14 +30,14 @@ const Restaurantes = () => {
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={domino}
+            img={pizzaria1}
           />
           </Link>
           <Link to="/PagRestaurantePremium">
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={domino}
+            img={sorveteria1}
           />
           </Link>
           <CardRestaurante

@@ -18,7 +18,7 @@
   display: flex;
 }
 .filters {
-width: 20%;
+width: 100%;
 display: flex;
 flex-direction: column;
   border-right: 1px solid #ddd;
@@ -37,12 +37,23 @@ flex-direction: column;
   width: 100%;
 }
 .results {
- width: 80%;
+ width: 100%;
+ display: flex;
+ justify-content: right;
+ align-items: flex-end;
+ flex-direction: column;
 }
 .result-item {
+  width: 80%;
   border: 1px solid #54545432;
+  background-color: var(--branco);
+  background-image: url('../assets/Curvas/1Prancheta 1 cópia 5.png');
+  box-shadow: 0rem 0rem 0.4rem -0.15rem gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 2rem;
   margin-bottom: 1.2rem;
 }
 .result-item h2 {
@@ -114,21 +125,43 @@ flex-direction: column;
 #btnFilter, #backFilter{
   display: none;
 }
-@media (max-width:800px){
-  .filters{
-    width: 35%;
-  }
+.btn-primary{
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.5rem;
+  color: var(--vermelho);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
+.btn-primary:hover{
+  background-color: var(--vermelho);
+}
+
+.btn-filtrar button{
+
+  background-color: var(--vermelho);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  color: var(--branco);
+  padding: 0.3rem;
+  border: 1px solid var(--vermelho);
+  width: 100%;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.btn-filtrar button:hover{
+  background-color: transparent;
+  color: var(--vermelho);
+}
+
 @media (max-width:650px){
-.filters{
-  display: none;
-
-
-}
-#btnFilter{
-  display: flex;
-}
 .result-item .images{
   flex-direction: column;
 }
+}
+@media (max-width:450px){
+  .perfil-result, .info{
+    flex-direction: column;
+  }
 }

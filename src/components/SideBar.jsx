@@ -1,7 +1,7 @@
 import React from 'react'
 import Dev from '../assets/img2/dev2.webp'
 import '../css/sidebar.css'
-
+import { Link } from 'react-router-dom';
 // icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,16 +30,15 @@ const SideBar = () => {
       <nav id="sidebar">
         <div id="sidebar_content">
         <div id="user">
-            <img src={Dev} alt="usuário" width="100" />
-
             <p id="user_infos">
               <span className="item-description">
                 Fulano de Tal
                 </span>
               <span className="item-description">
-                Lorem Ipsum
+                Sair da conta
                 </span>
             </p>
+            <img src={Dev} id="user_avatar" alt="usuário" />
         </div>
         <ul id="side_item">
             <li className="side-item active">
@@ -51,12 +50,12 @@ const SideBar = () => {
                 </a>
             </li>
             <li className="side-item">
-                <a href="#">
+                <Link to="/cardapio">
                 <FontAwesomeIcon className='icon' icon={faBook} />
                 <span className="item-description">
                     Cardápio
                 </span>
-                </a>
+                </Link>
             </li>
             <li className="side-item">
                 <a href="#">

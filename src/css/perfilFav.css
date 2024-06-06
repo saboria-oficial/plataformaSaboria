@@ -280,8 +280,173 @@ align-items: end;
 }
 
 /* Perfil restaurantes */
-
-.containerRes{
+.containerResPerfilS{
     display: flex;
-    background-color: cadetblue;
+}
+.containerResPerfil{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    align-items: center;
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.tituloResPerfil{
+    width: 100%;
+    
+}
+.tituloResPerfil h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--verde-escuro2);
+    font-weight: 650;
+}
+.localResPerfil{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0rem 0rem 0.4rem -0.1rem gray;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 1rem;
+    width: 75%;
+    margin-bottom: 2rem;
+    background-color: var(--branco);
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+.info-perfil{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.info-perfil2{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+.localResPerfil img{
+    width: 10rem;
+    height:10rem;
+    border-radius: 100%;
+    margin-left: 1rem;
+}
+.descriResPerfil{
+   
+    text-align: justify;
+    padding-left: 1rem;
+}
+.descriResPerfil h2{
+    font-size: 1.3rem;
+    font-weight: 650;
+    margin: 0;
+}
+.descriResPerfil h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+}
+.descriResPerfil h4{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.descriResPerfil h5{
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.descriResPerfil #clock{
+    color: var(--verde-escuro2);
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+}
+.EditResPerfil{
+    display: flex;
+    color: var(--vermelho);
+    align-items: end;
+}
+.EditResPerfil h2{
+    font-size: 0.9rem;
+}
+
+/* segundoCard */
+.horaResPerfil{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.horaResPerfil h2{
+    font-size: 1rem;
+    font-weight: 650;
+}
+.horaResPerfil button{
+    font-size: 1rem;
+    color: var(--branco);
+    font-weight: 650;
+    background-color: var(--vermelho);
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+.horaResPerfil .horarioResPerfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.abreRes{
+    display: flex;
+    gap: 2rem;
+}
+.abreRes2{
+    display: flex;
+    gap: 3.3rem;
+}
+.abreRes h4{
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+.abreRes2 h5{
+    font-size: 1.2rem;
+    background-color: var(--cinza-claro);
+    padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+    border-radius: 2rem;
+}
+
+.intoleranciasResPerfil{
+    width: 40%;
+    border-radius: 2rem;
+    background-color: var(--amarelo2);
+}
+.intoleranciasResPerfil h2{
+    padding-top: 0.7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.intoleranciasResPerfil h3{
+    /* display: block;
+    padding-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600; */
+    font-size: 1.4rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.intoleranciasResPerfil #circle{
+    font-size: 0.7rem;
+    color: var(--vermelho);
+    margin: 0rem 0.5rem 0rem 0.5rem;
 }

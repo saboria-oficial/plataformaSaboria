@@ -15,6 +15,7 @@
 }
 .container-restaurantes{
     padding: 1.5rem 1rem;
+    
 }
 .container2-restaurantes{
     display: grid;
@@ -151,6 +152,30 @@ iframe{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
+.cardapio-premium{
+  
+    width: 100%;
+}
+.input-premium{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    float: right;
+    color: var(--preto);
+    width: 20rem;
+    background-color: #fff;
+    padding: 0.4rem;
+    padding-right: 0.8rem;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    margin: 0.5rem;
+}
+.input-premium input{
+    width: 95%;
+    border: none;
+    outline: 0;
+}
+
 @media (max-width:1200px){
     .container2-restaurantes .card-restaurante{
      width: 10rem;
@@ -238,5 +263,8 @@ iframe{
        }
        .card-carrosel{
         display: none;
+       }
+       .input-premium{
+        width: 16rem;
        }
 }

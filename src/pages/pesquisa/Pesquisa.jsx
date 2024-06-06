@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../../css/pesquisa.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faFilter, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faFilter, faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
 //imagem
 import sorvete1 from '../../assets/img2/crunch_belga.webp'
@@ -40,28 +41,7 @@ const Pesquisa = () => {
   };
  
 
-  const [filters, setFilters] = useState(false);
-
-  useEffect(() => {
-    if(window.innerWidth < 651){
-    let btnFilter = document.getElementById('btnFilter');
-    let backFilter = document.getElementById('backFilter');
-    let filter = document.querySelectorAll('.filters');
-    if (filters) {
-      filter.forEach(el => el.style.display = 'flex');
-      btnFilter.style.display = 'none';
-      backFilter.style.display = 'flex';
-     
-    } else {
-      filter.forEach(el => el.style.display = 'none');
-      btnFilter.style.display = 'flex';
-      backFilter.style.display = 'none';
-    }
-  }}, [filters]);
   
-  const toggleFilters = () => {
-    setFilters(!filters);
-  };
   
 
   const [distance, setDistance] = useState(0);
@@ -119,10 +99,16 @@ const Pesquisa = () => {
         <h2 className="resultadoP">
           Resultados para: <span className="highlight">"Sorvete"</span>
         </h2>
-        <span id="btnFilter" onClick={toggleFilters}><FontAwesomeIcon icon={faFilter}/></span>
+      
         <div className="main-content">
-          <aside className="filters">
-          <span id="backFilter" onClick={toggleFilters}><FontAwesomeIcon icon={faArrowLeft}/></span>
+      
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><FontAwesomeIcon icon={faFilter}/></button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+  
+
+        <aside className="filters">
             <div className="sort">
               <label>Ordenar por:</label>
               <select>
@@ -168,7 +154,16 @@ const Pesquisa = () => {
                 </div>
               </form>
             </div>
+            <div className="btn-filtrar">
+              <Link to="/"><button>Filtrar</button></Link>
+            </div>
           </aside>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+   
+  </div>
+</div>
           <div className="results">
             {data.map((item, index) => (
               <div className="result-item" key={index}>

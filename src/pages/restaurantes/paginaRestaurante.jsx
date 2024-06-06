@@ -18,7 +18,7 @@ import Footer from "../../components/Footer";
 import Carrosel from "../../components/Carrosel";
 import Avaliacoes from "../../components/Avaliacoes";
 //imagens
-import domino from "../../assets/img2/dominosLogo.png";
+import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
 import pizza1 from "../../assets/img2/pizza1.jpg";
 import pizza2 from "../../assets/img2/pizza2.avif";
 import pizza3 from "../../assets/img2/pizza3.jpg";
@@ -49,10 +49,10 @@ const PaginaRestaurante = () => {
           <h4>comida boa é aqui</h4>
         </div>
         <div className="pag-perfil-res">
-          <img src={domino} alt="" />
+          <img src={logoPizzaria1} alt="" />
 
           <div>
-            <h2>Domino's</h2>
+            <h2>Bom Recheio</h2>
             <div className="links-res">
               <div>
                 <p id="horario" style={{ color: cor }}>

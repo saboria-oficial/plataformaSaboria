@@ -24,7 +24,7 @@ const botao = () => {
 })
 }
 
-const SideBar = () => {
+const SideBar = (props) => {
   return (
     <div>
       <nav id="sidebar">
@@ -32,13 +32,13 @@ const SideBar = () => {
         <div id="user">
             <p id="user_infos">
               <span className="item-description">
-                Fulano de Tal
+                {props.nomeRestaurante}
                 </span>
               <span className="item-description">
                 Sair da conta
                 </span>
             </p>
-            <img src={Dev} id="user_avatar" alt="usuário" />
+            <img src={props.img} id="user_avatar" alt="usuário" />
         </div>
         <ul id="side_item">
             <li className="side-item active">

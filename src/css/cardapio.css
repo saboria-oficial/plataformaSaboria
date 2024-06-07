@@ -18,6 +18,13 @@
     display: flex;
     width: 100%;
 }
+.content-cardapio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .item-cardapio{
     display: flex;
     gap: 0.5rem;
@@ -34,6 +41,18 @@
     color: #990000;
     font-weight: 500;
 }
+.desc-items-cardapio{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+.desc-items-cardapio span{
+    font-weight: 600;
+    color: var(--preto);
+    font-size: 1rem;
+}
 .cardapio-preco{
     font-weight: 700;
     color: var(--preto);
@@ -46,16 +65,14 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--cinza-claro);
-    float: right;
-    width: 70%;
+    width: 90%;
     gap: 1rem;
-    padding: 0.5rem;
     margin-left: 1rem;
-   
 }
-.tabela-item{
+.item-cardapio{
     width: 100%;
-    border: 1px solid var(--cinza-claro);
+    padding: 0.2rem;
+    border-bottom: 1px solid var(--cinza-claro);
 }
 .tabela-cardapio h2{
     font-size: 2rem;
@@ -67,6 +84,38 @@
     text-align: center;
 }
 .add-cardapio{
-    font-weight: 500;
+    font-weight: 600;
     color: var(--vermelho);
+    cursor: pointer;
+}
+.add-prato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.6rem 0.3rem;
+    gap: 1.5rem;
+}
+.prato-img, .prato-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.prato-img img{
+  width: 14rem;  
+  border-radius: 1rem;
+  border: 0.4rem solid var(--cinza-claro);
+}
+#link-verifique{
+    color: var(--vermelho);
+    text-align: center;
+}
+.prato-desc input, .prato-desc textarea{
+background-color: var(--cinza-claro);
+padding: 0.6rem 0.2rem;
+border-radius: 0.6rem;
+outline: 0;
+border: none;
+
 }

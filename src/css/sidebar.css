@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--cinza-claro);
-    height: 100vh;
+    padding: 0.2rem;
     border-radius: 0rem 1.12rem 1.12rem 0rem;
     transition: all .5s;
     min-height: 5.1rem;
@@ -120,4 +120,19 @@
 }
 #iconC{
     color: var(--cinza-claro);
+}
+.icon-side{
+    color: var(--vermelho);
+}
+@media (max-width:450px) {
+    #sidebar_content{
+        padding: 0.4rem;
+    }  
+    .icon-side, .item-description ,.icon-side span{
+        font-size: 0.8rem;
+    }
+    #user_avatar{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }

@@ -96,7 +96,7 @@ const Header = () => {
                   <input
                     className="form-control"
                     type="search"
-                    placeholder="busque pratos"
+                    placeholder="Busque pratos"
                     aria-label="Search"
                   />
                   <Link to="/Pesquisa"><button type="button" id="btn-search">

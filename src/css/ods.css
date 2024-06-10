@@ -21,6 +21,7 @@
 }
 .ods {
     display: flex;
+    justify-content: center;
     border-radius: 0.93rem;
     margin-bottom: 1.25rem;
 }

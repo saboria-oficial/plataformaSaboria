@@ -91,7 +91,7 @@ const Cardapio = () => {
             </div>
             <div className="prato-desc">
               <input type="text" placeholder="nome do prato" name="nomePrato" id="nomePrato"/>
-              <textarea name="descricaoPrato" id="descricaoPrato" placeholder="descrição do prato" cols={30} rows={4}></textarea>
+              <textarea name="descricaoPrato" id="descricaoPrato" placeholder="descrição do prato" ></textarea>
             </div>
           </div>
         </div>

@@ -27,18 +27,21 @@ width: 65%;
 font-size: 1.2rem;
 color: var(--cinza);
 }
+.formsClientes form textarea{
+ padding-left:0.3rem;   
+}
 .formsClientes form input{
     padding: 0.3rem;
 }
 .formsClientes form input::placeholder, .formsClientes form textarea::placeholder{
     color: var(--cinza);
-    padding: 8px;
 }
 .formsClientes h2{
     font-size: 2rem;
     color: var(--branco);
     font-weight: bold;
 }
+
 .formsClientes form button{
     width: 30%;
     font-size: 1.5rem;

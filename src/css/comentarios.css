@@ -40,7 +40,9 @@
   align-items: center;
   margin-bottom: 0.5rem;
 }
-
+.starD{
+  font-size: 0.9rem;
+}
 .user-image {
   border-radius: 50%;
   height: 3rem;

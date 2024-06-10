@@ -26,7 +26,7 @@ const LoginRestaurantes = () => {
           <input type="text" placeholder="cnpj" required/> 
           <input type="password" placeholder="senha" required/> 
 
-          <Link to="/PerfilRes"><input type="submit" id="cadastrar" value="Entrar"/></Link> 
+          <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link> 
       </form>
     <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
 

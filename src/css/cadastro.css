@@ -110,10 +110,16 @@ select {
 .card-cadastro form input::placeholder {
   color: var(--cinza);
 }
-.card-cadastro form #cadastrar {
+ #cadastrar, #cadastrarRes{
   background-color: var(--preto-night);
   color: var(--branco);
   width: 40%;
+  overflow: none;
+}
+#loginRes{
+  background-color: var(--preto-night);
+  color: var(--branco);
+  width: 10rem;
 }
 .mudarCor {
   color: var(--preto-night);
@@ -150,7 +156,7 @@ select {
     width: 100%;
     padding: 0.5rem 0.2rem;
   }
-  .card-cadastro form #cadastrar {
+  #cadastrar, #cadastrarRes{
     width: 50%;
   }
   .card-cadastro h2 {
@@ -183,7 +189,7 @@ select {
   .alergias{
     width: 100%;
   }
-  .card-cadastro form #cadastrar {
+  #cadastrar, #cadastrarRes{
     width: 100%;
   }
   .card-cadastro h2 {

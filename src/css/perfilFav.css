@@ -58,83 +58,6 @@
 .textoPerfil{
     margin: 1.3rem ;
 }
-@media (max-width: 1150px ) {
-    .detalhesPerfil{
-gap: 10rem;
-    }
-    .restaurantesPerfil{
-        grid-template-columns: repeat(4,1fr);
-    }
-    
-}
-@media (max-width: 915px ) {
-    .detalhesPerfil{
-        gap: 3rem;
-            }
-    .restaurantesPerfil{
-        grid-template-columns: repeat(3,1fr);
-    }
-    
-}
-@media (max-width: 730px ) {
-    .detalhesPerfil{
-        width: 95%;
-        gap: 0.5rem;
-            }
-    .restaurantesPerfil{
-        grid-template-columns: repeat(3,1fr);
-    }
-    
-}
-@media (max-width: 675px ) {
-    .detalhesPerfil{
-        width: 100%;
-        scale: 0.9;
-        gap: 0.1rem;
-    }
-    .restaurantesPerfil{
-        grid-template-columns: repeat(2,1fr);
-    }
-    
-}
-@media (max-width: 540px ) {
-    .detalhesPerfil{
-        display: flex;
-        flex-direction: column;
-    }
-    .avatarPerfil img{
-        margin-bottom: 1rem;
-    }
-    .detalhesPerfil{
-        width: 100%;
-        scale: 0.9;
-        gap: 0.1rem;
-    }
-    .restaurantesPerfil{
-        grid-template-columns: repeat(2,1fr);
-    }
-    
-}
-@media (max-width: 420px ) {
-    .restaurantesPerfil{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .avatarPerfil img{
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    }
-}
-@media (max-width: 360px ) {
-    .avatarPerfil img{
-    margin-top: 1.9rem;
-        width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    }
-}
-
-
 
 
 
@@ -155,11 +78,25 @@ gap: 10rem;
 }
 .config-perfil{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
    background-color: #fff;
    padding: 1rem;
    border-radius: 1rem;
     width: 80%;
+}
+.configPerfil2{
+    margin-top: 2rem;
+}
+.configPerfil2 h3{
+    margin: 0;
+    padding: 0.1rem 0.6rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--cinza-claro);
+}
+.configPerfil2 span{
+    font-size: 1rem;
+    padding: 0 0.4rem 0 0.1rem;
+    color: var(--vermelho);
 }
 .client-config-info{
     display: flex;
@@ -245,40 +182,6 @@ align-items: end;
 #eye{
     display: none;
 }
-@media (max-width:750px){
-    .container-form-config ,.config-perfil{
-        width: 92%;
-    }
-    .config-perfil img{
-        width: 8rem;
-        height: 8rem;
-    }
-}
-@media (max-width:600px){
-    .container-form-config form{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-@media (max-width:500px){
-    .config-perfil{
-      flex-direction: column;
-    }
-    .config-perfil img{
-        width: 6.5rem;
-        height: 6.5rem;
-        margin-bottom: 1rem;
-    }
-}
-@media (max-width:350px){    
-.client-config-info{
-    gap: 0.2rem;
-    flex-direction: column;
-}
-.opcoesGenero{
-    flex-direction: column;
-}
-}
-
 /* Perfil restaurantes */
 .containerResPerfilS{
     display: flex;
@@ -291,7 +194,7 @@ align-items: end;
     background-image: url('../assets/Curvas/1Prancheta 1 cópia 4.png');
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1;
+
 }
 .tituloResPerfil{
     width: 100%;
@@ -425,6 +328,7 @@ align-items: end;
 }
 
 .intoleranciasResPerfil{
+    padding: 0.7rem 1.5rem;
     width: 40%;
     border-radius: 2rem;
     background-color: var(--amarelo2);
@@ -435,18 +339,240 @@ align-items: end;
     font-weight: 600;
 }
 .intoleranciasResPerfil h3{
-    /* display: block;
-    padding-top: 0.5rem;
-    font-size: 1.4rem;
-    font-weight: 600; */
+    
     font-size: 1.4rem;
     margin: 10px 0;
     display: flex;
     align-items: center;
 }
 
-.intoleranciasResPerfil #circle{
+.intoleranciasResPerfil .circle{
     font-size: 0.7rem;
     color: var(--vermelho);
     margin: 0rem 0.5rem 0rem 0.5rem;
 }
+.intoleranciasResPerfil h4{
+    font-size: 1.1rem;
+}
+.intoleranciasResPerfil .num-avaliacao{
+    font-size: 4rem;
+}
+.text-avaliacao-perfil{
+    text-align: justify;
+    margin: 0.7rem;
+}
+.intoleranciasResPerfil span{
+    color:var(--vermelho);
+}
+.conteiner2-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.card-perfilRest{
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 6.png');
+    background-size: cover;
+    padding: 1.5rem;
+    box-shadow: 10px 10px 12px rgba(0,0,0, 0.2);
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+}
+.card-perfilRest h2{
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--preto-night);
+}
+.card-perfilRest p{
+    font-size: 1.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-perfilRest span{
+    background-color: var(--cinza-claro);
+    padding: 0.6rem;
+   width: 3.5rem;
+   text-align: center;
+   border-radius: 1.3rem;
+}
+.card-perfilRest button{
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    margin: 0.6rem;
+    padding: 0.4rem 0;
+    border-radius: 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+.card-perfilRest button:hover{
+    background-color:var(--branco);
+    border: 2px solid var(--vermelho);
+    color: var(--vermelho);
+}
+@media (max-width: 1150px ) {
+    .detalhesPerfil{
+gap: 10rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+}
+@media (max-width: 915px ) {
+    .detalhesPerfil{
+        gap: 3rem;
+            }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card-perfilRest{
+        width: 46%;
+    }
+}
+@media (max-width:800px){
+
+    .localResPerfil{
+
+        width: 90%;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .intoleranciasResPerfil, .horaResPerfil{
+        width: 100%;
+    }
+    .card-perfilRest h2{
+        font-size: 1.2rem;
+    }
+    .card-perfilRest p, .card-perfilRest button{
+        font-size: 1rem;
+    }
+}
+@media (max-width:750px){
+    .container-form-config ,.config-perfil{
+        width: 92%;
+    }
+    .config-perfil img{
+        width: 8rem;
+        height: 8rem;
+    }
+    .detalhesPerfil{
+        width: 95%;
+        gap: 0.5rem;
+            }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 675px ) {
+    .detalhesPerfil{
+        width: 100%;
+        scale: 0.9;
+        gap: 0.1rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media (max-width:600px){
+    .container-form-config form{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .info-perfil{
+        flex-direction: column;
+    }
+    .conteiner2-cards{
+        flex-direction: column;
+    }
+    .card-perfilRest{
+        width: 90%;
+    }
+}
+@media (max-width: 540px ) {
+    .detalhesPerfil{
+        display: flex;
+        flex-direction: column;
+    }
+    .avatarPerfil img{
+        margin-bottom: 1rem;
+    }
+    .detalhesPerfil{
+        width: 100%;
+        scale: 0.9;
+        gap: 0.1rem;
+    }
+    .restaurantesPerfil{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .config-perfil{
+        flex-direction: column;
+      }
+      .config-perfil img{
+          width: 6.5rem;
+          height: 6.5rem;
+          margin-bottom: 1rem;
+      }
+}
+@media (max-width: 420px ) {
+    .restaurantesPerfil{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .avatarPerfil img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    }
+    .card-perfilRest{
+        width: 100%;
+        transform: translateX(-20%);
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 360px ) {
+    .client-config-info{
+        gap: 0.2rem;
+        flex-direction: column;
+    }
+    .opcoesGenero{
+        flex-direction: column;
+    }
+    .avatarPerfil img{
+    margin-top: 1.9rem;
+        width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    }
+  .info-perfil img{
+    width: 6rem;
+    height: 6rem;
+  }
+  .descriResPerfil{
+    font-size: 1rem;
+  }
+  .descriResPerfil h3{
+    font-size: 0.8rem;
+  }
+  .intoleranciasResPerfil h2, .text-avaliacao-perfil h3{
+    font-size: 1.1rem;
+  }
+  .intoleranciasResPerfil .num-avaliacao{
+    font-size: 2.5rem;
+  }
+  .intoleranciasResPerfil h3, .text-avaliacao-perfil p, .intoleranciasResPerfil p, .intoleranciasResPerfil span,   .horaResPerfil h2, .horaResPerfil h4, .horaResPerfil h5, .horaResPerfil button{
+    font-size: 0.9rem;
+      }
+      .EditResPerfil h2{
+        font-size:0.8rem;
+      }
+}
+
+

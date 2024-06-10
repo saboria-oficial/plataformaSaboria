@@ -11,14 +11,14 @@ const FormularioClientes = () => {
             <form action='#'>
                 <h2>Podemos Ajudar?</h2>
 
-                <input type="text" name='nomeCliente' id='nomeCliente' placeholder='nome completo:'/>
+                <input type="text" name='nomeCliente' id='nomeCliente' placeholder='Nome completo:'/>
 
-                <input type="email" name='emailCliente' id='emailCliente' placeholder='email:'/>
+                <input type="email" name='emailCliente' id='emailCliente' placeholder='Email:'/>
 
-                <input type="text" name='restricaoCliente' id='restricaoCliente' placeholder='qual a sua restrição?'/>
+                <input type="text" name='restricaoCliente' id='restricaoCliente' placeholder='Qual a sua restrição?'/>
                 
                 <textarea name="comentarioCliente" id="comentarioCliente" rows={8} cols={40} placeholder='Como podemos te ajudar?'></textarea>
-                <Link className="linkin" to="/Enviado"><button type='submit'>enviar</button></Link>
+                <Link className="linkin" to="/Enviado"><button type='submit'>Enviar</button></Link>
             </form>
         </div>
         <div className="imgClientes">

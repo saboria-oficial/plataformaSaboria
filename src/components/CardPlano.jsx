@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/planoRes.css'
-
+import { Link } from 'react-router-dom';
 const CardPlano = (props) => {
 
   return (
@@ -36,7 +36,7 @@ const CardPlano = (props) => {
         </ul>
       </div>
       <div className="planoBtn assinarBtn">
-        <button>Assinar</button>
+       <button><Link to="/pagamentos" className='planoBtn'>Assinar</Link></button>
       </div>
     </div>
 

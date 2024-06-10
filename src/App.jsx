@@ -23,6 +23,7 @@ import PerfilRes from "./pages/perfil/PerfilRest.jsx";
 import Pesquisa from "./pages/pesquisa/Pesquisa.jsx";
 import PlanosRes from "./pages/planos/PlanosRes.jsx";
 import Cardapio from "./pages/cardapio/Cardapio.jsx";
+import Pagamentos from "./pages/pagamentos/Pagamentos.jsx";
 function App() {
   return (
     <Router>
@@ -50,6 +51,7 @@ function App() {
       <Route path="/PerfilRes" element={<PerfilRes/>}></Route>
       <Route path="/PlanoRes" element={<PlanosRes/>}></Route>
       <Route path="/cardapio" element={<Cardapio/>}></Route>
+      <Route path="/pagamentos" element={<Pagamentos/>}></Route>
     </Routes>
     </Router>
   );

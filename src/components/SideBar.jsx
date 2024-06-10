@@ -43,7 +43,7 @@ const SideBar = (props) => {
         <ul id="side_item">
             <li className="side-item active">
                 <a href="#">
-                <FontAwesomeIcon className='icon' icon={faHouse} />
+                <FontAwesomeIcon className='icon-side' icon={faHouse} />
                 <span className="item-description">
                     Início
                 </span>
@@ -51,7 +51,7 @@ const SideBar = (props) => {
             </li>
             <li className="side-item">
                 <Link to="/cardapio">
-                <FontAwesomeIcon className='icon' icon={faBook} />
+                <FontAwesomeIcon className='icon-side' icon={faBook} />
                 <span className="item-description">
                     Cardápio
                 </span>
@@ -59,15 +59,7 @@ const SideBar = (props) => {
             </li>
             <li className="side-item">
                 <a href="#">
-                <FontAwesomeIcon className='icon' icon={faReceipt} />
-                <span className="item-description">
-                    Promoções
-                </span>
-                </a>
-            </li>
-            <li className="side-item">
-                <a href="#">
-                <FontAwesomeIcon className='icon' icon={faEye} />
+                <FontAwesomeIcon className='icon-side' icon={faEye} />
                 <span className="item-description">
                     Visualização
                 </span>
@@ -75,15 +67,7 @@ const SideBar = (props) => {
             </li>
             <li className="side-item">
                 <a href="#">
-                <FontAwesomeIcon className='icon' icon={faComments} />
-                <span className="item-description">
-                    Avaliação
-                </span>
-                </a>
-            </li>
-            <li className="side-item">
-                <a href="#">
-                <FontAwesomeIcon className='icon' icon={faQuestion} />
+                <FontAwesomeIcon className='icon-side' icon={faQuestion} />
                 <span className="item-description">
                     FAQ & Fale conosco
                 </span>
@@ -91,7 +75,7 @@ const SideBar = (props) => {
             </li>
             <li className="side-item">
                 <a href="#">
-                <FontAwesomeIcon className='icon' icon={faMoneyBill1Wave} />
+                <FontAwesomeIcon className='icon-side' icon={faMoneyBill1Wave} />
                 <span className="item-description">
                     Planos
                 </span>
@@ -99,15 +83,7 @@ const SideBar = (props) => {
             </li>
             <li className="side-item">
                 <a href="#">
-                <FontAwesomeIcon className='icon' icon={faCircleInfo} />
-                <span className="item-description">
-                    Informações do estabelecimento
-                </span>
-                </a>
-            </li>
-            <li className="side-item">
-                <a href="#">
-                <FontAwesomeIcon className='icon' icon={faPen} />
+                <FontAwesomeIcon className='icon-side' icon={faPen} />
                 <span className="item-description">
                     Escreva no nosso Blog
                 </span>

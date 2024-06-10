@@ -40,7 +40,7 @@ const PerfilConfig = () => {
               <h2>Olá, João Lucas</h2>
             </div>
           </div>
-          <div className="menu-config">
+          {/* <div className="menu-config">
             <Link to="/perfilConfig">
               <p>
                 <span>
@@ -65,6 +65,11 @@ const PerfilConfig = () => {
                 Faq
               </p>
             </Link>
+          </div> */}
+          <div className="configPerfil2">
+            <Link className="linkPerfil" to="/perfilConfig"><h3><span><FontAwesomeIcon icon={faGear}/></span>Configurações da conta</h3></Link>
+            <Link className="linkPerfil" to="/perfilFav"><h3><span><FontAwesomeIcon icon={faHeart}/></span>Favoritos</h3></Link>
+            <Link className="linkPerfil" to="/Faq"><h3><span><FontAwesomeIcon icon={faMessage}/></span>FAQ</h3></Link>
           </div>
         </div>
         <div className="container-form-config">

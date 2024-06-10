@@ -1,9 +1,10 @@
-
 .container-planos{
     padding: 0.2rem 1rem;
     width: 100%;
     min-height: 100vh;
     display: grid;
+    background-image: url('../assets/Curvas/1Prancheta 1 cópia 4.png');
+    background-size: cover;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 10px;
@@ -17,6 +18,8 @@
     box-sizing: border-box;
     border-radius: 1rem;
     box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--branco);
+    z-index: 2;
 }
 .card-planos-client h2{
 color: var(--cinza);
@@ -45,6 +48,11 @@ justify-content: center;
    border-radius: 0.5rem; 
    font-weight: 700;
 }
+.planoBtn{
+    color: var(--preto-night);
+    text-decoration: none;
+}
+
 .experiment button{
     border: 1px solid var(--verde);
     background-color: transparent;
@@ -62,9 +70,10 @@ justify-content: center;
 }
 .assinarBtn button:hover{
     background-color: transparent;
+}
+.assinarBtn button:hover .planoBtn{
     color: var(--amarelo);
 }
-
 .line-plano{
     margin: 1rem;
     width: 90%;
@@ -108,4 +117,3 @@ align-items: start;
         font-size: 0.8rem;
     }
 }
-

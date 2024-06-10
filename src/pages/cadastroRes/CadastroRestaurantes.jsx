@@ -68,7 +68,7 @@ const CadastroRestaurantes = () => {
               </div>
             </div>
 
-            <input type="submit" id="cadastrar" value="Cadastrar"/> 
+            <input type="submit" id="cadastrarRes" value="Cadastrar"/> 
         </form>
       <Link to="/loginRes" className="link">Login</Link>
     </div>

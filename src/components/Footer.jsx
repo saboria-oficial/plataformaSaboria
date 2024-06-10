@@ -14,7 +14,7 @@ const Footer = () => {
       <section id="container-footer">
         <div class="card-footer">
           <img src={logoPreta} alt="logotipo da saboria preta" />
-          <h2 class="title">O sabor da inclusão alimentar</h2>
+          <h2 class="title">O Sabor da Inclusão Alimentar</h2>
         </div>
         <div class="card-footer">
           <ul>
@@ -73,7 +73,7 @@ const Footer = () => {
           </ul>
         </div>
         <div class="card-footer">
-          <p>ENTRE EM CONTATO</p>
+          <p>Entre em Contato</p>
           <a href="tel:1140028922">(11) 4002-8922</a>
           <a href="mailto:saboriaoficial@gmail.com">saboriaoficial@gmail.com</a>
         </div>
@@ -102,7 +102,7 @@ const Footer = () => {
       </div>
       <p>Termos de uso | Políticas de privacidade</p>
       <p>
-        &copy; Saboria &bull; Todos Direitos Reservados &bull; Versão v1.000
+        &copy; Saboria &bull; Todos Direitos Reservados &bull; Versão v1
       </p>
     </footer>
     </div>

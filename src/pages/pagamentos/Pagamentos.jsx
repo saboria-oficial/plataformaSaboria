@@ -1,25 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/pagamentos.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 //img
 import img from "../../assets/img2/imgPagamentos.svg";
-import banco1 from "../../assets/img2/banco1.jpg";
-import banco2 from "../../assets/img2/banco2.png";
-import banco3 from "../../assets/img2/banco3.webp";
-import banco4 from "../../assets/img2/banco4.webp";
-import banco5 from "../../assets/img2/banco5.jpg";
-import banco6 from "../../assets/img2/banco6.png";
-import banco7 from "../../assets/img2/banco7.png";
+import banco from "../../assets/img2/bancos.webp";
+import imgSeguranca from "../../assets/img2/segurancapagamentos.webp";
 //icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
 const Pagamentos = () => {
+  const [paymentType, setPaymentType] = useState("credito");
+
+  const handlePaymentTypeChange = (type) => {
+    setPaymentType(type);
+  };
+
   return (
     <div>
-      <Header></Header>
+      <Header />
       <div className="container-plano">
         <Link className="back" to="/">
           <FontAwesomeIcon icon={faArrowLeft} />
@@ -38,27 +38,141 @@ const Pagamentos = () => {
           <img src={img} alt="" />
         </nav>
         <div className="cartoes">
-          <img src={banco1} alt="" />
-          <img src={banco2} alt="" />
-          <img src={banco3} alt="" />
-          <img src={banco4} alt="" />
-          <img src={banco5} alt="" />
-          <img src={banco6} alt="" />
-          <img src={banco7} alt="" />
+          <img src={banco} alt="" />
         </div>
         <div className="btn-cartao">
-          <button className="ativo">Crédito</button>
-          <button>Débito</button>
-          <button>Pix</button>
+          <button
+            className={paymentType === "credito" ? "ativo" : ""}
+            onClick={() => handlePaymentTypeChange("credito")}
+          >
+            Crédito
+          </button>
+          <button
+            className={paymentType === "debito" ? "ativo" : ""}
+            onClick={() => handlePaymentTypeChange("debito")}
+          >
+            Débito
+          </button>
         </div>
+        <div className={`form-pagamento ${paymentType === "credito" ? "show" : ""}`}>
+          <input type="text" placeholder="Número do Cartão" id="num-cartao"/>
+          <input type="text" placeholder="Bandeira" id="bandeira"/>
+          <div className="info-banco">
+            <div>
+              <select name="" id="">
+                <option value="" disabled>
+                  Mês
+                </option>
+                <option value="">Janeiro</option>
+                <option value="">Fevereiro</option>
+                <option value="">Março</option>
+                <option value="">Abril</option>
+                <option value="">Maio</option>
+                <option value="">Junho</option>
+                <option value="">Julho</option>
+                <option value="">Agosto</option>
+                <option value="">Setembro</option>
+                <option value="">Outubro</option>
+                <option value="">Novembro</option>
+                <option value="">Dezembro</option>
+              </select>
+              <input type="number" placeholder="Ano" />
+            </div>
+            <input type="number" placeholder="Cod do Cartão" />
+          </div>
+          <select name="" id="parcelas">
+            <option value="" disabled>
+              Parcelas
+            </option>
+            <option value="">1x vez</option>
+            <option value="">2x vez</option>
+            <option value="">3x vez</option>
+            <option value="">4x vez</option>
+            <option value="">5x vez</option>
+            <option value="">6x vez</option>
+          </select>
+
+          <p>
+            Suas informações serão coletadas de acordo com a política de
+            privacidade da <Link>Saboria</Link>
+          </p>
+
+          <div className="termos">
+            <div>
+              <input type="checkbox" name="" id="" />
+              <label htmlFor="">
+                Quero receber notificações sobre novidades e notícias da Sabor.IA
+                por email e WhatsApp
+              </label>
+            </div>
+         
+            <div>
+              <input type="checkbox" name="" id="" />
+              <label htmlFor="">
+              Concordo com os termos
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div className={`form-pagamento ${paymentType === "debito" ? "show" : ""}`}>
+          <input type="text" placeholder="Número do Cartão" id="num-cartao"/>
+          <input type="text" placeholder="Bandeira" id="bandeira"/>
+          <div className="info-banco">
+            <div>
+              <select name="" id="">
+                <option value="" disabled>
+                  Mês
+                </option>
+                <option value="">Janeiro</option>
+                <option value="">Fevereiro</option>
+                <option value="">Março</option>
+                <option value="">Abril</option>
+                <option value="">Maio</option>
+                <option value="">Junho</option>
+                <option value="">Julho</option>
+                <option value="">Agosto</option>
+                <option value="">Setembro</option>
+                <option value="">Outubro</option>
+                <option value="">Novembro</option>
+                <option value="">Dezembro</option>
+              </select>
+              <input type="number" placeholder="Ano" />
+            </div>
+            <input type="number" placeholder="Cod do Cartão" />
+          </div>
+
+          <p>
+            Suas informações serão coletadas de acordo com a política de
+            privacidade da <Link>Saboria</Link>
+          </p>
+
+          <div className="termos">
+            <div>
+              <input type="checkbox" name="" id="" />
+              <label htmlFor="">
+                Quero receber notificações sobre novidades e notícias da Sabor.IA
+                por email e WhatsApp
+              </label>
+            </div>
+         
+            <div>
+              <input type="checkbox" name="" id="" />
+              <label htmlFor="">
+              Concordo com os termos
+              </label>
+            </div>
+          </div>
+        </div>
+
         <div className="funcoes-cartao">
-        <button className="comprarPlano">Comprar Agora!</button>
+          <button className="comprarPlano">Comprar Agora!</button>
         </div>
         <div className="seguranca-pagamentos">
-            
+          <img src={imgSeguranca} alt="" />
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

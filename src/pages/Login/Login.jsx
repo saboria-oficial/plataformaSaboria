@@ -12,7 +12,15 @@ import imagemCadastro from "../../assets/img2/cadastro.svg";
 import Header from "../../components/Header.jsx";
 import Footer from "../../components/Footer.jsx";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 const Login = () => {
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+  
   return (
     <section>
       <Header />
@@ -25,50 +33,27 @@ const Login = () => {
                 <h2 className="title">Login</h2>
                 <div className="input-field">
                   <FontAwesomeIcon icon={faUser} className="icone-login"/>
-                  <input type="text" placeholder="usuário" required />
+                  <input type="text" placeholder={t("Usuário")} required />
                 </div>
                 <div className="input-field">
                   <FontAwesomeIcon icon={faLock} className="icone-login"/>
                   <input type="password" placeholder="Senha" required />
                 </div>
-                <Link className="link" to="/redefinir">esqueceu sua senha?</Link>
+                <Link className="link" to="/redefinir">Esqueceu sua senha?</Link>
                 <Link to="/perfilFav"><input type="submit" value="Entrar" className="btn solid" /></Link>
                 <p className="social-text">
                   Ou faça login com suas redes sociais
                 </p>
                 <div class="icons-cadastro">
-                  <div class="icon-cadastro">
-                    <a href="">
-                      <FontAwesomeIcon
-                        icon={faFacebookF}
-                        className="fa-facebook-f fa-brands"
-                      />
-                    </a>
-                  </div>
-                  <div class="icon-cadastro">
-                    <a href="">
-                      <FontAwesomeIcon
-                        icon={faInstagram}
-                        className="fa-instagram fa-brands"
-                      />
-                    </a>
-                  </div>
-                  <div class="icon-cadastro">
-                    <a href="">
-                      <FontAwesomeIcon
-                        icon={faGoogle}
-                        className="fa-google fa-brands"
-                      />
-                    </a>
-                  </div>
-                  <div class="icon-cadastro">
-                    <a href="">
-                      <FontAwesomeIcon
-                        icon={faGithub}
-                        className="fa-github fa-brands"
-                      />
-                    </a>
-                  </div>
+                
+            <div class="icon-cadastro">
+              <a href="">
+                <FontAwesomeIcon
+                  icon={faGoogle}
+                  className="fa-google"
+                />
+              </a>
+            </div>
                 </div>
                 <div className="cadastro">
                   <p>

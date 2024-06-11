@@ -18,17 +18,18 @@ const PlanosRes = () => {
         <div className="planoRes-content">
             <CardPlanoRes nome="Menu de Entrada" preco='0.00' icon1={<FontAwesomeIcon icon={faCircleCheck}/>} icon2={<FontAwesomeIcon icon={faCircleCheck}/>}icon3={<FontAwesomeIcon icon={faCircleCheck}/>}icon4={<FontAwesomeIcon icon={faCircleCheck}/>} 
             
-            vantagem1="num sei vantagens"
-            vantagem2="num sei vantagens"
-            vantagem3="num sei vantagens"
-            vantagem4="num sei vantagens"/>
+            vantagem1="Divulgação do Restaurante"
+            vantagem2="Local"
+            vantagem3="Informações Gerais"
+            vantagem4="Informações Gerais"/>
 
-<CardPlanoRes nome="Menu Omakasê" preco='39.99' icon1={<FontAwesomeIcon icon={faCircleCheck}/>} icon2={<FontAwesomeIcon icon={faCircleCheck}/>}icon3={<FontAwesomeIcon icon={faCircleCheck}/>}icon4={<FontAwesomeIcon icon={faCircleCheck}/>} 
+<CardPlanoRes nome="Menu Omakasê" preco='39.99' icon1={<FontAwesomeIcon icon={faCircleCheck}/>} icon2={<FontAwesomeIcon icon={faCircleCheck}/>}icon3={<FontAwesomeIcon icon={faCircleCheck}/>}icon4={<FontAwesomeIcon icon={faCircleCheck}/>}icon5={<FontAwesomeIcon icon={faCircleCheck}/>} 
             
-            vantagem1="num sei vantagens"
-            vantagem2="num sei vantagens"
-            vantagem3="num sei vantagens"
-            vantagem4="num sei vantagens"/>
+            vantagem1="Divulgação do Restaurante"
+            vantagem2="Local"
+            vantagem3="Informações Gerais"
+            vantagem4="Cardápio Personalizado"
+            vantagem5="Delivery do Restaurante"/>
             
             
         </div>

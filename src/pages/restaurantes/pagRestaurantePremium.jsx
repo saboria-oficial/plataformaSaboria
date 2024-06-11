@@ -67,7 +67,7 @@ const PagRestaurantePremium = () => {
           <div className="card-carrosel">
             <h2>Sorveteria XXXX</h2>
             <h3>Promoções as sextas</h3>
-            <h4>comida boa é aqui</h4>
+            <h4>Comida boa é aqui</h4>
           </div>
           <div className="pag-perfil-res">
             <img src={sorveteria1} alt="" />
@@ -78,7 +78,7 @@ const PagRestaurantePremium = () => {
                   <p id="horario" style={{ color: cor }}>
                     <FontAwesomeIcon icon={faClock} /> {status}
                   </p>
-                  <p>abre as 12h fecha as 22:00</p>
+                  <p>Abre às 12h fecha às 22:00</p>
                 </div>
                 <Link className="link-res">
                   <span>
@@ -105,7 +105,7 @@ const PagRestaurantePremium = () => {
             <div className="info-perfil-clientes">
              
               <div>
-                <h3>Intolâncias que atendemos</h3>
+                <h3>Intolerâncias que atendemos</h3>
                 <div className="alergias-atendidas">
                   <p>
                     <span>

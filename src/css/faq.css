@@ -4,6 +4,7 @@
   display: flex;
   background-image: url('../assets/Curvas/1Prancheta 1 cópia 2.png');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .container-faq-img{
   width: 50%;

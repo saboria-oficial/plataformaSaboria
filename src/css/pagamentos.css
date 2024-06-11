@@ -50,27 +50,29 @@
 .nav-pagamentos strong{
     color: var(--cinza);
 }
-.cartoes{
+.cartoes, .seguranca-pagamentos{
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
     gap: 1rem;
     justify-self: center;
     align-items: center;
     width: 75%;
 }
-.cartoes img{
-    width: 6rem;
-    height: 4rem;
-    border-radius: 1.2rem;
-    cursor: pointer;
+.cartoes img , .seguranca-pagamentos img{
+    width: 100%;
+    border-radius: 1.2rem; 
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
 }
 .btn-cartao{
     margin: 1rem;
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.6rem;
+   
+}
+.show{
+    display:flex;
 }
 .btn-cartao button{
 background-color: #fed45688;
@@ -99,4 +101,83 @@ transition: 0.3s ease-in-out;
     border-radius: 1.5rem;
     font-weight: 700;
     border: none;
+}
+.form-pagamento{
+    display: none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: baseline;
+}
+.show{
+    display: flex;
+}
+.form-pagamento input, .form-pagamento select, .form-pagamento option{
+    background-color: #fed45688;
+    border: none;
+    outline: none;
+    padding: 0.2rem 0.5rem;
+    height: 3rem;
+    border-radius: 1rem;
+}
+#num-cartao, #bandeira, #parcelas{
+    width: 100%;
+}
+.termos div{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.info-banco{
+gap: 0.6rem;
+width: 100%;
+     display: flex;
+}
+.info-banco input{
+    width: 60%;
+}
+.info-banco select, .info-banco div input {
+    width: 40%;
+}
+.info-banco div{
+    border-right: 3px solid var(--amarelo);
+   
+}
+@media(max-width:720px){
+    .nav-pagamentos{
+        width: 90%;
+    }
+    .nav-pagamentos img{
+        height: 100%;
+    }
+   
+}
+@media(max-width:500px){
+    .nav-pagamentos{
+        width: 100%;
+    }
+    .nav-pagamentos img{
+        width: 40%;
+    }
+    .nav-pagamentos h3{
+        font-size: 1.2rem;
+    }
+.btn-cartao button{
+width: 5rem;
+}
+.cartoes, .seguranca-pagamentos{
+    width: 100%;
+}
+.funcoes-cartao button{
+    width: 10rem;
+    font-size: 1.2rem;
+}
+@media(max-width:360px){
+    .nav-pagamentos img{
+      display: none;
+    }
+    .funcoes-cartao button{
+        width: 6.6rem;
+        font-size: 1rem;
+    }
+}
 }

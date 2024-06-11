@@ -11,13 +11,13 @@ const CardPlano = (props) => {
       <h2>{props.title}</h2>
         <h2>{props.valorTitle}</h2>
         <div>
-          <p>usuário <br />
+          <p>Usuário <br />
           /mês</p>
         </div>
     
     
     </div>
-      <p>total de R${props.valorTitle * 12}/mês colaborados anualmente</p>
+      <p>Total de R${props.valorTitle * 12}/mês colaborados anualmente</p>
     
       <div className="planoBtn  experiment">
         <button>Experimentar plano grátis</button>

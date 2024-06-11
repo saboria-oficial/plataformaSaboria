@@ -22,31 +22,30 @@ const LoginRestaurantes = () => {
      
       <form>
 
-          <input type="email" placeholder="email" required/>
-          <input type="text" placeholder="cnpj" required/> 
-          <input type="password" placeholder="senha" required/> 
+          <input type="email" placeholder="Email" required/>
+          <input type="text" placeholder="Cnpj" required/> 
+          <input type="password" placeholder="Senha" required/> 
 
           <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link> 
       </form>
     <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
 
 
-    <p>ou inscreva-se pelas redes sociais</p>
+    <p>Ou inscreva-se pelas redes sociais</p>
 
     <div class="icons-cadastro">
         
-          <div class="icon-cadastro">
-              <a href=""><FontAwesomeIcon icon={faFacebookF} className='fa-facebook-f fa-brands'/></a>
-          </div>
-          <div class="icon-cadastro">
-          <a href=""><FontAwesomeIcon icon={faInstagram} className='fa-instagram fa-brands'/></a>
-          </div>
-          <div class="icon-cadastro">
-          <a href=""><FontAwesomeIcon icon={faGoogle} className='fa-google fa-brands'/></a>
-          </div>
-          <div class="icon-cadastro">
-              <a href=""><FontAwesomeIcon icon={faGithub}  className='fa-github fa-brands'/></a>
-          </div>
+        
+        
+           
+    <div class="icon-cadastro">
+              <a href="">
+                <FontAwesomeIcon
+                  icon={faGoogle}
+                  className="fa-google"
+                />
+              </a>
+            </div>
       </div>
 
 

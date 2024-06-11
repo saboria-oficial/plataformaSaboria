@@ -40,10 +40,7 @@
 .card-cadastro a {
   text-decoration: none;
 }
-.icons-cadastro{
-  display: flex;
-  gap: 10px;
-}
+
 .icons-cadastro .fa-brands {
   width: 2rem;
   height: 2rem;
@@ -55,38 +52,22 @@
   transition: 0.3s all;
   font-size: 2rem;
 }
-.icons-cadastro .fa-instagram{
-  border: 2px solid #d5407e;
-  color: #d5407e;
-}
-.icons-cadastro .fa-facebook-f {
-  border: 2px solid transparent;
-  color: #007ab3;
-}
+
 .icons-cadastro .fa-google {
+  width: 14rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  transition: 0.3s all;
+  font-size: 2rem;
   border: 2px solid #e33629;
   color: #e33629;
 }
- .fa-github {
-  border: transparent 2px solid;
-  color: #1f1d1d;
-}
- .icon-cadastro .fa-github:hover {
-  background-color: #1f1d1d;
-  color: var(--branco);
-}
-.icons-cadastro .fa-facebook-f:hover {
-  background-color: #007ab3;
-  color: var(--branco);
-}
+
 .icons-cadastro .fa-google:hover {
   background-color: #e33629;
   color: var(--branco);
 }
-.icons-cadastro .fa-instagram:hover {
-  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-  color: var(--branco);
-}
+
 .card-cadastro form {
   display: flex;
   flex-direction: column;
@@ -164,7 +145,9 @@ select {
   }
 }
 @media (max-width: 350px) {
-
+.icons-cadastro .fa-google{
+  width: 10rem;
+}
   .card-cadastro,
   form {
     padding: 0.2rem;

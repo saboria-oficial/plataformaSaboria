@@ -17,18 +17,18 @@ const CadastroRestaurantes = () => {
     <div class="card-cadastro">
         <h2 class="title">Criar Conta</h2>
         <div class="icons-cadastro">
-            <div class="icon-cadastro">
-                <a href=""><FontAwesomeIcon icon={faFacebookF} className='fa-facebook-f fa-brands'/></a>
+           
+           
+            
+        <div class="icon-cadastro">
+              <a href="">
+                <FontAwesomeIcon
+                  icon={faGoogle}
+                  className="fa-google"
+                />
+              </a>
             </div>
-            <div class="icon-cadastro">
-            <a href=""><FontAwesomeIcon icon={faInstagram} className='fa-instagram fa-brands'/></a>
-            </div>
-            <div class="icon-cadastro">
-            <a href=""><FontAwesomeIcon icon={faGoogle} className='fa-google fa-brands'/></a>
-            </div>
-            <div class="icon-cadastro">
-                <a href=""><FontAwesomeIcon icon={faGithub}  className='fa-github fa-brands'/></a>
-            </div>
+          
         </div>
         <div>
             <p class="line"></p>

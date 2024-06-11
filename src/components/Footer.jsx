@@ -7,26 +7,36 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import '../css/footer.css'
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+
+  const{i18n} = useTranslation();
+
+  const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+  };
+  const {t} = useTranslation(); 
+
+  
   return (
     <div>
        <footer>
       <section id="container-footer">
         <div class="card-footer">
           <img src={logoPreta} alt="logotipo da saboria preta" />
-          <h2 class="title">O Sabor da Inclusão Alimentar</h2>
+          <h2 class="title">{t("O Sabor da Inclusão Alimentar")}</h2>
         </div>
         <div class="card-footer">
           <ul>
-            <p>Menu</p>
+            <p>Menu</p> 
             <Link to='/'>
-              <li>Início</li>
+              <li>{t("Início")}</li>
             </Link>
             <Link to='/sobre' >
-              <li>Sobre</li>
+              <li>{t("Sobre")}</li>
             </Link>
             <Link to='/restaurantes'>
-              <li>Restaurantes</li>
+              <li>{t("Restaurantes")}</li>
             </Link>
           </ul>
         </div>
@@ -34,12 +44,12 @@ const Footer = () => {
           <ul>
            
               <Link to='/localiza'>
-                <li>Localização</li>
+                <li>{t("Localização")}</li>
               </Link>
          
            
               <Link to='/parcerias' >
-                <li>Parcerias</li>
+                <li>{t("Parcerias")}</li>
               </Link>
            
  
@@ -73,7 +83,7 @@ const Footer = () => {
           </ul>
         </div>
         <div class="card-footer">
-          <p>Entre em Contato</p>
+          <p>{t("Entre em Contato")}</p>
           <a href="tel:1140028922">(11) 4002-8922</a>
           <a href="mailto:saboriaoficial@gmail.com">saboriaoficial@gmail.com</a>
         </div>
@@ -100,9 +110,9 @@ const Footer = () => {
         </a>
         </div>
       </div>
-      <p>Termos de uso | Políticas de privacidade</p>
+      <p>{t("Termos de uso | Políticas de privacidade")}</p>
       <p>
-        &copy; Saboria &bull; Todos Direitos Reservados &bull; Versão v1
+        &copy; Saboria &bull; {t("Todos Direitos Reservados")} &bull; {t("Versão v1")}
       </p>
     </footer>
     </div>

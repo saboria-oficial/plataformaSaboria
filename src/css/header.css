@@ -1,4 +1,5 @@
 /*header*/
+
 .navbar-brand{
     min-width: 7rem;
 }
@@ -8,13 +9,25 @@
 .navbar{
 padding: 0.6rem 1.2rem;
 background-color: var(--branco);
+
+
 }
 .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.btn-idioma{
+    border: none;
+    margin-top: 0.2rem;
+    background-color: var(--branco);
+    padding-right: 0.4rem;
+    cursor: pointer;
+}
+.btn-idioma:hover{
+    scale: 1.1;
+    color: var(--preto);
+}
 
 .offcanvas-body .navbar-nav {
     display: flex;

@@ -5,24 +5,22 @@ import { faCow, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-ic
 import imgRestaurante from '../assets/img2/restauranteGenerico.avif';
 import burguer from '../assets/img2/burguerVegano.jpg';
 import CardRestaurante from './CardRestaurante';
+import { useTranslation } from "react-i18next";
 
 const NavbarIntolerancia = () => {
-  const [activeLink, setActiveLink] = useState('Laticionios');
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const [activeLink, setActiveLink] = useState('laticinios');
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
 
   const handleLinkClick = (intolerancia) => {
     setActiveLink(intolerancia);
   };
-
-  const links = [
-    'Amêndoas',
-    'Glúten',
-    'Laticínios',
-    'Ovo',
-    'Frutos do mar',
-    'Soja'
-  ];
 
   const handleScroll = (scrollContainer) => {
     scrollContainer.style.scrollBehavior = 'auto';
@@ -74,17 +72,24 @@ const NavbarIntolerancia = () => {
   return (
     <section>
       <nav className='nav-intolerancia'>
-        {links.map((intolerancia) => (
+        {[
+          "Amêndoas",
+          "Glúten",
+          "Laticínios",
+          "Ovo",
+          "Frutos do mar",
+          "Soja"
+        ].map((intolerancia) => (
           <Link
             key={intolerancia}
             className={`nav-link-intolerancia ${activeLink === intolerancia ? 'into-active' : ''}`}
             onClick={() => handleLinkClick(intolerancia)}
           >
-            {intolerancia}
+            {t(intolerancia)}
           </Link>
         ))}
       </nav>
-      <div className="titulos-home"><p>Restaurante 5 estrelas - <span>Livre de Laticínios</span></p></div>
+      <div className="titulos-home"><p>{t("Restaurante 5 estrelas")} - <span>{t("Livre de Laticínios")}</span></p></div>
       <div className="row-card-gallery">
         <div className="btnLeft" onClick={() => handleBackClick(scrollContainerRef1.current)}>
           <FontAwesomeIcon icon={faAngleLeft} />
@@ -105,7 +110,7 @@ const NavbarIntolerancia = () => {
           <FontAwesomeIcon icon={faAngleRight} />
         </div>
       </div>
-      <div className="titulos-home"><p>Pratos 5 estrelas - <span>Livre de Laticínios</span></p></div>
+      <div className="titulos-home"><p>{t ("Pratos 5 estrelas")} - <span>{t("Livre de Laticínios")}</span></p></div>
       <div className="row-card-gallery">
         <div className="btnLeft" onClick={() => handleBackClick(scrollContainerRef2.current)}>
           <FontAwesomeIcon icon={faAngleLeft} />

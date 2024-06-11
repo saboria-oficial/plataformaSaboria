@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import '../../css/faq.css'
-import faq from '../../assets/img2/FAQimg.svg'
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../css/faq.css';
+import faq from '../../assets/img2/FAQimg.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-
+import { useTranslation } from "react-i18next";
 
 const Faq = () => {
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -47,32 +53,29 @@ const Faq = () => {
 
   return (
     <div>
-      <Header/>
-      <h2 id="titulo-faq">AS RESPOSTAS PARA AS SUAS PERGUNTAS:</h2>
+      <Header />
+      <h2 id="titulo-faq">{t("AS RESPOSTAS PARA AS SUAS PERGUNTAS:")}</h2>
       <div className="container-faq">
         <div className="container-faq-img">
-          <img src={faq}  id="faqImg" alt="faq" />
+          <img src={faq} id="faqImg" alt="faq" />
         </div>
         <div className="container-faq-texto">
-          
           {faqs.map((faq, index) => (
             <div className={`faq ${activeIndex === index ? 'active' : ''}`} key={index}>
               <button className="accordion" onClick={() => toggleAccordion(index)}>
-                {faq.question}
-                <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon icon={faChevronDown}/></i>
+                {t(faq.question)}
+                <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></i>
               </button>
               <div className="pannel" style={{ display: activeIndex === index ? 'block' : 'none' }}>
-                <p>{faq.answer}</p>
+                <p>{t(faq.answer)}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 
 export default Faq;
-
-

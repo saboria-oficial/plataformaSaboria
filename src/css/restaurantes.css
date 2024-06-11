@@ -57,7 +57,7 @@ font-weight: bold;
     width: fit-content;
     border-radius: 1.5rem;
     text-align: center;
-    transform: translateX(200%) translateY(-300%);
+    transform: translateX(200%) translateY(-150%);
     font-weight: bold;
     position: absolute;
 }

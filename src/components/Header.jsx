@@ -6,9 +6,16 @@ import logo from '../assets/img2/logotipo-amarelo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
 
+  const{i18n} = useTranslation();
+
+  const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+  };
+  const {t} = useTranslation();
 
   return (
     <div>
@@ -50,22 +57,22 @@ const Header = () => {
                 <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
                   <li className="nav-item">
                     <Link to='/' className="nav-link active" aria-current="page">
-                      Início
+                    {t("Início")}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link to='/sobre' className="nav-link">
-                      Sobre
+                    {t("Sobre")}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link to='/Restaurantes' className="nav-link">
-                      Restaurantes
+                    {t("Restaurantes")}
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link to='/planos' className="nav-link">
-                      Planos
+                    {t("Planos")}
                     </Link>
                   </li>
                   <li className="nav-item dropdown">
@@ -76,12 +83,12 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      Fale Conosco
+                      {t("Fale Conosco")}
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                          {t("Formulário")} 
                         </Link>
                       </li>
                       <li>
@@ -96,7 +103,7 @@ const Header = () => {
                   <input
                     className="form-control"
                     type="search"
-                    placeholder="Busque pratos"
+                    placeholder={t("Busque pratos")}
                     aria-label="Search"
                   />
                   <Link to="/Pesquisa"><button type="button" id="btn-search">
@@ -118,12 +125,12 @@ const Header = () => {
                     <ul className="dropdown-menu">
                       <li>
                         <Link to='/login' className="dropdown-item">
-                          Login Clientes
+                        {t("Login Clientes")}
                         </Link>
                       </li>
                       <li>
                         <Link to='/loginRes' className="dropdown-item">
-                          Login Restaurantes
+                        {t("Login Restaurantes")}
                         </Link>
                       </li>
                     </ul>
@@ -134,9 +141,10 @@ const Header = () => {
                   <a id="clear-mode" className="icon-header">
                     <FontAwesomeIcon icon={faSun} />
                   </a>
-                  <a id="idiomas" className="title">
-                    PT | EN
-                  </a>
+                  <div id="idiomas" className="title">
+                    <button className="btn-idioma" onClick={() => changeLanguage("pt")}>PT</button>
+                    <button className="btn-idioma" onClick={() => changeLanguage("en")}>EN</button>
+                  </div>
                 </div>
               </div>
             </div>

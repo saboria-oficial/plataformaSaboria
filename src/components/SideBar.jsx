@@ -74,12 +74,12 @@ const SideBar = (props) => {
                 </a>
             </li>
             <li className="side-item">
-                <a href="#">
+                <Link to="/PlanoRes">
                 <FontAwesomeIcon className='icon-side' icon={faMoneyBill1Wave} />
                 <span className="item-description">
                     Planos
                 </span>
-                </a>
+                </Link>
             </li>
             <li className="side-item">
                 <a href="#">

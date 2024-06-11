@@ -150,8 +150,11 @@ const PerfilConfig = () => {
                 <FontAwesomeIcon icon={faLock} />
               </button>
             </div>
+           
           </form>
+        
         </div>
+        <button type="submit" className="btn-perfil-config">Alterar Dados</button>
       </div>
       <Footer />
     </div>

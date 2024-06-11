@@ -46,7 +46,7 @@ const PaginaRestaurante = () => {
 
           <h3>Promoções as sextas</h3>
 
-          <h4>comida boa é aqui</h4>
+          <h4>Comida boa é aqui</h4>
         </div>
         <div className="pag-perfil-res">
           <img src={logoPizzaria1} alt="" />
@@ -58,7 +58,7 @@ const PaginaRestaurante = () => {
                 <p id="horario" style={{ color: cor }}>
                   <FontAwesomeIcon icon={faClock} /> {status}
                 </p>
-                <p>abre as 15h fecha as 00:00</p>
+                <p>Abre às 15h fecha às 00:00</p>
               </div>
               <Link className="link-res">
                 <span>
@@ -86,13 +86,13 @@ const PaginaRestaurante = () => {
         <div className="perfil-res-content">
           <div className="info-perfil-clientes">
             <div>
-              <h3>Intolâncias que atendemos</h3>
+              <h3>Intolerâncias que atendemos</h3>
               <div className="alergias-atendidas"> 
                   <p>
                     <span>
                       <FontAwesomeIcon icon={faWheatAwnCircleExclamation} />
                     </span>{" "}
-                    Zero Glutén
+                    Zero Glúten
                   </p>
                   <p>
                     <span>

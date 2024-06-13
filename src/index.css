@@ -22,7 +22,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    
     font-optical-sizing: auto;
 }
 body{
@@ -37,3 +36,4 @@ body{
 .link{
     color: var(--cinza); 
 }
+

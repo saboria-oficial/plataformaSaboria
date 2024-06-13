@@ -95,7 +95,7 @@ select {
   background-color: var(--preto-night);
   color: var(--branco);
   width: 40%;
-  overflow: none;
+
 }
 #loginRes{
   background-color: var(--preto-night);
@@ -179,3 +179,5 @@ select {
     font-size: 2rem;
   }
 }
+
+

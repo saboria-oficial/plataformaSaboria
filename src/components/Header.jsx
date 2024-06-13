@@ -1,156 +1,178 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';  
-import '../css/header.css';
-import logo from '../assets/img2/logotipo-amarelo.webp';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from "react-i18next";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../css/header.css";
+import logo from "../assets/img2/logotipo-amarelo.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSun,
+  faMoon,
+  faUser,
+  faMagnifyingGlass,
+  faLanguage,
+} from "@fortawesome/free-solid-svg-icons";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 const Header = () => {
+  const [showTranslate, setShowTranslate] = useState(false);
 
-  const{i18n} = useTranslation();
+  useEffect(() => {
+    if (showTranslate) {
+      const addScript = () => {
+        if (window.google) {
+          const script = document.createElement("script");
+          script.src =
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+          script.async = true;
+          document.body.appendChild(script);
+        } else {
+          window.googleTranslateElementInit();
+        }
+      };
 
-  const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng);
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          { pageLanguage: "pt" },
+          "google_translate_element"
+        );
+      };
+
+      addScript();
+    }
+
+    return () => {
+      const translateElement = document.getElementById(
+        "google_translate_element"
+      );
+      if (translateElement) {
+        translateElement.innerHTML = "";
+      }
+    };
+  }, [showTranslate]);
+
+  const handleToggleTranslate = () => {
+    setShowTranslate(!showTranslate);
   };
-  const {t} = useTranslation();
 
   return (
     <div>
-      <header>
-        <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid">
-            <Link to='/' className="navbar-brand">
-              <img src={logo} alt="logotipo amarelo da Saboria" />
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
+      {["xl"].map((expand) => (
+        <Navbar
+          key={expand}
+          expand={expand}
+          className=" mb-3 "
+          style={{ backgroundColor: "transparent" }}
+        >
+          <Container fluid>
+            <Navbar.Brand href="#">
+              <img src={logo} alt="Logo" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
             >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div
-              className="offcanvas offcanvas-end"
-              tabIndex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div className="offcanvas-header">
-                <Link to='/' className="navbar-brand">
-                  <img src={logo} alt="logotipo amarelo da Saboria" />
-                </Link>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div className="offcanvas-body">
-                <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                  className="navbar-brand"
+                >
+                  <img src={logo} alt="Logo" />
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-center flex-grow-1 pe-3">
                   <li className="nav-item">
-                    <Link to='/' className="nav-link active" aria-current="page">
-                    {t("Início")}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to='/sobre' className="nav-link">
-                    {t("Sobre")}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to='/Restaurantes' className="nav-link">
-                    {t("Restaurantes")}
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to='/planos' className="nav-link">
-                    {t("Planos")}
-                    </Link>
-                  </li>
-                  <li className="nav-item dropdown">
                     <Link
-                      to='/'
-                      className="nav-link dropdown-toggle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      to="/"
+                      className="nav-link"
+                      aria-current="page"
                     >
-                      {t("Fale Conosco")}
+                      Início
                     </Link>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link to="/ " className="dropdown-item">
-                          {t("Formulário")} 
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to='/faq' className="dropdown-item">
-                          FAQ
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
-                </ul>
+                  <li className="nav-item">
+                    <Link to="/sobre" className="nav-link">
+                      Sobre
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/Restaurantes" className="nav-link">
+                      Restaurantes
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/planos" className="nav-link">
+                      Planos
+                    </Link>
+                  </li>
+
+                  <NavDropdown
+                    title="Fale Conosco"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <Link to="/ " className="dropdown-item">
+                      Formulário
+                    </Link>
+                    <Link to="/faq" className="dropdown-item">
+                      FAQ
+                    </Link>
+                  </NavDropdown>
+                </Nav>
                 <form className="form-inline">
                   <input
                     className="form-control"
                     type="search"
-                    placeholder={t("Busque pratos")}
+                    placeholder="Busque pratos"
                     aria-label="Search"
                   />
-                  <Link to="/Pesquisa"><button type="button" id="btn-search">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                  </button></Link>
-
+                  <Link to="/Pesquisa">
+                    <button type="button" id="btn-search">
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                  </Link>
                 </form>
                 <div className="links-navbar">
-                <li className="icon-header dropdown">
-                    <Link
-                      to='/'
-                      className="icon-header "
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                  <li className="icon-header dropdown">
+                    <NavDropdown
+                      className="icon-header"
+                      title={<FontAwesomeIcon id="icon-header-user" icon={faUser} />}
+                      id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
-                     <FontAwesomeIcon icon={faUser} />
-                    </Link>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link to='/login' className="dropdown-item">
-                        {t("Login Clientes")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to='/loginRes' className="dropdown-item">
-                        {t("Login Restaurantes")}
-                        </Link>
-                      </li>
-                    </ul>
+                      <Link to="/login" className="dropdown-item">
+                        Login Clientes
+                      </Link>
+                      <Link to="/loginRes" className="dropdown-item">
+                        Login Restaurantes
+                      </Link>
+                    </NavDropdown>
                   </li>
-                  <a id="dark-mode" className="icon-header"> 
-                    <FontAwesomeIcon icon={faMoon}  />
-                  </a>
-                  <a id="clear-mode" className="icon-header">
-                    <FontAwesomeIcon icon={faSun} />
-                  </a>
+                  {/* <a id="dark-mode" className="icon-header"> 
+                  <FontAwesomeIcon icon={faMoon}  />
+                </a>
+                <a id="clear-mode" className="icon-header">
+                  <FontAwesomeIcon icon={faSun} />
+                </a> */}
                   <div id="idiomas" className="title">
-                    <button className="btn-idioma" onClick={() => changeLanguage("pt")}>PT</button>
-                    <button className="btn-idioma" onClick={() => changeLanguage("en")}>EN</button>
+                    <button
+                      className="btn-idioma"
+                      onClick={handleToggleTranslate}
+                    >
+                      <FontAwesomeIcon icon={faLanguage} />
+                    </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
     </div>
   );
 };

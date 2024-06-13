@@ -17,17 +17,9 @@ import Image3 from '../../assets/img2/carrosel3.jpg';
 import ImgLogoTipoNutri  from '../../assets/img2/logotiponutriacess.webp'
 // Import dos icones 
 
-//Import da api tradução
-import { useTranslation } from "react-i18next";
+
 
 const Home = () => {
-
-  const{i18n} = useTranslation();
-
-  const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng);
-  };
-  const {t} = useTranslation(); {t("")}
 
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
@@ -83,11 +75,11 @@ const Home = () => {
       </div>
 
       <div className='scrolar'>
-        <Comentarios nome={t("DEPOIMENTOS")}/>
+        <Comentarios nome="DEPOIMENTOS"/>
       </div>
-      <FormularioClientes id="formulario-link"/>
+      <FormularioClientes className="formulario-link"/>
       <div className='container-parcerias2' >
-        <h2 className="title-parceria2">{t("NOSSAS PARCERIAS")}</h2>
+        <h2 className="title-parceria2">NOSSAS PARCERIAS</h2>
             <p className='line'></p></div>
             <div className="container-img-parceria" >
               <img src={ImgLogoTipoNutri} alt="logotipo" />

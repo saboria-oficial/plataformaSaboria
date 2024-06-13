@@ -3,24 +3,18 @@ import "../../css/login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebookF,
-  faInstagram,
+
   faGoogle,
-  faGithub,
+
 } from "@fortawesome/free-brands-svg-icons";
 import imagemCadastro from "../../assets/img2/cadastro.svg";
 import Header from "../../components/Header.jsx";
 import Footer from "../../components/Footer.jsx";
 import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+
 
 const Login = () => {
-  const { i18n, t } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-  
   return (
     <section>
       <Header />
@@ -33,7 +27,7 @@ const Login = () => {
                 <h2 className="title">Login</h2>
                 <div className="input-field">
                   <FontAwesomeIcon icon={faUser} className="icone-login"/>
-                  <input type="text" placeholder={t("Usuário")} required />
+                  <input type="text" placeholder={"Usuário"} required />
                 </div>
                 <div className="input-field">
                   <FontAwesomeIcon icon={faLock} className="icone-login"/>
@@ -44,9 +38,9 @@ const Login = () => {
                 <p className="social-text">
                   Ou faça login com suas redes sociais
                 </p>
-                <div class="icons-cadastro">
+                <div className="icons-cadastro">
                 
-            <div class="icon-cadastro">
+            <div className="icon-cadastro">
               <a href="">
                 <FontAwesomeIcon
                   icon={faGoogle}

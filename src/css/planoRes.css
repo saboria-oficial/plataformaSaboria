@@ -14,6 +14,10 @@
     --verde-escuro:#093824;
     --verde-escuro2: #095635;
 }
+.responsive-pr{
+    display: flex;
+    
+}
 .container-planoRes{
     width: 100%;
     display: flex;

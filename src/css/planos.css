@@ -8,7 +8,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 10px;
+
 }
+
 .card-planos-client{
     padding: 0.5rem 1rem;
     display: flex;

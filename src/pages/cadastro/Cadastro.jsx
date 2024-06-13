@@ -13,12 +13,12 @@ const Cadastro = () => {
   return (
     <div>
       <Header />
-      <div class="container-cadastro">
-        <div class="card-cadastro">
-          <h2 class="title">Criar Conta</h2>
-          <div class="icons-cadastro">
+      <div className="container-cadastro">
+        <div className="card-cadastro">
+          <h2 className="title">Criar Conta</h2>
+          <div className="icons-cadastro">
            
-            <div class="icon-cadastro">
+            <div className="icon-cadastro">
               <a href="">
                 <FontAwesomeIcon
                   icon={faGoogle}
@@ -29,9 +29,9 @@ const Cadastro = () => {
            
           </div>
           <div>
-            <p class="line"></p>
+            <p className="line"></p>
             <p>ou</p>
-            <p class="line"></p>
+            <p className="line"></p>
           </div>
           <p>Cadastre-se</p>
           <form>
@@ -75,7 +75,7 @@ const Cadastro = () => {
             Login
           </Link>
         </div>
-        <div class="card-cadastro-img">
+        <div className="card-cadastro-img">
           <img src={imagemCadastro} alt="" />
         </div>
       </div>

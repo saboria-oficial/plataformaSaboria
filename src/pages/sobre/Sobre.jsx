@@ -32,16 +32,8 @@ import ODS12 from '../../assets/img2/ods12.svg'
 //icones
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils} from '@fortawesome/free-solid-svg-icons';
-//Import da api de tradução
-import { useTranslation } from 'react-i18next';
 
 const Sobre = () => {
-  const{i18n} = useTranslation();
-
-  const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng);
-  };
-  const {t} = useTranslation();
 
   return (
     <div className="container-sobre">
@@ -52,8 +44,8 @@ const Sobre = () => {
         <img src={missao}/>
       </div>
       <div className="mvv-content ">
-        <h2>{t("MISSÃO")}</h2>
-        <p>{t("Nossa plataforma de geolocalização de restaurantes oferece uma experiência inclusiva e segura, com diversidade e delivery, garantindo a satisfação dos clientes.")}</p>
+        <h2>MISSÃO</h2>
+        <p>Nossa plataforma de geolocalização de restaurantes oferece uma experiência inclusiva e segura, com diversidade e delivery, garantindo a satisfação dos clientes.</p>
       </div>
     </div> 
 
@@ -62,8 +54,8 @@ const Sobre = () => {
         <img src={visao}/>
       </div>
       <div className="mvv-content ">
-        <h2>{t("VISÃO")}</h2>
-        <p>{t("Conectamos clientes com restrições alimentares a restaurantes seguros e deliciosos.")}</p>
+        <h2>VISÃO</h2>
+        <p>Conectamos clientes com restrições alimentares a restaurantes seguros e deliciosos.</p>
       </div>
     </div>
 
@@ -72,13 +64,13 @@ const Sobre = () => {
         <img src={valores}/>
       </div>
       <div className="mvv-content ">
-        <h2>{t("VALORES")}</h2>
-        <p>{t("Respeito, integridade, inclusão, segurança e transparência.")}</p>
+        <h2>VALORES</h2>
+        <p>Respeito, integridade, inclusão, segurança e transparência.</p>
       </div>
     </div>
     </div>
     <div className="desenvolvedores">
-                <h2>{t("DESENVOLVEDORES")}</h2>
+                <h2>DESENVOLVEDORES</h2>
             </div>
 <div className="container-dev"><Desenvolvedores nome="Carlos Bonfim" cargo="Dev. Front-end" github="https://github.com/Carlos-bonfim26" linkedin="https://www.linkedin.com/in/carlosbonfim26/" img={dev1}/>
 
@@ -98,74 +90,74 @@ const Sobre = () => {
 </div>
 <div className="containerODS">
             <div className="headerODS">
-                <h2>{t("OBJETIVO DE DESENVOLVIMENTO SUSTENTÁVEL")}</h2>
+                <h2>OBJETIVO DE DESENVOLVIMENTO SUSTENTÁVEL</h2>
             </div>
             <div className="contentODS">
                 <ODS
-                    descricao={t("ODS 2 - Fome Zero e Agricultura Sustentável: Ao proporcionar meios para que pessoas com restrições alimentares encontrem comida adequada com mais facilidade, o projeto contribui indiretamente para o combate à fome e promove uma abordagem mais sustentável na produção e distribuição de alimentos.")}
+                    descricao="ODS 2 - Fome Zero e Agricultura Sustentável: Ao proporcionar meios para que pessoas com restrições alimentares encontrem comida adequada com mais facilidade, o projeto contribui indiretamente para o combate à fome e promove uma abordagem mais sustentável na produção e distribuição de alimentos."
                     backgroundColor="#f2cc8f"
                     imagemODS={ODS2}
                 />
                 <ODS
-                    descricao={t("ODS 3 - Saúde e Bem-Estar: O projeto visa facilitar a vida das pessoas com restrições alimentares, garantindo que elas tenham acesso a alimentos seguros e adequados às suas necessidades, o que está diretamente ligado à promoção da saúde e do bem-estar.")}
+                    descricao="ODS 3 - Saúde e Bem-Estar: O projeto visa facilitar a vida das pessoas com restrições alimentares, garantindo que elas tenham acesso a alimentos seguros e adequados às suas necessidades, o que está diretamente ligado à promoção da saúde e do bem-estar."
                     backgroundColor="#c5e1a5"
                     imagemODS={ODS3}
                 />
                 <ODS
-                    descricao={t("ODS 12 - Consumo e Produção Responsáveis: Ao ajudar as pessoas a fazerem escolhas alimentares mais conscientes e seguras, o projeto promove o consumo responsável e incentiva práticas mais sustentáveis na indústria alimentícia.")}
+                    descricao="ODS 12 - Consumo e Produção Responsáveis: Ao ajudar as pessoas a fazerem escolhas alimentares mais conscientes e seguras, o projeto promove o consumo responsável e incentiva práticas mais sustentáveis na indústria alimentícia."
                     backgroundColor="#f2cc8f"
                     imagemODS={ODS12}
                 />
             </div>
         </div>
 <div className="divisao2">
-  <h2>{t("IDENTIDADE VISUAL")}</h2>
+  <h2>IDENTIDADE VISUAL</h2>
 </div>
 
 <div className="logoCompleta2">
         <img src={logoAmarelo} alt="logotipo verde" />
       </div>
-<div class="tituloLogo">
-      <h2>{t("Fontes utilizadas")}</h2>
+<div className="tituloLogo">
+      <h2>Fontes utilizadas</h2>
     </div>
-<div class="fontesUtilizadas">
-        <div class="coluna lato">
-            <h2 class="amarelo">Lato</h2>
-            <h3 class="vermelho">SUBTÍTULO</h3>
-            <p>{t("A SaborIA é uma plataforma de geolocalização que visa a inclusão de pessoas que possuem intolerância alimentar de forma simples")}</p>
-            <div class="fontExemplo medium">
+<div className="fontesUtilizadas">
+        <div className="coluna lato">
+            <h2 className="amarelo">Lato</h2>
+            <h3 className="vermelho">SUBTÍTULO</h3>
+            <p>A SaborIA é uma plataforma de geolocalização que visa a inclusão de pessoas que possuem intolerância alimentar de forma simples</p>
+            <div className="fontExemplo medium">
                 <h4>Medium</h4>
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo semibold">
+            <div className="fontExemplo semibold">
                 <h4>SemiBold</h4>
                 <p >ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo bold">
+            <div className="fontExemplo bold">
                 <h4>Bold</h4>
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
         </div>
-        <div class="coluna raleway">
-            <h2 class="amarelo">Raleway</h2>
-            <h3 class="vermelho">SUBTÍTULO</h3>
-            <p>{t("Com nossa plataforma, a vida de pessoas com restrição alimentar 'alergias e intolerâncias' é facilitada. Assim, você se sente seguro'a' ao comer seu prato favorito.")}</p>
-            <div class="fontExempl mediumo">
+        <div className="coluna raleway">
+            <h2 className="amarelo">Raleway</h2>
+            <h3 className="vermelho">SUBTÍTULO</h3>
+            <p>Com nossa plataforma, a vida de pessoas com restrição alimentar 'alergias e intolerâncias' é facilitada. Assim, você se sente seguro ao comer seu prato favorito.</p>
+            <div className="fontExempl mediumo">
                 <h4>Medium</h4>
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo semibold">
+            <div className="fontExemplo semibold">
                 <h4>SemiBold</h4>
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
-            <div class="fontExemplo bold">
+            <div className="fontExemplo bold">
                 <h4>Bold</h4>
                 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 1234567890@#$%&*</p>
             </div>
         </div>
     </div>
       <div className="divisao"></div>
-      <div className="tituloPaleta title">{t("Paleta de cores")}</div>
+      <div className="tituloPaleta title">Paleta de cores</div>
       <div className="sobre-icons ">
        
         <div>
@@ -193,28 +185,28 @@ const Sobre = () => {
           <h3>#CDF3A8</h3>
         </div>
       </div>
-      <div class="tituloLogo">
-        <div class="textoLogo"><h2>{t("A logotipo da Sabor.IA")}</h2></div>
+      <div className="tituloLogo">
+        <div className="textoLogo"><h2>A logotipo da Sabor.IA</h2></div>
     </div>
       <div className="logoSignificado">
         <div>
             <img id="Sabor" src={Sabor} alt="sabor" />
-            <h2>{t("Representa o sabor da comida")}</h2>
+            <h2>Representa o sabor da comida</h2>
         </div>
         <h3>+</h3>
         <div>
             <img id="IA" src={IA} alt="IA" />
-            <h2>{t("Iniciais de Inclusão Alimentar")}</h2>
+            <h2>Iniciais de Inclusão Alimentar"</h2>
         </div>
         <h3>+</h3>
         <div>
             <img id="Pin" src={Pin} alt="Pin" />
-            <h2>{t("Localização dos estabelecimentos")}</h2>
+            <h2>Localização dos estabelecimentos</h2>
         </div>
         <h3>+</h3>
         <div>
             <img src={Prato} alt="Prato" />
-            <h2>{t("Respresenta a alimentação")}</h2>
+            <h2>Respresenta a alimentação</h2>
         </div>
       </div>
       <div className="logoCompleta">

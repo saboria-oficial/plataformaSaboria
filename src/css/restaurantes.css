@@ -13,6 +13,7 @@
     --verde-escuro:#093824;
     --verde-escuro2: #095635;
 }
+
 .container-restaurantes{
     padding: 1.5rem 1rem;
     
@@ -269,3 +270,4 @@ iframe{
         width: 16rem;
        }
 }
+

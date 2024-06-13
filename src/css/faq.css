@@ -1,11 +1,13 @@
 /* FAQ NOVO */
 .container-faq{
+ 
   width: 100%;
   display: flex;
   background-image: url('../assets/Curvas/1Prancheta 1 cópia 2.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .container-faq-img{
   width: 50%;
 }
@@ -57,7 +59,7 @@
 .pannel {
   padding: 0 2rem 2.5rem 2rem;
   background-color: white;
-  overflow: hidden;
+
   background-color: #f1f7f5;
   display: none;
 }
@@ -90,6 +92,8 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .card-faq{
-margin-bottom: 1rem;
+    margin-bottom: 1rem;
     }
 }
+
+

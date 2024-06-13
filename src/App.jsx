@@ -12,6 +12,7 @@ import Planos from './pages/planos/Planos.jsx'
 import PerfilFav from './pages/perfil/PerfilFav.jsx'
 import Blog from './pages/blog/Blog.jsx'
 import Faq from "./pages/faq/faq.jsx";
+import AlterFaq from "./pages/faq/AlterFaq.jsx";
 import Parceria from "./pages/parceria/Parceria.jsx";
 import Sobre from "./pages/sobre/Sobre.jsx";
 import Restaurantes from "./pages/restaurantes/Restaurantes.jsx";
@@ -39,6 +40,7 @@ function App() {
       <Route path="/planos" element={<Planos/>}></Route>
       <Route path="/blog" element={<Blog/>}></Route>
       <Route path="/Faq" element={<Faq/>}></Route>
+      <Route path="/AlterFaq" element={<AlterFaq/>}></Route>
       <Route path="/parcerias" element={<Parceria/>}></Route>
       <Route path="/sobre" element={<Sobre/>}></Route>
       <Route path="/Restaurantes" element={<Restaurantes/>}></Route>

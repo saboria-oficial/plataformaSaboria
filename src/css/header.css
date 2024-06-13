@@ -9,9 +9,12 @@
 .navbar{
 padding: 0.6rem 1.2rem;
 background-color: var(--branco);
-
-
 }
+.btn-idioma{
+    font-size: 1.5rem;
+    color: var(--cinza);
+}
+
 .navbar-nav {
     display: flex;
     justify-content: center;
@@ -19,7 +22,6 @@ background-color: var(--branco);
 }
 .btn-idioma{
     border: none;
-    margin-top: 0.2rem;
     background-color: var(--branco);
     padding-right: 0.4rem;
     cursor: pointer;
@@ -40,10 +42,10 @@ background-color: var(--branco);
 }
 
 /*nav-link*/
-.nav-link{
+.nav-link {
     font-family: "Lato", sans-serif;
-    color: var(--preto);
-    font-weight: 600;
+    color: var(--preto) !important;
+    font-weight: 550 !important;
 }
 
 /*fim navlink*/
@@ -57,16 +59,17 @@ background-color: var(--branco);
     border-radius: 0.8rem;
     width: 18rem;
     height: 3rem;
+    outline: none;
 }
-.form-control{
+.form-inline .form-control {
     background-color: transparent;
     border: none;
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
     height: 100%;
     width: 90%;
-    
 }
-.form-control:focus {
+.form-inline .form-control:focus {
     outline: none;
     box-shadow: none;
 }
@@ -128,12 +131,17 @@ display: none;
 }
 .carousel-item img{
     width: 100%;
+    user-select: none;
+    pointer-events: none;
     
 }
 .icon-header{
     color: var(--cinza);
     cursor: pointer;
     margin-right: 0.1rem;
+}
+#icon-header-user{
+    color: var(--cinza);
 }
 @media(min-width:1100px){
     .carousel-inner{

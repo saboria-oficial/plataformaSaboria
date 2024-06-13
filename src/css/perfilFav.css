@@ -2,6 +2,7 @@
 .linkPerfil{
     text-decoration: none;
     color: var(--preto);
+
 }
 .containerPerfil{
     width: 100%;
@@ -416,6 +417,7 @@ align-items: end;
     background-color:var(--branco);
     border: 2px solid var(--vermelho);
     color: var(--vermelho);
+    
 }
 .btn-perfil-config{
     padding: 0.2rem 0.5rem;
@@ -590,5 +592,6 @@ gap: 10rem;
         font-size:0.8rem;
       }
 }
+
 
 

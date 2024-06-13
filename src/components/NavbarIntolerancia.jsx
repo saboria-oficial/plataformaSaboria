@@ -1,26 +1,48 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCow, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faCow, faEgg, faWheatAwnCircleExclamation, faShrimp, faJarWheat, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import imgRestaurante from '../assets/img2/restauranteGenerico.avif';
 import burguer from '../assets/img2/burguerVegano.jpg';
 import CardRestaurante from './CardRestaurante';
-import { useTranslation } from "react-i18next";
 
 const NavbarIntolerancia = () => {
-  const { i18n, t } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
-  const [activeLink, setActiveLink] = useState('laticinios');
+  const [activeLink, setActiveLink] = useState('Laticínios');
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
+
+  // Mapeamento de ícones para ingredientes
+  const iconesIngredientes = {
+    'leite': faCow,
+    'ovo': faEgg,
+    'gluten': faWheatAwnCircleExclamation,
+    'frutos do mar': faShrimp,
+    'soja': faJarWheat
+  };
+
+  const restaurantes = [
+    { nome: 'Restaurante A', ingredientes: ['ovo'], img: imgRestaurante },
+    { nome: 'Restaurante B', ingredientes: ['gluten'], img: imgRestaurante },
+    { nome: 'Restaurante C', ingredientes: ['ovo'], img: imgRestaurante },
+    { nome: 'Restaurante D', ingredientes: ['leite'], img: imgRestaurante },
+    { nome: 'Restaurante E', ingredientes: [], img: imgRestaurante }
+  ];
 
   const handleLinkClick = (intolerancia) => {
     setActiveLink(intolerancia);
   };
+
+  const links = [
+    "Amêndoas",
+    'Glúten',
+    'Laticínios',
+    'Ovo',
+    'Frutos do mar',
+    'Soja'
+  ];
+
+
+  const filteredRestaurants = activeLink === 'none' ? restaurantes : restaurantes.filter(restaurant => !restaurant.ingredientes.includes(activeLink.toLowerCase()));
 
   const handleScroll = (scrollContainer) => {
     scrollContainer.style.scrollBehavior = 'auto';
@@ -72,60 +94,51 @@ const NavbarIntolerancia = () => {
   return (
     <section>
       <nav className='nav-intolerancia'>
-        {[
-          "Amêndoas",
-          "Glúten",
-          "Laticínios",
-          "Ovo",
-          "Frutos do mar",
-          "Soja"
-        ].map((intolerancia) => (
+        {links.map((intolerancia) => (
           <Link
             key={intolerancia}
             className={`nav-link-intolerancia ${activeLink === intolerancia ? 'into-active' : ''}`}
             onClick={() => handleLinkClick(intolerancia)}
           >
-            {t(intolerancia)}
+            {intolerancia}
           </Link>
         ))}
       </nav>
-      <div className="titulos-home"><p>{t("Restaurante 5 estrelas")} - <span>{t("Livre de Laticínios")}</span></p></div>
+      <div className="titulos-home"><p>Restaurante 5 estrelas - <span>Livre de {activeLink}</span></p></div>
       <div className="row-card-gallery">
         <div className="btnLeft" onClick={() => handleBackClick(scrollContainerRef1.current)}>
           <FontAwesomeIcon icon={faAngleLeft} />
         </div>
         <div className="row-card" ref={scrollContainerRef1}>
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={imgRestaurante} />
+          {filteredRestaurants.map((restaurant, index) => (
+            <CardRestaurante
+              key={index}
+              estrelas='5'
+              intolerancia={<FontAwesomeIcon icon={iconesIngredientes[restaurant.ingredientes[0]]} />}
+              img={restaurant.img}
+              nome={restaurant.nome}
+            />
+          ))}
         </div>
         <div className="btnRight" onClick={() => handleNextClick(scrollContainerRef1.current)}>
           <FontAwesomeIcon icon={faAngleRight} />
         </div>
       </div>
-      <div className="titulos-home"><p>{t ("Pratos 5 estrelas")} - <span>{t("Livre de Laticínios")}</span></p></div>
+      <div className="titulos-home"><p>Pratos 5 estrelas - <span>Livre de {activeLink}</span></p></div>
       <div className="row-card-gallery">
         <div className="btnLeft" onClick={() => handleBackClick(scrollContainerRef2.current)}>
           <FontAwesomeIcon icon={faAngleLeft} />
         </div>
         <div className="row-card" ref={scrollContainerRef2}>
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
-          <CardRestaurante estrelas='5' intolerancia={<FontAwesomeIcon icon={faCow} />} img={burguer} />
+          {filteredRestaurants.map((restaurant, index) => (
+            <CardRestaurante
+              key={index}
+              estrelas='5'
+              intolerancia={<FontAwesomeIcon icon={iconesIngredientes[restaurant.ingredientes[0]]} />}
+              img={burguer}
+              nome={restaurant.nome}
+            />
+          ))}
         </div>
         <div className="btnRight" onClick={() => handleNextClick(scrollContainerRef2.current)}>
           <FontAwesomeIcon icon={faAngleRight} />

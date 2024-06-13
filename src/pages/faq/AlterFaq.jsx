@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import '../../css/faq.css'
-import faq from '../../assets/img2/FAQimg.svg'
+import React, {useState} from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../css/alterFaq.css';
+import SideBar from '../../components/SideBar'
+import FormularioClientes from '../../components/FormularioClientes.jsx';
+import Faq from '../../assets/img2/FAQimg.svg';
+import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+const AlterFaq = () => {
 
-const Faq = () => {
-
-  const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqs = [
+  const faq = [
     {
       question: "Com quais restrições alimentares vocês trabalham?",
       answer: "Nós trabalhamos com leite, peixes, ovos, castanhas, trigo, amendoim e camarão."
@@ -49,28 +51,30 @@ const Faq = () => {
   return (
     <div>
       <Header/>
-      <h2 id="titulo-faq">AS RESPOSTAS PARA AS SUAS PERGUNTAS:</h2>
-      <div className="container-faq">
-        <div className="container-faq-img">
-          <img src={faq}  id="faqImg" alt="faq" />
+      <h2 id="res-titulo-faq">AS RESPOSTAS PARA AS SUAS PERGUNTAS:</h2>
+      <div className="res-container-faq">
+        <SideBar className="asside-cardapio"  img={logoPizzaria1} nomeRestaurante="Bom Recheio"/>
+        <div className="res-container-faq-img">
+            <img src={Faq} id="resfaqImg" alt="faq" />
         </div>
-        <div className="container-faq-texto">
-          {faqs.map((faq, index) => (
-            <div className={`faq ${activeIndex === index ? 'active' : ''}`} key={index}>
-              <button className="accordion" onClick={() => toggleAccordion(index)}>
-                {faq.question}
-                <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon className='icon-faq' icon={faChevronDown}/></i>
-              </button>
-              <div className="pannel" style={{ display: activeIndex === index ? 'block' : 'none' }}>
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          ))}
+        <div className="res-container-faq-texto">
+            {faq.map((faq, index) => (
+                <div className={`Resfaq ${activeIndex === index ? 'active' : ''}`} key={index}>
+                    <button className="faqaccordion" onClick={() => toggleAccordion(index)}>
+                        {faq.question}
+                        <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon icon={faChevronDown}/></i>
+                    </button>
+                    <div className="faqpannel" style={{display: activeIndex === index ? 'block' : 'none'}}>
+                        <p>{faq.answer}</p>
+                    </div>
+                </div>
+            ))}
         </div>
       </div>
+      <FormularioClientes/>
       <Footer/>
     </div>
   );
 };
 
-export default Faq;
+export default AlterFaq;

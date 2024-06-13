@@ -1,9 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 import imagemCadastro from '../../assets/img2/CadastroRestaurante.svg'
 import { Link } from 'react-router-dom';  
 import Header from '../../components/Header';
@@ -13,14 +12,14 @@ const CadastroRestaurantes = () => {
   return (
     <div>
         <Header/>
-      <div class="container-cadastro">
-    <div class="card-cadastro">
-        <h2 class="title">Criar Conta</h2>
-        <div class="icons-cadastro">
+      <div className="container-cadastro">
+    <div className="card-cadastro">
+        <h2 className="title">Criar Conta</h2>
+        <div className="icons-cadastro">
            
            
             
-        <div class="icon-cadastro">
+        <div className="icon-cadastro">
               <a href="">
                 <FontAwesomeIcon
                   icon={faGoogle}
@@ -31,9 +30,9 @@ const CadastroRestaurantes = () => {
           
         </div>
         <div>
-            <p class="line"></p>
+            <p className="line"></p>
             <p>ou</p>
-            <p class="line"></p>
+            <p className="line"></p>
         </div>
     <p>Cadastre-se</p>
 
@@ -72,7 +71,7 @@ const CadastroRestaurantes = () => {
         </form>
       <Link to="/loginRes" className="link">Login</Link>
     </div>
-<div class="card-cadastro-img">
+<div className="card-cadastro-img">
     <img src={imagemCadastro} alt=""/>
 </div>
    </div>

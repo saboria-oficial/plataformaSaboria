@@ -13,7 +13,9 @@
     --verde-escuro:#093824;
     --verde-escuro2: #095635;
 }
+
 .container-plano{
+   
     padding: 0.5rem 0.8rem;
     display: flex;
     flex-direction: column;

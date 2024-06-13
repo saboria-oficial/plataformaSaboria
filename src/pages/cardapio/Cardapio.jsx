@@ -18,7 +18,7 @@ const Cardapio = () => {
       <div className="container-cardapio">
         <SideBar className="asside-cardapio"  img={logoPizzaria1} nomeRestaurante="Bom Recheio"/>
         <div className="content-cardapio">
-          <div className="tabela-cardapio ">
+          <div className="tabela-cardapio scrolar ">
             <h2>Cardápio</h2>
             <div className="desc-items-cardapio">
               <span>Intolerâncias</span>

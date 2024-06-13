@@ -1,0 +1,35 @@
+import React, { useState } from "react";
+// ... other imports ...
+
+const Header = () => {
+  const [showTranslate, setShowTranslate] = useState(false);
+
+  function googleTranslateElementInit() {
+    if (!showTranslate) {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'pt' },
+        'google_translate_element'
+      );
+      setShowTranslate(true);
+    } else {
+      document.getElementById('google_translate_element').innerHTML = '';
+      setShowTranslate(false);
+    }
+  }
+
+  return (
+    <div>
+      {/* ... other code ... */}
+      <div id="idiomas" className="title">
+        <button className="btn-idioma" onClick={googleTranslateElementInit}>
+          <FontAwesomeIcon icon={faLanguage} />
+        </button>
+        {showTranslate && (
+          <div id="google_translate_element"></div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Header;

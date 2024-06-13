@@ -1,0 +1,85 @@
+.res-container-faq{
+  width: 100%;
+  display: flex;
+  background-image: url('../assets/Curvas/1Prancheta 1 cópia 2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.res-container-faq-img{
+    width: 40%;
+}
+.res-container-faq-texto{
+  width: 40%;
+  margin: auto;
+  background-color: var(--branco);
+  box-shadow: 0.04rem 0.1rem 0.3rem 0.01rem gray;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+.res-container-faq > p, #res-titulo-faq{
+    margin: 1.5rem 0;
+  text-align: center;
+}
+#res-titulo-faq{
+    letter-spacing: 3px;
+    font-weight: 600;
+    color:var(--cinza);
+}
+.faqaccordion{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.faqaccordion i{
+    font-size: 0.9rem;
+    color: var(--cinza);
+    transition: transform 0.3s ease;
+}
+.active,
+.faqaccordion:hover{
+    background-color: #f1f7f5;
+}
+.faqpannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    background-color: #f1f7f5;
+    display: none;
+}
+.faqpannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.Resfaq{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+.Resfaq.active{
+    border: none;
+}
+@media (max-width: 800px){
+    .res-container-faq{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .res-icon-faq{
+        width: 60%;
+    }
+}
+@media (max-width: 550px){
+    .res-container-faq{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .res-card-faq{
+        margin-bottom: 1rem;
+    }
+}

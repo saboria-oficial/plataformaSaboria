@@ -1,3 +1,6 @@
+
+
+
 :root{
     --amarelo:#ffca3e;
     --amarelo2:#FED356;;
@@ -13,6 +16,7 @@
     --verde-escuro:#093824;
 }
 .identidadeVisual{
+ 
     font-size: 2.5rem;
     text-align: center;
     font-weight: 650;
@@ -87,6 +91,7 @@ justify-content: end;
     padding: 0.5rem;
     background-color: var(--branco);
 }
+
 /* Logo */
 .tituloLogo {
     width: 100%;
@@ -253,7 +258,9 @@ flex-direction: column;
     align-items: center;
     font-size: 3rem;
 }
-
+.fa-github{
+    color: var(--preto-night);
+}
 /*card mvv*/
 .container-MVV{
     background: url('../assets/Curvas/1Prancheta 1 cópia 6.png') no-repeat center center;

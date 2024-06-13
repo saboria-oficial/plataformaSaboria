@@ -6,7 +6,7 @@ footer{
     flex-direction: column;
     
 background-color:var(--amarelo);
-    width: 100%;
+   min-width: 100%;
   
     text-align: center;
 }

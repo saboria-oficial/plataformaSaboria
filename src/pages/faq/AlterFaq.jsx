@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../../css/alterFaq.css';
 import SideBar from '../../components/SideBar'
-import FormularioClientes from '../../components/FormularioClientes.jsx';
+import FormularioRes from '../../components/FormularioRestaurantes.jsx';
 import Faq from '../../assets/img2/FAQimg.svg';
 import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,24 +54,26 @@ const AlterFaq = () => {
       <h2 id="res-titulo-faq">AS RESPOSTAS PARA AS SUAS PERGUNTAS:</h2>
       <div className="res-container-faq">
         <SideBar className="asside-cardapio"  img={logoPizzaria1} nomeRestaurante="Bom Recheio"/>
-        <div className="res-container-faq-img">
-            <img src={Faq} id="resfaqImg" alt="faq" />
-        </div>
-        <div className="res-container-faq-texto">
-            {faq.map((faq, index) => (
-                <div className={`Resfaq ${activeIndex === index ? 'active' : ''}`} key={index}>
-                    <button className="faqaccordion" onClick={() => toggleAccordion(index)}>
-                        {faq.question}
-                        <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon icon={faChevronDown}/></i>
-                    </button>
-                    <div className="faqpannel" style={{display: activeIndex === index ? 'block' : 'none'}}>
-                        <p>{faq.answer}</p>
-                    </div>
-                </div>
-            ))}
+        <div className="res-content-faq">
+          <div className="res-container-faq-img">
+              <img src={Faq} id="resfaqImg" alt="faq" />
+          </div>
+          <div className="res-container-faq-texto">
+              {faq.map((faq, index) => (
+                  <div className={`Resfaq ${activeIndex === index ? 'active' : ''}`} key={index}>
+                      <button className="faqaccordion" onClick={() => toggleAccordion(index)}>
+                          {faq.question}
+                          <i className={`faChevronDown ${activeIndex === index ? 'active' : ''}`}><FontAwesomeIcon icon={faChevronDown}/></i>
+                      </button>
+                      <div className="faqpannel" style={{display: activeIndex === index ? 'block' : 'none'}}>
+                          <p>{faq.answer}</p>
+                      </div>
+                  </div>
+              ))}
+          </div>
         </div>
       </div>
-      <FormularioClientes/>
+      <FormularioRes/>
       <Footer/>
     </div>
   );

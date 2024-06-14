@@ -1,0 +1,98 @@
+.containerFormularioRest{
+    display: flex;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.formsRest{
+    padding: 1rem;
+    background-color: var(--amarelo);
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerFormularioRest .formsRest form{
+display: flex;
+flex-direction: column;
+width: 95%;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+ .formsRest form input, .formsRest form textarea{
+background-color: #FBF5E2;
+outline: none;
+border-radius: 0.7rem;
+border: none;
+width: 65%;
+font-size: 1.2rem;
+color: var(--cinza);
+}
+.formsRest form textarea{
+ padding-left:0.3rem;   
+}
+.formsRest form input{
+    padding: 0.3rem;
+}
+.formsRest form input::placeholder, .formsRest form textarea::placeholder{
+    color: var(--cinza);
+}
+.formsRest h2{
+    font-size: 2rem;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.formsRest form button{
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 0.3rem 0rem;
+    color: var(--branco);
+    background-color: #4a3b03;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+}
+.formsRest form button:hover{
+    background-color: #312600;
+}
+.imgRest{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.imgRest img{
+    width: 100%;
+    transform: translateY(3%);
+}
+.linkin{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+}
+@media (max-width:620px){
+    .formsRest{
+        width: 100%;
+    }
+    .formsRest form input, .formsRest form textarea{
+        width: 80%;
+    }
+    .imgRest{
+        display: none;
+    }
+    .formsRest form button{
+        width: 40%;
+    }
+}
+@media (max-width:320px){
+    .formsRest form input, .formsRest form textarea{
+        width: 100%;
+    }
+    .formsRest form button{
+        width: 60%;
+    }
+}

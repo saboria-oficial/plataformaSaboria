@@ -74,6 +74,7 @@ const Header = () => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
+            
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
@@ -115,10 +116,11 @@ const Header = () => {
 
                   <NavDropdown
                     title="Fale Conosco"
+                  
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <Link to="/ " className="dropdown-item">
-                      Formulário
+                    <Link to="/blog " className="dropdown-item">
+                      Blog
                     </Link>
                     <Link to="/faq" className="dropdown-item">
                       FAQ

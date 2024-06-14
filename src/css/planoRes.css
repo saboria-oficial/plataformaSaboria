@@ -60,6 +60,12 @@
 color: var(--verde);
 font-size: 1.5rem;
 }
+#icon4{
+    color: var(--vermelho);
+}
+#icon5{
+    color: var(--vermelho);
+}
 .vantagens-plano-res li{
     font-weight: 700;
     color: var(--preto);

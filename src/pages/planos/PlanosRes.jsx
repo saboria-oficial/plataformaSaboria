@@ -19,20 +19,41 @@ const PlanosRes = () => {
           <h2 id='title-planoRes'>Planos para estabelecimentos</h2>
           <Link to="/" className='link-back'><FontAwesomeIcon icon={faArrowLeft}/></Link>
           <div className="planoRes-content">
-              <CardPlanoRes nome="Menu de Entrada" preco='0.00' icon1={<FontAwesomeIcon icon={faCircleCheck}/>} icon2={<FontAwesomeIcon icon={faCircleCheck}/>}icon3={<FontAwesomeIcon icon={faCircleCheck}/>}icon4={<FontAwesomeIcon icon={faCircleCheck}/>}
+              <CardPlanoRes nome="Menu de Entrada" preco='0.00' 
+              icon1={<FontAwesomeIcon 
+                icon={faCircleCheck}/>} 
+                icon2={<FontAwesomeIcon 
+                  icon={faCircleCheck}/>}
+                  icon3={<FontAwesomeIcon 
+                    icon={faCircleCheck}/>}
+                    icon4={<FontAwesomeIcon 
+                      icon={faCircleXmark} style={{color: 'red'}}/>}
+                    icon5={<FontAwesomeIcon 
+                      icon={faCircleXmark} style={{color: 'red'}}/>}
         
               vantagem1="Divulgação do Restaurante"
-              vantagem2="Local"
-              vantagem3="Informações Gerais"
-              vantagem4="Acesso ao nosso suporte"/>
+              vantagem2="Informações Gerais"
+              vantagem3="Acesso ao nosso suporte"
+              vantagem4="Personalização do seu cardápio"
+              vantagem5="Adicionar matéria ao nosso blog"/>
         
-        <CardPlanoRes nome="Menu Omakasê" preco='39.99' icon1={<FontAwesomeIcon icon={faCircleCheck}/>} icon2={<FontAwesomeIcon icon={faCircleCheck}/>}icon3={<FontAwesomeIcon icon={faCircleCheck}/>}icon4={<FontAwesomeIcon icon={faCircleCheck}/>}icon5={<FontAwesomeIcon icon={faCircleCheck}/>}
+        <CardPlanoRes nome="Menu Omakasê" preco='39.99' 
+        icon1={<FontAwesomeIcon 
+        icon={faCircleCheck}/>} 
+        icon2={<FontAwesomeIcon 
+          icon={faCircleCheck}/>}
+          icon3={<FontAwesomeIcon 
+            icon={faCircleCheck}/>}
+            icon4={<FontAwesomeIcon 
+              icon={faCircleCheck}/>}
+              icon5={<FontAwesomeIcon 
+                icon={faCircleCheck} />}
         
-              vantagem1="Divulgação do Restaurante"
-              vantagem2="Local"
-              vantagem3="Informações Gerais"
-              vantagem4="Cardápio Personalizado"
-              vantagem5="Delivery do Restaurante"/>
+                vantagem1="Divulgação do Restaurante"
+                vantagem2="Informações Gerais"
+                vantagem3="Acesso ao nosso suporte"
+                vantagem4="Personalização do seu cardápio"
+                vantagem5="Adicionar matéria ao nosso blog"/>
         
         
           </div>

@@ -1,74 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 /* Geral */
 
-.container-blog{
-    padding: 0.6rem 0rem;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    top: 0;
-    flex-direction: column;
-    background-image: url('../assets/Curvas/1Prancheta 1 cópia 4.png');
-    background-repeat: repeat-Y;
-    background-size: cover;
-   
+.container-blog {
+  padding: 0.6rem 1rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-image: url("../assets/Curvas/1Prancheta 1 cópia 4.png");
+  background-repeat: repeat-Y;
+  background-size: cover;
 }
-.title-blog{
-    font-size: 2rem;
-    color: var(--verde-escuro);
-    font-weight: 750;
-    margin-bottom: 0.5rem;
-    }
-    .line-blog{
-        width: 30%;
-        border-bottom: 2px solid var(--verde-escuro) ;
-    }
-      .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-      }
-      .blog-item {
-      
-        box-sizing: border-box;
-        margin: 10px;
-        background-color: var(--branco);
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: ease-in 0.3s;
-      }
-      
-      .blog-item img {
-        width: 100%;
-        height: auto;
-      }
-      .blog-item:hover{
-scale: 1.1;
-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-      }
-      .blog-item h2 {
-        padding: 10px;
-        font-size: 1.2em;
-        color: var(--cinza);
-      }
-      
-      @media (max-width:750px){
-          .blog-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-    @media (max-width:580px){
-        .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width:370px){
-    .blog-grid {
-    grid-template-columns: repeat(1, 1fr);
+.banner-blog {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  background-color: var(--cinza-claro);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
 }
+.content-blog {
+  width: 100%;
+  display: flex;
+  gap: 0.7rem;
+}
+.materias-blog {
+  padding: 0.5rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.materias-blog h2 {
+  text-align: left;
+}
+.line-blog {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.aside-blog {
+  width: 33%;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.blog-item {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 10px;
+  background-color: var(--branco);
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: ease-in 0.3s;
 }
 
+.blog-item img {
+  width: 100%;
+  height: auto;
+}
+.blog-item:hover {
+  scale: 1.1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.blog-item h2 {
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: left;
+  color: var(--cinza);
+}
+@media (max-width: 800px) {
+  .line-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .materias-blog{
+    width: 55%;
+  }
+  .aside-blog{
+width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .line-blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .materias-blog{
+    width: 50%;
+  }
+  .aside-blog{
+width: 50%;
+  }
+}
+@media (max-width: 400px){
+.content-blog{
+flex-direction: column-reverse;
+}
+.materias-blog, .aside-blog{
+  width: 96%;
+}
+}

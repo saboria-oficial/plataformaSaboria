@@ -19,13 +19,15 @@
     width: 100%;
 }
 .content-cardapio{
-    width: 100%;
+    width: 80%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+   
     flex-direction: column;
     font-size: 1rem;
+    overflow-x: auto;
 }
+
 .item-cardapio{
     display: flex;
     gap: 0.5rem;
@@ -67,9 +69,10 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--cinza-claro);
-    width: 100%;
-    overflow-x: auto;
+    min-width: 43rem;
     gap: 1rem;
+  
+
     margin-left: 1rem;
     
 }
@@ -130,7 +133,7 @@ border: none;
     } */
     .add-prato{
         padding: 0.3rem 0.15rem;
-        transform: translateX(-25%);
+       
     }
     .prato-img img{
         width: 10rem;

@@ -14,7 +14,9 @@ background-color: var(--branco);
     font-size: 1.5rem;
     color: var(--cinza);
 }
-
+.links-navbar{
+    margin-right: 2rem;
+}
 .navbar-nav {
     display: flex;
     justify-content: center;

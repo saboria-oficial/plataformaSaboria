@@ -78,7 +78,14 @@
 .faq.active {
   border: none;
 }
-
+@media (max-width:900px){
+.container-faq{
+  flex-direction: column;
+}
+.container-faq-img,.container-faq-texto{
+  width: 100%;
+}
+}
 @media (max-width:800px){
     .container-faq{
         grid-template-columns: repeat(2, 1fr);

@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <section>
       <Header />
-      <div className="container-login">
+      <div className="container-login fundo-clientes" >
       <div className="card-cadastro-img">
           <img src={imagemCadastro} />
         </div>

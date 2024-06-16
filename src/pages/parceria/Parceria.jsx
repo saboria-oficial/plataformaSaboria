@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/parcerias.css';
 import CardP from '../../components/CardP';
 import logonutriacess from '../../assets/img2/logonutriacess.svg';
+import logoLifeBand from '../../assets/img2/VARIANTE LOGO LIFEBAND.png'
 import { Link } from "react-router-dom";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -23,15 +24,10 @@ const Parceria = (props) => {
             text={"Fundada no primeiro semestre de 2023 por alunos do Instituto Proa, a NutriAcess é uma plataforma que visa a democratização a consultas nutricionais a preço social, comprometidos em oferecer um serviço acessível e de qualidade para todos os nossos pacientes."}
           />
           <CardP
-            img={logonutriacess}
-            nome={'NutriAcess'}
-            text={"Fundada no primeiro semestre de 2023 por alunos do Instituto Proa, a NutriAcess é uma plataforma que visa a democratização a consultas nutricionais a preço social, comprometidos em oferecer um serviço acessível e de qualidade para todos os nossos pacientes."}
+            img={logoLifeBand}
+            nome={'Life Band'}
+            text={"O projeto Life Band surgiu a partir da experiência pessoal de um dos nossos membros com um atendimento médico ineficiente. Desenvolvemos uma pulseira inteligente que agiliza o atendimento hospitalar, especialmente em emergências. A pulseira envia alertas imediatos aos responsáveis e hospitais, enquanto compartilha dados cruciais dos pacientes, como cadastro, doenças e alergias. Nosso objetivo é otimizar a triagem e melhorar a eficiência e segurança do atendimento médico."}
           />
-          {/* <CardP
-            img={connecthealth}
-            nome={'Connect Health'}
-            text='Somos uma Multiplataforma que visa levar informações e consultas online para pacientes que sofrem de transtornos alimentares ou sofrem de algum problema psicológico, por isso trabalhamos ligados a psicologia e a nutrição... pois para comer bem deve-se estar saudável mentalmente também.'
-          /> */}
           <CardP
             img={logonutriacess}
             nome={'NutriAcess'}

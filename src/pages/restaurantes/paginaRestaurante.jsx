@@ -113,17 +113,22 @@ const PaginaRestaurante = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     > <span><FontAwesomeIcon icon={faCaretDown}/></span>
-                     Opções Clientes
+                     Facilidades
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Bar no local
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                        Banheiros
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Wifi grátis
                         </Link>
                       </li>
                     </ul>
@@ -142,12 +147,22 @@ const PaginaRestaurante = () => {
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Almoço
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                          Jantar
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                          Sobremesa
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                          Café
                         </Link>
                       </li>
                     </ul>
@@ -161,17 +176,27 @@ const PaginaRestaurante = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     > <span><FontAwesomeIcon icon={faCaretDown}/></span>
-                    Planejamento
+                    Acessibilidade
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Estacionamento acessível para cadeiras de rodas
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                        Entrada acessível para cadeiras de rodas
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Assentos acessíveis para cadeiras de rodas
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Banheiro acessível para cadeira de rodas
                         </Link>
                       </li>
                     </ul>
@@ -190,12 +215,12 @@ const PaginaRestaurante = () => {
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Bom para crianças
                         </Link>
                       </li>
                       <li>
                         <Link to="/faq" className="dropdown-item">
-                          FAQ
+                          Cadeiras altas
                         </Link>
                       </li>
                     </ul>
@@ -214,12 +239,12 @@ const PaginaRestaurante = () => {
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Estacionamento gratuito de vários andares
                         </Link>
                       </li>
                       <li>
                         <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        Um pouco difícil encontrar um espaço
                         </Link>
                       </li>
                     </ul>

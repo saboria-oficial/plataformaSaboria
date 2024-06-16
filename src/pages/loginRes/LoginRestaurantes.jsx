@@ -14,7 +14,7 @@ const LoginRestaurantes = () => {
   return (
     <div>
       <Header/>
-    <div className="container-cadastro">
+    <div className="container-cadastro fundo-restaurantes">
     <div className="card-cadastro-img">
   <img src={imagemCadastro} alt=""/>
 </div>

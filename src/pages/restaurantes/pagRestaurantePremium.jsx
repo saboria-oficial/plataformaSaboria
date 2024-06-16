@@ -124,33 +124,35 @@ const PagRestaurantePremium = () => {
               <div>
                 <h3>Informações extras</h3>
                 <div className="menu-info-res">
-                  <li className="nav-item dropdown">
+                <li className="nav-item dropdown">
                     <Link
                       to="/"
                       className="link-res"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                    >
-                      {" "}
-                      <span>
-                        <FontAwesomeIcon icon={faCaretDown} />
-                      </span>
-                      Opções Clientes
+                    > <span><FontAwesomeIcon icon={faCaretDown}/></span>
+                     Facilidades
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Bar no local
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                        Banheiros
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Wifi grátis
                         </Link>
                       </li>
                     </ul>
                   </li>
+
                   <li className="nav-item dropdown">
                     <Link
                       to="/"
@@ -158,26 +160,33 @@ const PagRestaurantePremium = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                    >
-                      {" "}
-                      <span>
-                        <FontAwesomeIcon icon={faCaretDown} />
-                      </span>
-                      Opções do Menu
+                    > <span><FontAwesomeIcon icon={faCaretDown}/></span>
+                     Opções do Menu
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Almoço
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                          Jantar
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                          Sobremesa
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                          Café
                         </Link>
                       </li>
                     </ul>
                   </li>
+
                   <li className="nav-item dropdown">
                     <Link
                       to="/"
@@ -185,26 +194,33 @@ const PagRestaurantePremium = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                    >
-                      {" "}
-                      <span>
-                        <FontAwesomeIcon icon={faCaretDown} />
-                      </span>
-                      Planejamento
+                    > <span><FontAwesomeIcon icon={faCaretDown}/></span>
+                    Acessibilidade
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Estacionamento acessível para cadeiras de rodas
                         </Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        <Link to="/" className="dropdown-item">
+                        Entrada acessível para cadeiras de rodas
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Assentos acessíveis para cadeiras de rodas
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/" className="dropdown-item">
+                        Banheiro acessível para cadeira de rodas
                         </Link>
                       </li>
                     </ul>
                   </li>
+
                   <li className="nav-item dropdown">
                     <Link
                       to="/"
@@ -212,26 +228,23 @@ const PagRestaurantePremium = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                    >
-                      {" "}
-                      <span>
-                        <FontAwesomeIcon icon={faCaretDown} />
-                      </span>
-                      Crianças
+                    > <span><FontAwesomeIcon icon={faCaretDown}/></span>
+                Crianças
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Bom para crianças
                         </Link>
                       </li>
                       <li>
                         <Link to="/faq" className="dropdown-item">
-                          FAQ
+                          Cadeiras altas
                         </Link>
                       </li>
                     </ul>
                   </li>
+
                   <li className="nav-item dropdown">
                     <Link
                       to="/"
@@ -239,22 +252,18 @@ const PagRestaurantePremium = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                    >
-                      {" "}
-                      <span>
-                        <FontAwesomeIcon icon={faCaretDown} />
-                      </span>
-                      Estacionamento
+                    > <span><FontAwesomeIcon icon={faCaretDown}/></span>
+                     Estacionamento
                     </Link>
                     <ul className="dropdown-menu">
                       <li>
                         <Link to="/ " className="dropdown-item">
-                          Formulário
+                        Estacionamento gratuito de vários andares
                         </Link>
                       </li>
                       <li>
                         <Link to="/faq" className="dropdown-item">
-                          FAQ
+                        Um pouco difícil encontrar um espaço
                         </Link>
                       </li>
                     </ul>

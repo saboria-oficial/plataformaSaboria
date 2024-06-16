@@ -14,16 +14,20 @@
   background-repeat: repeat-Y;
   background-size: cover;
 }
+
 .banner-blog {
   width: 100%;
   justify-content: center;
   align-items: center;
   height: 15rem;
-  background-color: var(--cinza-claro);
+  background: url('../assets/img2/bannerSaboria.jpg') center;
+  background-size: 92%;
+  background-position-y: 43%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
+
 .content-blog {
   width: 100%;
   display: flex;
@@ -76,7 +80,79 @@
   text-align: left;
   color: var(--cinza);
 }
+
+#alert-box {
+  border-radius: 0.5rem;
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40rem;
+  width: 100%;
+  position: absolute;
+  padding: 0.5rem;
+  top: 25%;
+  left: 25%;
+
+  z-index: 5;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+
+#alert-box h2{
+  text-align: center;
+  font-size: 2rem;
+}
+#alert-box p{
+  font-size: 1rem;
+  text-align: justify;
+}
+#alert-box #btn-alert-box{
+  width: 70%;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.1rem;
+  font-weight: 700;
+  border: 2px solid transparent;
+  background-color: var(--verde);
+  color: var(--branco);
+  cursor: pointer;
+
+  transition: 0.3s ease-in;
+}
+#alert-box #btn-alert-box:hover{
+  background-color: transparent;
+  color:  var(--verde);
+  border: 2px solid var(--verde);
+}
+
+#alert-box img{
+  width: 100%;
+  border-radius: 2rem;
+}
+.container-blog .add-prato{
+  display: none;
+}
+.prato-desc button{
+  background-color: var(--vermelho);
+  color: var(--branco);
+  border: none;
+border-radius: 0.6rem;
+padding: 0.3rem;
+width: fit-content;
+}
+@media (max-width: 1000px){
+  #alert-box{
+    width: 34rem;
+  }
+}
 @media (max-width: 800px) {
+  #alert-box{
+    width: 24rem;
+    right: 10%;
+ left: 10%;
+  }
   .line-blog {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -97,6 +173,15 @@ width: 40%;
   .aside-blog{
 width: 50%;
   }
+  #alert-box{
+    width: 18rem;
+
+ top: 60%;
+  }
+  #alert-box h2{
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 400px){
 .content-blog{
@@ -104,5 +189,16 @@ flex-direction: column-reverse;
 }
 .materias-blog, .aside-blog{
   width: 96%;
+}
+#alert-box{
+  width: 16rem;
+}
+#alert-box h2{
+    font-size: 1rem;
+}
+#alert-box p{
+left: 20%;
+right: 20%;
+  font-size: 0.8rem;
 }
 }

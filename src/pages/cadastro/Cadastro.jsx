@@ -13,7 +13,7 @@ const Cadastro = () => {
   return (
     <div>
       <Header />
-      <div className="container-cadastro">
+      <div className="container-cadastro fundo-clientes">
         <div className="card-cadastro">
           <h2 className="title">Criar Conta</h2>
           <div className="icons-cadastro">

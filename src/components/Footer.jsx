@@ -34,17 +34,10 @@ const Footer = () => {
         </div>
         <div className="card-footer">
           <ul>
-           
-              <Link to='/localiza'>
-                <li>Localização</li>
-              </Link>
-         
-           
               <Link to='/parcerias' >
                 <li>Parcerias</li>
               </Link>
            
- 
               <li className="dropdown">
                     <Link
                       to='/'

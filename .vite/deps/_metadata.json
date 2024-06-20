@@ -1,0 +1,184 @@
+{
+  "hash": "4f78cebc",
+  "configHash": "04b7be67",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "c8254bf0",
+  "optimized": {
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "4ce19a0a",
+      "needsInterop": false
+    },
+    "@fortawesome/free-regular-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-regular-svg-icons/index.mjs",
+      "file": "@fortawesome_free-regular-svg-icons.js",
+      "fileHash": "5820a548",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/index.mjs",
+      "file": "@fortawesome_free-solid-svg-icons.js",
+      "fileHash": "a93501ef",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "16bb3a19",
+      "needsInterop": false
+    },
+    "@react-oauth/google": {
+      "src": "../../node_modules/@react-oauth/google/dist/index.esm.js",
+      "file": "@react-oauth_google.js",
+      "fileHash": "b73f9624",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "8805ebc3",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "44470fae",
+      "needsInterop": true
+    },
+    "react-bootstrap/Button": {
+      "src": "../../node_modules/react-bootstrap/esm/Button.js",
+      "file": "react-bootstrap_Button.js",
+      "fileHash": "e10010c4",
+      "needsInterop": false
+    },
+    "react-bootstrap/Carousel": {
+      "src": "../../node_modules/react-bootstrap/esm/Carousel.js",
+      "file": "react-bootstrap_Carousel.js",
+      "fileHash": "a792140d",
+      "needsInterop": false
+    },
+    "react-bootstrap/Container": {
+      "src": "../../node_modules/react-bootstrap/esm/Container.js",
+      "file": "react-bootstrap_Container.js",
+      "fileHash": "d6dccb18",
+      "needsInterop": false
+    },
+    "react-bootstrap/Form": {
+      "src": "../../node_modules/react-bootstrap/esm/Form.js",
+      "file": "react-bootstrap_Form.js",
+      "fileHash": "57841834",
+      "needsInterop": false
+    },
+    "react-bootstrap/Nav": {
+      "src": "../../node_modules/react-bootstrap/esm/Nav.js",
+      "file": "react-bootstrap_Nav.js",
+      "fileHash": "b53003c5",
+      "needsInterop": false
+    },
+    "react-bootstrap/Navbar": {
+      "src": "../../node_modules/react-bootstrap/esm/Navbar.js",
+      "file": "react-bootstrap_Navbar.js",
+      "fileHash": "0dfd14e9",
+      "needsInterop": false
+    },
+    "react-bootstrap/NavDropdown": {
+      "src": "../../node_modules/react-bootstrap/esm/NavDropdown.js",
+      "file": "react-bootstrap_NavDropdown.js",
+      "fileHash": "15345b57",
+      "needsInterop": false
+    },
+    "react-bootstrap/Offcanvas": {
+      "src": "../../node_modules/react-bootstrap/esm/Offcanvas.js",
+      "file": "react-bootstrap_Offcanvas.js",
+      "fileHash": "8487e151",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "7017f978",
+      "needsInterop": true
+    },
+    "react-responsive-modal": {
+      "src": "../../node_modules/react-responsive-modal/dist/react-responsive-modal.esm.js",
+      "file": "react-responsive-modal.js",
+      "fileHash": "bb237e34",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1b779b63",
+      "needsInterop": false
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "b267df2b",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-DSY6RBUN": {
+      "file": "chunk-DSY6RBUN.js"
+    },
+    "chunk-YU67GCQ5": {
+      "file": "chunk-YU67GCQ5.js"
+    },
+    "chunk-ZP3UXEXZ": {
+      "file": "chunk-ZP3UXEXZ.js"
+    },
+    "chunk-DAQVVGRW": {
+      "file": "chunk-DAQVVGRW.js"
+    },
+    "chunk-FARSAGJJ": {
+      "file": "chunk-FARSAGJJ.js"
+    },
+    "chunk-R6S2KK6O": {
+      "file": "chunk-R6S2KK6O.js"
+    },
+    "chunk-UU5GFICK": {
+      "file": "chunk-UU5GFICK.js"
+    },
+    "chunk-NABVTMLI": {
+      "file": "chunk-NABVTMLI.js"
+    },
+    "chunk-KPRMMDPR": {
+      "file": "chunk-KPRMMDPR.js"
+    },
+    "chunk-VC6NTQNN": {
+      "file": "chunk-VC6NTQNN.js"
+    },
+    "chunk-5ZJGNF7Q": {
+      "file": "chunk-5ZJGNF7Q.js"
+    },
+    "chunk-JF6VG5U5": {
+      "file": "chunk-JF6VG5U5.js"
+    },
+    "chunk-LA27QXTM": {
+      "file": "chunk-LA27QXTM.js"
+    },
+    "chunk-KB4VQC4Z": {
+      "file": "chunk-KB4VQC4Z.js"
+    },
+    "chunk-34BKBSNK": {
+      "file": "chunk-34BKBSNK.js"
+    },
+    "chunk-6O7FUOOE": {
+      "file": "chunk-6O7FUOOE.js"
+    },
+    "chunk-AL6I7C5S": {
+      "file": "chunk-AL6I7C5S.js"
+    },
+    "chunk-6OOA64LF": {
+      "file": "chunk-6OOA64LF.js"
+    },
+    "chunk-PMYDY72F": {
+      "file": "chunk-PMYDY72F.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}

@@ -72,9 +72,9 @@ const Sobre = () => {
     <div className="desenvolvedores">
                 <h2>DESENVOLVEDORES</h2>
             </div>
-<div className="container-dev"><Desenvolvedores nome="Carlos Bonfim" cargo="Dev. Front-end" github="https://github.com/Carlos-bonfim26" linkedin="https://www.linkedin.com/in/carlosbonfim26/" img={dev1}/>
+<div className="container-dev"><Desenvolvedores nome="Carlos Bonfim" cargo="Dev. Front-end, Designer" github="https://github.com/Carlos-bonfim26" linkedin="https://www.linkedin.com/in/carlosbonfim26/" img={dev1}/>
 
-<Desenvolvedores nome="Yan Rodrigues" cargo="Scrum Master, Dev. Front-end" github="https://github.com/Yan-MR" linkedin="https://www.linkedin.com/in/yanmrodrigues/" img={dev2}/>
+<Desenvolvedores nome="Yan Rodrigues" cargo="Scrum Master, Dev. Front-end, Designer" github="https://github.com/Yan-MR" linkedin="https://www.linkedin.com/in/yanmrodrigues/" img={dev2}/>
 
 <Desenvolvedores nome="Samanta Gomes" cargo="Product Owner, Banco de Dados, UI/UX Designer" github="https://github.com/Sasa-G" linkedin="https://www.linkedin.com/in/samanta-gomes8/" img={dev3}/>
 
@@ -82,7 +82,7 @@ const Sobre = () => {
 
 <Desenvolvedores nome="Fellype Oliveira" cargo="Financeiro, Back-end" github="https://github.com/1fellype" linkedin="https://www.linkedin.com/in/fellype-oliveira/" img={dev5}/>
 
-<Desenvolvedores nome="João Gabriel" cargo="Dev. Back-end" github="https://github.com/joaoMallmann1" linkedin="https://www.linkedin.com/in/joaogabriel-/" img={dev6}/>
+<Desenvolvedores nome="João Gabriel" cargo="Designer" github="https://github.com/joaoMallmann1" linkedin="https://www.linkedin.com/in/joaogabriel-/" img={dev6}/>
 
 <Desenvolvedores nome="Leonardo Henrique" cargo="Dev. Back-end" github="https://github.com/Leonardo-Aparecido" linkedin="https://www.linkedin.com/in/leohen/" img={dev7}/>
 

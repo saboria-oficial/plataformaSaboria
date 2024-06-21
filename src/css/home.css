@@ -147,6 +147,9 @@ font-weight: 650;
     /* parcerias */
     .container-img-parceria{
         display: grid;
+      
+        align-items: center;
+       
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         margin-bottom: 2.5rem;
@@ -169,4 +172,3 @@ font-weight: 650;
         width: 10%;
       }
     }
-    

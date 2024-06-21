@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../css/pagamentos.css";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -11,12 +11,57 @@ import imgSeguranca from "../../assets/img2/segurancapagamentos.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const Pagamentos = () => {
-  const [paymentType, setPaymentType] = useState("credito");
 
-  const handlePaymentTypeChange = (type) => {
-    setPaymentType(type);
-  };
+  const [paid, setPaid] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
+  let paypalRef = useRef();
+
+  const product = {
+    price: 19.99,
+    description: "Plano: Menu da Casa",
+  }
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    const id = "AQdNQQ111WhAEa4UAEgfeH9mf3hTMTAPlY59gPyBhjDWAd6pRpuDXrl0LV8rSUh9IhpQOFXN4Qcafz31"
+    script.src = `https://www.paypal.com/sdk/js?currency=BRL&client-id=${id}`
+
+    script.addEventListener("load", () => setLoaded(true));
+
+    document.body.appendChild(script);
+
+    if (loaded) {
+      function loadButtonsAndLogicAboutPayment() {
+        setTimeout(() => {
+          window.paypal
+          .Buttons({
+            createOrder: (data, actions) => {
+              return actions.order.create({
+                purchase_units: [{
+                  description: product.description,
+                  amount: {
+                    currency_code: "BRL",
+                    value: product.price
+                  }
+                }
+              ]
+              });
+            },
+            onApprove: async (_,actions) => {
+              const order = await actions.order.capture();
+
+              setPaid(true);
+
+              console.log(order);
+            }
+          })
+          .render(paypalRef);
+        })
+      }
+      loadButtonsAndLogicAboutPayment();
+    }
+  })
   return (
     <div>
       <Header />
@@ -40,134 +85,22 @@ const Pagamentos = () => {
         <div className="cartoes">
           <img src={banco} alt="" />
         </div>
-        <div className="btn-cartao">
-          <button
-            className={paymentType === "credito" ? "ativo" : ""}
-            onClick={() => handlePaymentTypeChange("credito")}
-          >
-            Crédito
-          </button>
-          <button
-            className={paymentType === "debito" ? "ativo" : ""}
-            onClick={() => handlePaymentTypeChange("debito")}
-          >
-            Débito
-          </button>
+     
+
+        <div className="pagamento-Paypal">
+      {paid ? (
+        <div>
+          <h2>Parabéns você comprou o Plano!</h2>
         </div>
-        <div className={`form-pagamento ${paymentType === "credito" ? "show" : ""}`}>
-          <input type="text" placeholder="Número do Cartão" id="num-cartao"/>
-          <input type="text" placeholder="Bandeira" id="bandeira"/>
-          <div className="info-banco">
-            <div>
-              <select name="" id="">
-                <option value="" disabled>
-                  Mês
-                </option>
-                <option value="">Janeiro</option>
-                <option value="">Fevereiro</option>
-                <option value="">Março</option>
-                <option value="">Abril</option>
-                <option value="">Maio</option>
-                <option value="">Junho</option>
-                <option value="">Julho</option>
-                <option value="">Agosto</option>
-                <option value="">Setembro</option>
-                <option value="">Outubro</option>
-                <option value="">Novembro</option>
-                <option value="">Dezembro</option>
-              </select>
-              <input type="number" placeholder="Ano" />
-            </div>
-            <input type="number" placeholder="Cod do Cartão" />
-          </div>
-          <select name="" id="parcelas">
-            <option value="" disabled>
-              Parcelas
-            </option>
-            <option value="">1x vez</option>
-            <option value="">2x vez</option>
-            <option value="">3x vez</option>
-            <option value="">4x vez</option>
-            <option value="">5x vez</option>
-            <option value="">6x vez</option>
-          </select>
+      ) : (
+        <>
+      <h2>Formas de Pagamento</h2>
+        <div ref={v => (paypalRef = v)} className="btn-paypal"/>
+        </>
+      )}
+    </div>
 
-          <p>
-            Suas informações serão coletadas de acordo com a política de
-            privacidade da <Link>Saboria</Link>
-          </p>
-
-          <div className="termos">
-            <div>
-              <input type="checkbox" name="" id="" />
-              <label htmlFor="">
-                Quero receber notificações sobre novidades e notícias da Sabor.IA
-                por email e WhatsApp
-              </label>
-            </div>
-         
-            <div>
-              <input type="checkbox" name="" id="" />
-              <label htmlFor="">
-              Concordo com os termos
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className={`form-pagamento ${paymentType === "debito" ? "show" : ""}`}>
-          <input type="text" placeholder="Número do Cartão" id="num-cartao"/>
-          <input type="text" placeholder="Bandeira" id="bandeira"/>
-          <div className="info-banco">
-            <div>
-              <select name="" id="">
-                <option value="" disabled>
-                  Mês
-                </option>
-                <option value="">Janeiro</option>
-                <option value="">Fevereiro</option>
-                <option value="">Março</option>
-                <option value="">Abril</option>
-                <option value="">Maio</option>
-                <option value="">Junho</option>
-                <option value="">Julho</option>
-                <option value="">Agosto</option>
-                <option value="">Setembro</option>
-                <option value="">Outubro</option>
-                <option value="">Novembro</option>
-                <option value="">Dezembro</option>
-              </select>
-              <input type="number" placeholder="Ano" />
-            </div>
-            <input type="number" placeholder="Cod do Cartão" />
-          </div>
-
-          <p>
-            Suas informações serão coletadas de acordo com a política de
-            privacidade da <Link>Saboria</Link>
-          </p>
-
-          <div className="termos">
-            <div>
-              <input type="checkbox" name="" id="" />
-              <label htmlFor="">
-                Quero receber notificações sobre novidades e notícias da Sabor.IA
-                por email e WhatsApp
-              </label>
-            </div>
-         
-            <div>
-              <input type="checkbox" name="" id="" />
-              <label htmlFor="">
-              Concordo com os termos
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className="funcoes-cartao">
-          <button className="comprarPlano">Comprar Agora!</button>
-        </div>
+        
         <div className="seguranca-pagamentos">
           <img src={imgSeguranca} alt="" />
         </div>

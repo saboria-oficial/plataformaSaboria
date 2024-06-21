@@ -49,7 +49,12 @@ background-color: var(--branco);
     color: var(--preto) !important;
     font-weight: 550 !important;
 }
-
+.link-search{
+    display: flex;
+     justify-Content: space-between;
+     width: 100%;
+     text-Decoration: none;
+}
 /*fim navlink*/
 .form-inline{
     display: flex;

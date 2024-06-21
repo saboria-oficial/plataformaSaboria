@@ -17,7 +17,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-
+import InputPesquisa from "../components/InputPesquisa";
 const Header = () => {
   const [showTranslate, setShowTranslate] = useState(false);
 
@@ -127,19 +127,9 @@ const Header = () => {
                     </Link>
                   </NavDropdown>
                 </Nav>
-                <form className="form-inline">
-                  <input
-                    className="form-control"
-                    type="search"
-                    placeholder="Busque pratos"
-                    aria-label="Search"
-                  />
-                  <Link to="/Pesquisa">
-                    <button type="button" id="btn-search">
-                      <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
-                  </Link>
-                </form>
+               
+               <InputPesquisa/>
+            
                 <div className="links-navbar">
                   <li className="icon-header dropdown">
                     <NavDropdown
@@ -155,12 +145,6 @@ const Header = () => {
                       </Link>
                     </NavDropdown>
                   </li>
-                  {/* <a id="dark-mode" className="icon-header"> 
-                  <FontAwesomeIcon icon={faMoon}  />
-                </a>
-                <a id="clear-mode" className="icon-header">
-                  <FontAwesomeIcon icon={faSun} />
-                </a> */}
                   <div id="idiomas" className="title">
                     <button
                       className="btn-idioma"

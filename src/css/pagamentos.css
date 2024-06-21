@@ -64,86 +64,30 @@
     border-radius: 1.2rem; 
     box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
 }
-.btn-cartao{
+
+.pagamento-Paypal{
+    padding: 1rem;
     margin: 1rem;
-    display: flex;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.6rem;
-   
-}
-.show{
-    display:flex;
-}
-.btn-cartao button{
-background-color: #fed45688;
-padding: 1rem;
-text-align: center;
-color: var(--preto);
-border: none;
-border-radius: 1rem;
-font-weight: 600;
-width: 8rem;
-cursor: pointer;
-transition: 0.3s ease-in-out;
-}
-.btn-cartao button:hover{
-    background-color: var(--amarelo);
-}
-.btn-cartao .ativo{
-    background-color: var(--amarelo);
-}
-.funcoes-cartao button{
-    font-size: 1.5rem;
-    color: var(--preto);
-    width: 14rem;
-    padding: 0.4rem;
-    background-color: var(--amarelo);
-    border-radius: 1.5rem;
-    font-weight: 700;
-    border: none;
-}
-.form-pagamento{
-    display: none;
-    gap: 1rem;
     flex-direction: column;
-    align-items: baseline;
+    gap: 0.7rem;
 }
-.show{
-    display: flex;
+.pagamento-Paypal h2{
+    font-size: 2rem;
+    font-family: 'Lato' sans-serif;
+    margin-bottom: 0.7rem;
+    text-align: center;
 }
-.form-pagamento input, .form-pagamento select, .form-pagamento option{
-    background-color: #fed45688;
-    border: none;
-    outline: none;
-    padding: 0.2rem 0.5rem;
-    height: 3rem;
-    border-radius: 1rem;
-}
-#num-cartao, #bandeira, #parcelas{
-    width: 100%;
-}
-.termos div{
+.btn-paypal {
     display: flex;
     align-items: center;
-    gap: 0.2rem;
+    justify-content: center;
+width: 50%;
 }
-.info-banco{
-gap: 0.6rem;
-width: 100%;
-     display: flex;
-}
-.info-banco input{
-    width: 60%;
-}
-.info-banco select, .info-banco div input {
-    width: 40%;
-}
-.info-banco div{
-    border-right: 3px solid var(--amarelo);
-   
-}
+
 @media(max-width:720px){
     .nav-pagamentos{
         width: 90%;
@@ -163,15 +107,11 @@ width: 100%;
     .nav-pagamentos h3{
         font-size: 1.2rem;
     }
-.btn-cartao button{
-width: 5rem;
+.btn-paypal {
+    width: 75%;
 }
-.cartoes, .seguranca-pagamentos{
-    width: 100%;
-}
-.funcoes-cartao button{
-    width: 10rem;
-    font-size: 1.2rem;
+.pagamento-Paypal h2{
+    font-size: 1.6rem;
 }
 @media(max-width:360px){
     .nav-pagamentos img{

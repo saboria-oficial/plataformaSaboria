@@ -15,6 +15,7 @@ import Image2 from "../../assets/img2/carrosel2.webp";
 import Image3 from "../../assets/img2/carrosel3.jpg";
 import ImgLogoTipoLifeBand from "../../assets/img2/VARIANTE LOGOMARCA LIFEBAND.png";
 import ImgLogoTipoNutri from "../../assets/img2/logotiponutriacess.webp";
+import ImgLogoTipoCali from "../../assets/img2/CaliPet (1).png";
 // Import dos icones
 
 const Home = () => {
@@ -96,7 +97,7 @@ const Home = () => {
         <p className="line"></p>
       </div>
       <div className="container-img-parceria">
-        <img src={ImgLogoTipoNutri} alt="logotipo" />
+        <img src={ImgLogoTipoCali} alt="logotipo" />
         <img src={ImgLogoTipoNutri} alt="logotipo" />
         <img src={ImgLogoTipoLifeBand} alt="logotipo" />
       </div>

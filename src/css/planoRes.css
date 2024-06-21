@@ -74,7 +74,11 @@ font-size: 1.5rem;
     display: flex;
     flex-direction: column; 
 }
+.link-plano{
+    width: 100%;
+}
 .btn-plano-res{
+    width: 100%;
     margin: 0.7rem;
     padding: 0.6rem 0.2rem;
     font-weight: bold;

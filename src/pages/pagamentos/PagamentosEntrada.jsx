@@ -18,8 +18,8 @@ const Pagamentos = () => {
   let paypalRef = useRef();
 
   const product = {
-    price: 19.99,
-    description: "Plano: Menu Principal",
+    price: 0.00,
+    description: "Plano: Menu de Entrada",
   }
 
   useEffect(() => {
@@ -73,12 +73,12 @@ const Pagamentos = () => {
         <nav className="nav-pagamentos">
           <div>
             <h3>
-              Plano escolhido: <strong>Menu Principal</strong>
+              Plano escolhido: <strong>Menu de Entrada</strong>
             </h3>
             <h3>
-              Preço: <strong>R$19.99/Mês</strong>
+              Preço: <strong>R$Grátis/Mês</strong>
             </h3>
-            <p>Total de R${19.99 * 12}/Mês cobrados anualmente</p>
+            <p>Total de R${0.00 * 12}/Mês cobrados anualmente</p>
           </div>
           <img src={img} alt="" />
         </nav>

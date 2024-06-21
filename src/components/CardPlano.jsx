@@ -36,7 +36,7 @@ const CardPlano = (props) => {
         </ul>
       </div>
       <div className="planoBtn assinarBtn">
-       <button><Link to="/pagamentos" className='planoBtn'>Assinar</Link></button>
+       <button><Link to={props.linkPagamento} className='planoBtn'>Assinar</Link></button>
       </div>
     </div>
 

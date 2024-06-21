@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/planoRes.css'
+import { Link } from 'react-router-dom'
+
 const CardPlanoRes = (props) => {
   return (
     <div className='card-plano-res'>
@@ -20,7 +22,7 @@ const CardPlanoRes = (props) => {
         </ul>
       </div>
       <div className="buttons-plano-res">
-        <button className="btn-plano-res assinar">Assinar</button>
+        <Link className='link-plano' to={props.linkPagamento}><button className="btn-plano-res assinar">Assinar</button></Link>
         <button className="btn-plano-res gratuito">Experimentar plano grátis</button>
       </div>
     </div>

@@ -30,13 +30,10 @@ flex-direction: column;
   font-weight: 600;
 }
 .filters .sort,
-.filters .distance,
+.filters,
 .filters .intolerances {
   margin-bottom: 1.2rem;
-}
-.distance input[type="range"] {
-  width: 100%;
-}
+} 
 .results {
  width: 100%;
  display: flex;
@@ -155,7 +152,26 @@ flex-direction: column;
   background-color: transparent;
   color: var(--vermelho);
 }
-
+.container-search{
+  width: 80%;
+  padding: 1.5rem;
+}
+.container-search h2{
+  color: var(--vermelho);
+}
+.search-res{
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  height: 2.5rem;
+  width: fit-content;
+}
+#filtrarpesq{
+  font-size: 1.6rem;
+  font-weight: 450;
+  margin-top: 0.5rem;
+}
 @media (max-width:650px){
 .result-item .images{
   flex-direction: column;

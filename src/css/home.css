@@ -147,17 +147,18 @@ font-weight: 650;
     /* parcerias */
     .container-img-parceria{
         display: grid;
-      
         align-items: center;
-       
+        justify-items: center;
+        padding: 0.7rem;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         margin-bottom: 2.5rem;
         width: 100%;
+       
     }
     .container-img-parceria img{
-        width: 75%;
-        justify-self: center;
+      width: 80%;
+        
     }
     @media (max-width:500px){
         .container-img-parceria img{

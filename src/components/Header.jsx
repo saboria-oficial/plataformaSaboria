@@ -17,7 +17,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import InputPesquisa from "../components/InputPesquisa";
+
 const Header = () => {
   const [showTranslate, setShowTranslate] = useState(false);
 
@@ -58,9 +58,20 @@ const Header = () => {
   const handleToggleTranslate = () => {
     setShowTranslate(!showTranslate);
   };
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
+       <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Traduzir Idioma</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body  >
+        <div id="google_translate_element"></div> 
+        </Offcanvas.Body>
+      </Offcanvas>
       {["xl"].map((expand) => (
         <Navbar
           key={expand}
@@ -104,7 +115,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/Restaurantes" className="nav-link">
+                    <Link to="/Pesquisa" className="nav-link">
                       Restaurantes
                     </Link>
                   </li>
@@ -128,7 +139,7 @@ const Header = () => {
                   </NavDropdown>
                 </Nav>
                
-               <InputPesquisa/>
+               
             
                 <div className="links-navbar">
                   <li className="icon-header dropdown">
@@ -150,7 +161,7 @@ const Header = () => {
                       className="btn-idioma"
                       onClick={handleToggleTranslate}
                     >
-                      <FontAwesomeIcon icon={faLanguage} />
+                      <FontAwesomeIcon icon={faLanguage} variant="primary" onClick={handleShow}/>
                     </button>
                   </div>
                 </div>

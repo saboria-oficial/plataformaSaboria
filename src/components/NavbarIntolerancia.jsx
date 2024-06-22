@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCow, faEgg, faWheatAwnCircleExclamation, faShrimp, faJarWheat, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import imgRestaurante from '../assets/img2/restauranteGenerico.avif';
 import burguer from '../assets/img2/burguerVegano.jpg';
 import CardRestaurante from './CardRestaurante';
@@ -10,15 +10,6 @@ const NavbarIntolerancia = () => {
   const [activeLink, setActiveLink] = useState('Laticínios');
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
-
-  // Mapeamento de ícones para ingredientes
-  const iconesIngredientes = {
-    'leite': faCow,
-    'ovo': faEgg,
-    'gluten': faWheatAwnCircleExclamation,
-    'frutos do mar': faShrimp,
-    'soja': faJarWheat
-  };
 
   const restaurantes = [
     { nome: 'Restaurante A', ingredientes: ['ovo'], img: imgRestaurante },
@@ -40,7 +31,6 @@ const NavbarIntolerancia = () => {
     'Frutos do mar',
     'Soja'
   ];
-
 
   const filteredRestaurants = activeLink === 'none' ? restaurantes : restaurantes.filter(restaurant => !restaurant.ingredientes.includes(activeLink.toLowerCase()));
 
@@ -114,7 +104,6 @@ const NavbarIntolerancia = () => {
             <CardRestaurante
               key={index}
               estrelas='5'
-              intolerancia={<FontAwesomeIcon icon={iconesIngredientes[restaurant.ingredientes[0]]} />}
               img={restaurant.img}
               nome={restaurant.nome}
             />
@@ -134,7 +123,6 @@ const NavbarIntolerancia = () => {
             <CardRestaurante
               key={index}
               estrelas='5'
-              intolerancia={<FontAwesomeIcon icon={iconesIngredientes[restaurant.ingredientes[0]]} />}
               img={burguer}
               nome={restaurant.nome}
             />

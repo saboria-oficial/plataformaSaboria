@@ -1,13 +1,11 @@
 /*footer*/
 footer{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 background-color:var(--amarelo);
    min-width: 100%;
-  
     text-align: center;
 }
 #container-footer{
@@ -15,6 +13,7 @@ background-color:var(--amarelo);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    justify-items: center;
 }
 .card-footer{
     display: flex;

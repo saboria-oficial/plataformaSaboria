@@ -97,9 +97,9 @@ const Home = () => {
         <p className="line"></p>
       </div>
       <div className="container-img-parceria">
-        <img src={ImgLogoTipoCali} alt="logotipo" />
-        <img src={ImgLogoTipoNutri} alt="logotipo" />
-        <img src={ImgLogoTipoLifeBand} alt="logotipo" />
+        <a href="/"><img src={ImgLogoTipoCali} alt="logotipo" /></a>
+        <a href="http://nutriacess.com.br" target="_blank"><img src={ImgLogoTipoNutri} alt="logotipo" /></a>
+        <a href="/"><img src={ImgLogoTipoLifeBand} alt="logotipo" /></a>
       </div>
       <Footer />
     </div>

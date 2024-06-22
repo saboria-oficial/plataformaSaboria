@@ -8,6 +8,7 @@ import { faCircleCheck, faCircleXmark, faArrowLeft } from '@fortawesome/free-sol
 import CardPlanoRes from '../../components/CardPlanoRes';
 import SideBar from '../../components/SideBar'
 import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
+
 const PlanosRes = () => {
   return (
     <div>

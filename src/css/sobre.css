@@ -336,6 +336,11 @@ transform: translateX(18%);
     padding: 25px 0;
     margin: 3rem 0 4rem 0;
 }
+@media (min-width:2000px){
+    .container-dev{
+        grid-template-columns: repeat(4,1fr);
+       }
+}
 @media (max-width:1200px){
     .fontesUtilizadas{
         grid-template-columns: repeat(1,1fr);

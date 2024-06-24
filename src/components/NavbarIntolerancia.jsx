@@ -5,18 +5,29 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import imgRestaurante from '../assets/img2/restauranteGenerico.avif';
 import burguer from '../assets/img2/burguerVegano.jpg';
 import CardRestaurante from './CardRestaurante';
+// imagens de marcação
+import bolo3 from "../assets/img2/bolo3.jpg";
+import bolo4 from "../assets/img2/bolo4.jpg";
+import pizza4 from "../assets/img2/carrosel3.jpg";
+import sorvete4 from '../assets/img2/degustacao.webp';
+import burguer1 from "../assets/img2/burguer1.jpg";
 
+import logo1 from '../assets/img2/logo_minimalista_sorvetes.webp';
+import logo2 from '../assets/img2/logo_le-botteghe-di-leonardo1.webp';
+import logo3 from '../assets/img2/logo_veganeriaStuzzi.webp';
+import logo4 from '../assets/img2/logo_premiumIcecream.webp';
+import logo5 from '../assets/img2/logoPizzaGenerico.jpg'
 const NavbarIntolerancia = () => {
   const [activeLink, setActiveLink] = useState('Laticínios');
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
 
   const restaurantes = [
-    { nome: 'Restaurante A', ingredientes: ['ovo'], img: imgRestaurante },
-    { nome: 'Restaurante B', ingredientes: ['gluten'], img: imgRestaurante },
-    { nome: 'Restaurante C', ingredientes: ['ovo'], img: imgRestaurante },
-    { nome: 'Restaurante D', ingredientes: ['leite'], img: imgRestaurante },
-    { nome: 'Restaurante E', ingredientes: [], img: imgRestaurante }
+    { nome: 'Restaurante A', ingredientes: ['ovo'], img: logo1, imgcomida:bolo3 },
+    { nome: 'Restaurante B', ingredientes: ['gluten'], img: logo2, imgcomida:burguer1 },
+    { nome: 'Restaurante C', ingredientes: ['ovo'], img: logo3, imgcomida:bolo4 },
+    { nome: 'Restaurante D', ingredientes: ['leite'], img: logo4, imgcomida: pizza4},
+    { nome: 'Restaurante E', ingredientes: [], img: logo5, imgcomida:sorvete4 }
   ];
 
   const handleLinkClick = (intolerancia) => {
@@ -123,7 +134,7 @@ const NavbarIntolerancia = () => {
             <CardRestaurante
               key={index}
               estrelas='5'
-              img={burguer}
+              img={restaurant.imgcomida}
               nome={restaurant.nome}
             />
           ))}

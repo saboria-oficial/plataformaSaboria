@@ -28,7 +28,7 @@ const Cadastro = () => {
             </div>
            
           </div>
-          <div>
+          <div className="linhaOU">
             <p className="line"></p>
             <p>ou</p>
             <p className="line"></p>
@@ -47,26 +47,40 @@ const Cadastro = () => {
             <input type="tel" placeholder="telefone" required />
             <input type="password" placeholder="senha" required />
             <div className="alergias">
-              <label htmlFor="">
+              <p>
                 Quais restrições alimentares você possuí?
-              </label>
+              </p>
            
-              <div>
-                  <input type="checkbox" name="Laticinios" id="Laticinios" />
-                  <label htmlFor="Laticinios">Laticinios</label>
-                  <input type="checkbox" name="FrutosDoMar" id="FrutosDoMar" />
-                  <label htmlFor="FrutosDoMar">Frutos do mar</label>
-                  <input type="checkbox" name="Amendoas" id="Amendoas" />
-                  <label htmlFor="Amendoas">Amêndoas</label>
-                  <input type="checkbox" name="Ovo" id="Ovo" />
-                  <label htmlFor="Ovo">Ovo</label>
-                  <input type="checkbox" name="Graos" id="Graos" />
-                  <label htmlFor="Graos">Grãos</label>
-                  <input type="checkbox" name="Trigo" id="Trigo" />
-                  <label htmlFor="Trigo">Trigo</label>
-                  <input type="checkbox" name="Soja" id="Soja" />
-                  <label htmlFor="Soja">Soja</label>
-              </div>
+              <ul>
+                  <li>
+                    <input type="checkbox" name="Laticinios" id="Laticinios" />
+                    <label htmlFor="Laticinios">Laticinios</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="FrutosDoMar" id="FrutosDoMar" />
+                    <label htmlFor="FrutosDoMar">Frutos do mar</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Amendoas" id="Amendoas" />
+                    <label htmlFor="Amendoas">Amêndoas</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Ovo" id="Ovo" />
+                    <label htmlFor="Ovo">Ovo</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Graos" id="Graos" />
+                    <label htmlFor="Graos">Grãos</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Trigo" id="Trigo" />
+                    <label htmlFor="Trigo">Trigo</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Soja" id="Soja" />
+                    <label htmlFor="Soja">Soja</label>
+                  </li>
+              </ul>
             </div>
 
             <input type="submit" id="cadastrar" value="Cadastrar" />

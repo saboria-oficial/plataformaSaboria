@@ -109,15 +109,21 @@ const Blog = () => {
           </aside>
         </div>
         <div className="add-prato">
-            <div className="prato-img">
-              <img src={imgPrato} alt="" />
-     
+          <h2>Adicionar Matéria ao blog</h2>
+          <form action="">
+            <input type="text" placeholder='Título'/>
+            <input type="text" placeholder='Subtítulo'/>
+            <div className="add-input">
+              <input type="text"  placeholder='Área'/>
+              <input type="text" placeholder='Autor'/>
+              <input type="date"/>
             </div>
-            <div className="prato-desc">
-              <input type="text" placeholder="titúlo matéria" name="tituloMateria" id="tituloMateria"/>
-              <textarea name="descricaoMateria" id="descricaoMateria" placeholder="texto da máteria" ></textarea>
-              <button>Adicionar</button>
+            <textarea name="" id="" placeholder='Escreva sua matéria' rows={7}></textarea>
+            <div className="add-btn">
+           <button type='submit'>Enviar</button>
+              <button>Deletar</button>
             </div>
+          </form>
           </div>
       </div>
       <Footer />

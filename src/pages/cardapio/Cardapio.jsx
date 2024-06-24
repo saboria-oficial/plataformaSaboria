@@ -93,7 +93,7 @@ function scroolFun() {
           <div className="add-prato">
             <div className="prato-img">
               <img src={imgPrato} alt="" />
-              <Link id="link-verifique">Verifique seu plano</Link>
+              <Link id="link-verifique" to="/planoRes">Verifique seu plano</Link>
             </div>
             <div className="prato-desc">
               <input type="text" placeholder="nome do prato" name="nomePrato" id="nomePrato"/>

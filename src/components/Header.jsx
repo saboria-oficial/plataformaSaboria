@@ -65,10 +65,11 @@ const Header = () => {
   return (
     <div>
        <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+      
+        <Offcanvas.Body  style={{padding:"1rem"}}>
+        <Offcanvas.Header closeButton style={{marginTop: "0.5rem"}}>
           <Offcanvas.Title>Traduzir Idioma</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body  >
         <div id="google_translate_element"></div> 
         </Offcanvas.Body>
       </Offcanvas>
@@ -116,7 +117,7 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <Link to="/Pesquisa" className="nav-link">
-                      Restaurantes
+                   Pesquisar
                     </Link>
                   </li>
                   <li className="nav-item">

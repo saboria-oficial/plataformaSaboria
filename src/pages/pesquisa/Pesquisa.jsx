@@ -31,6 +31,7 @@ import peixe1 from "../../assets/img2/peixe1.jpg";
 import peixe2 from "../../assets/img2/peixe2.jpg";
 import peixe3 from "../../assets/img2/peixe3.jpg";
 import peixe4 from "../../assets/img2/peixe4.jpg";
+
 import logo1 from '../../assets/img2/logo_minimalista_sorvetes.webp';
 import logo2 from '../../assets/img2/logo_le-botteghe-di-leonardo1.webp';
 import logo3 from '../../assets/img2/logo_veganeriaStuzzi.webp';
@@ -109,7 +110,7 @@ const Pesquisa = () => {
     {
       logo: logo6,
       name: "Padaria Pão do João",
-      nicho:"Pão",
+      nicho:"Pão café",
       rating: 5,
       distance: 14,
       hours: "Aberto até 22h",
@@ -119,7 +120,7 @@ const Pesquisa = () => {
     {
       logo: logo7,
       name: "Bakkes Bakery",
-      nicho:"Pão",
+      nicho:"Pão café",
       rating: 5,
       distance: 14,
       hours: "Aberto até 21h",
@@ -159,7 +160,7 @@ const Pesquisa = () => {
     {
       logo: logo11,
       name: "Quiosque Navegando",
-      nicho:"Camarão",
+      nicho:"Camarão peixe",
       rating: 5,
       distance: 14,
       hours: "Aberto até 00h",

@@ -5,7 +5,11 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer.jsx";
 import CardRestaurante from "../../components/CardRestaurante.jsx";
 /*Import da imagens*/
-import imgRestaurante from "../../assets/img2/restauranteGenerico.avif";
+import logo7 from '../../assets/img2/logo7.jpg'
+import logo8 from '../../assets/img2/logo8.jpg'
+import logo9 from '../../assets/img2/logo9.avif'
+import logo10 from '../../assets/img2/logo10.jpg'
+import logo11 from '../../assets/img2/logo11.avif'
 import cliente from '../../assets/img2/guri.jpg'
 /* Import dos icones*/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,27 +40,27 @@ const PerfilFav = () => {
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={logo7}
           />
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={logo8}
           />
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={logo9}
           />
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={logo10}
           />
           <CardRestaurante
             estrelas="5"
             intolerancia={<FontAwesomeIcon icon={faCow} />}
-            img={imgRestaurante}
+            img={logo11}
           />
         </div>
       </div>

@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.jsx";
 import NavbarIntolerancia from "../../components/NavbarIntolerancia.jsx";
 import FormularioClientes from "../../components/FormularioClientes.jsx";
 import Comentarios from "../../components/Comentarios.jsx";
+import Slider from '../../components/Slider';
 
 //import imagens
 
@@ -13,9 +14,7 @@ import Carrosel from "../../components/Carrosel.jsx";
 import Image1 from "../../assets/img2/carrossel.webp";
 import Image2 from "../../assets/img2/carrosel2.webp";
 import Image3 from "../../assets/img2/carrosel3.jpg";
-import ImgLogoTipoLifeBand from "../../assets/img2/VARIANTE LOGOMARCA LIFEBAND.png";
-import ImgLogoTipoNutri from "../../assets/img2/logotiponutriacess.webp";
-import ImgLogoTipoCali from "../../assets/img2/CaliPet (1).png";
+
 // Import dos icones
 
 const Home = () => {
@@ -97,9 +96,7 @@ const Home = () => {
         <p className="line"></p>
       </div>
       <div className="container-img-parceria">
-        <a href="/"><img src={ImgLogoTipoCali} alt="logotipo" /></a>
-        <a href="http://nutriacess.com.br" target="_blank"><img src={ImgLogoTipoNutri} alt="logotipo" /></a>
-        <a href="/"><img src={ImgLogoTipoLifeBand} alt="logotipo" /></a>
+        <Slider/>
       </div>
       <Footer />
     </div>

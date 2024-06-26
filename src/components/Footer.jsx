@@ -4,7 +4,7 @@ import logoPreta from '../assets/img2/logotipo-preto.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import '../css/footer.css'
 
@@ -20,7 +20,6 @@ const Footer = () => {
         </div>
         <div className="card-footer">
           <ul>
-            <p>Menu</p> 
             <Link to='/'>
               <li>Início</li>
             </Link>
@@ -75,27 +74,22 @@ const Footer = () => {
       </section>
       <div className="icons-footer">
         <div className="icon-footer">
-          <a href="">
-            <FontAwesomeIcon icon={faFacebookF}/>
-          </a>
-        </div>
-        <div className="icon-footer">
-        <a href="">
+        <a href="https://www.instagram.com/saboria_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank'>
             <FontAwesomeIcon icon={faInstagram}/>
         </a>
         </div>
         <div className="icon-footer">
-        <a href="">
-            <FontAwesomeIcon icon={faGoogle}/>
+        <a href="https://x.com/saboria_oficial" target='_blank'>
+            <FontAwesomeIcon icon={faTwitter}/>
         </a>
         </div>
         <div className="icon-footer">
-        <a href="">
+        <a href="https://www.linkedin.com/company/saboria/?viewAsMember=true" target='_blank'>
             <FontAwesomeIcon icon={faLinkedinIn}/>
         </a>
         </div>
       </div>
-      <p>Termos de uso | Políticas de privacidade</p>
+      <p>Termos de uso | <a href="https://drive.google.com/file/d/1fQ8velUtEhwiytfnyM37Oq8e1M8vnauQ/view?usp=sharing" id='politicadePriv' target='_blank'>Políticas de privacidade</a></p>
       <p>
         &copy; Saboria &bull; "Todos Direitos Reservados &bull; Versão v1
       </p>

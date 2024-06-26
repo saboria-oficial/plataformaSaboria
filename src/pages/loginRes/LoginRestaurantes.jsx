@@ -25,8 +25,8 @@ const LoginRestaurantes = () => {
 
           <input type="email" placeholder="Email" required/>
           <input type="text" placeholder="Cnpj" required/> 
-          <input type="password" placeholder="Senha" required/> 
-
+          <input type="password" placeholder="Senha" required/>
+          <a className="links" href="/redefinir">Esqueceu sua senha?</a>
           <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link> 
       </form>
     <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
@@ -46,10 +46,11 @@ const LoginRestaurantes = () => {
                   className="fa-google"
                 />
               </a>
+              <p>
+                    <Link className="links" to="/login">Login para clientes</Link>
+                  </p>
             </div>
       </div>
-
-
   </div>
  </div>
  <Footer/>

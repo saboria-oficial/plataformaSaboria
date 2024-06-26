@@ -51,7 +51,7 @@ const Login = () => {
                 </div>
                 <div className="cadastro">
                   <p>
-                    <Link className="link" to="/cadastro">Cadastrar-se</Link>
+                    <Link className="link" to="/cadastro">Criar conta</Link>
                   </p>
                   <p>
                     <Link className="link" to="/loginRes">Login para restaurantes</Link>

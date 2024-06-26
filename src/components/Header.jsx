@@ -63,7 +63,7 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
+    <header>
        <Offcanvas show={show} onHide={handleClose}>
       
         <Offcanvas.Body  style={{padding:"1rem"}}>
@@ -143,6 +143,7 @@ const Header = () => {
                
             
                 <div className="links-navbar">
+                  
                   <li className="icon-header dropdown">
                     <NavDropdown
                       className="icon-header"
@@ -162,7 +163,8 @@ const Header = () => {
                       className="btn-idioma"
                       onClick={handleToggleTranslate}
                     >
-                      <FontAwesomeIcon icon={faLanguage} variant="primary" onClick={handleShow}/>
+                      <FontAwesomeIcon icon={faLanguage} id="iconeTradutor" variant="primary" onClick={handleShow}/>
+                      <p  onClick={handleShow}>Tradutor</p>
                     </button>
                   </div>
                 </div>
@@ -171,7 +173,7 @@ const Header = () => {
           </Container>
         </Navbar>
       ))}
-    </div>
+    </header>
   );
 };
 

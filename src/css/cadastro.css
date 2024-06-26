@@ -50,7 +50,10 @@
 .card-cadastro a {
   text-decoration: none;
 }
-
+.links{
+  text-decoration: underline !important;
+  color: var(--cinza);
+}
 .icons-cadastro .fa-brands {
   width: 2rem;
   height: 2rem;
@@ -77,7 +80,9 @@
   background-color: #e33629;
   color: var(--branco);
 }
-
+.icon-cadastro p{
+  padding-top: 0.5rem;
+}
 .card-cadastro form {
   display: flex;
   flex-direction: column;
@@ -113,7 +118,9 @@ select {
   width: 10rem;
 }
 .mudarCor {
-  color: var(--preto-night);
+  color: var(--cinza);
+  text-decoration: underline !important;
+
 }
 .linhaOU{
   align-items: center;

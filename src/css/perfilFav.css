@@ -16,6 +16,9 @@
     background-size: cover;
    
 }
+.restaurantesPerfil .coracao{
+    color: var(--vermelho);
+}
 .tituloPerfil{
     display: flex;
     justify-content: center;

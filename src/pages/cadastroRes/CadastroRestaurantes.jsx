@@ -29,7 +29,7 @@ const CadastroRestaurantes = () => {
             </div>
           
         </div>
-        <div>
+        <div className="linhaOU">
             <p className="line"></p>
             <p>ou</p>
             <p className="line"></p>
@@ -38,12 +38,12 @@ const CadastroRestaurantes = () => {
 
         <form>
             <input type="text" placeholder="Nome do Estabelecimento" id="nome" name="nome" required/> 
-            <input type="text" placeholder="qual é a sua culinária" required/> 
-            <input type="email" placeholder="email" required/>
-            <input type="text" placeholder="cep" required/>
-            <input type="tel" placeholder="telefone" required/>
-            <input type="text" placeholder="cnpj" required/> 
-            <input type="password" placeholder="senha" required/> 
+            <input type="text" placeholder="Qual é a sua culinária" required/> 
+            <input type="email" placeholder="Email" required/>
+            <input type="text" placeholder="Cep" required/>
+            <input type="tel" placeholder="Telefone" required/>
+            <input type="text" placeholder="CNPJ" required/> 
+            <input type="password" placeholder="Senha" required/> 
             <div className="alergias">
             <p>
                 Quais restrições seu restaurante atende?
@@ -52,7 +52,7 @@ const CadastroRestaurantes = () => {
               <ul>
                   <li>
                     <input type="checkbox" name="Laticinios" id="Laticinios" />
-                    <label htmlFor="Laticinios">Laticinios</label>
+                    <label htmlFor="Laticinios">Laticínios</label>
                   </li>
                   <li>
                     <input type="checkbox" name="FrutosDoMar" id="FrutosDoMar" />
@@ -77,6 +77,10 @@ const CadastroRestaurantes = () => {
                   <li>
                     <input type="checkbox" name="Soja" id="Soja" />
                     <label htmlFor="Soja">Soja</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Soja" id="Soja" />
+                    <label htmlFor="Soja">Não tenho / outros</label>
                   </li>
               </ul>
             </div>

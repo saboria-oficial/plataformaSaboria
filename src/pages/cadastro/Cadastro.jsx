@@ -42,10 +42,10 @@ const Cadastro = () => {
               name="nome"
               required
             />
-            <input type="email" placeholder="email" required />
-            <input type="number" placeholder="cep" required />
-            <input type="tel" placeholder="telefone" required />
-            <input type="password" placeholder="senha" required />
+            <input type="email" placeholder="Email" required />
+            <input type="number" placeholder="Cep" required />
+            <input type="tel" placeholder="Telefone" required />
+            <input type="password" placeholder="Senha" required />
             <div className="alergias">
               <p>
                 Quais restrições alimentares você possuí?
@@ -54,7 +54,7 @@ const Cadastro = () => {
               <ul>
                   <li>
                     <input type="checkbox" name="Laticinios" id="Laticinios" />
-                    <label htmlFor="Laticinios">Laticinios</label>
+                    <label htmlFor="Laticinios">Laticínios</label>
                   </li>
                   <li>
                     <input type="checkbox" name="FrutosDoMar" id="FrutosDoMar" />
@@ -79,6 +79,10 @@ const Cadastro = () => {
                   <li>
                     <input type="checkbox" name="Soja" id="Soja" />
                     <label htmlFor="Soja">Soja</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="Soja" id="Soja" />
+                    <label htmlFor="Soja">Não tenho / outros</label>
                   </li>
               </ul>
             </div>

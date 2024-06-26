@@ -10,7 +10,7 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  background-image: url("../assets/Curvas/1Prancheta 1 cópia 4.png");
+  /* background-image: url("../assets/Curvas/1Prancheta 1 cópia 2.png"); */
   background-repeat: repeat-Y;
   background-size: cover;
 }

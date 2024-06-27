@@ -76,6 +76,7 @@ const Pesquisa = () => {
       hours: "Aberto até 20h",
       images: [sorvete1, sorvete2, sorvete3, sorvete4],
       intolerances: ["Lactose", "Amendoas"],
+      link: "/PagRestaurantePremium"
     },
     {
       logo: logo3,
@@ -106,6 +107,7 @@ const Pesquisa = () => {
       hours: "Aberto até 02h",
       images: [pizza1, pizza2, pizza3, pizza4],
       intolerances: ["Lactose", "Trigo", "Gluten"],
+      link: "/PaginaRestaurante"
     },
     {
       logo: logo6,
@@ -223,9 +225,7 @@ const Pesquisa = () => {
     <>
       <Header />
       <div className="containerPesquisa">
-        <h2 className="resultadoP">
-          Resultados para: <span className="highlight">"Sorvete"</span>
-        </h2>
+       
         <div className="main-content">
           <button
             className="btn btn-primary"
@@ -323,14 +323,16 @@ const Pesquisa = () => {
           </div>
           <div className="results">
             <div className="container-search">
-              <h2>Faça sua busca</h2>
-              <input
-                type="search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar restaurantes"
-                className="search-res"
-              />
+              <div>
+                <h2>Faça sua busca</h2>
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Buscar restaurantes"
+                  className="search-res"
+                />
+              </div>
             </div>
             {restaurantes.map((item, index) => (
               <div className="result-item" key={index}>
@@ -348,9 +350,9 @@ const Pesquisa = () => {
                     <img key={imgIndex} src={src} alt={`${item.name} ${imgIndex}`} />
                   ))}
                 </div>
-                <a href="#" className="view-store">
+                <Link to={item.link} className="view-store">
                   Ver loja
-                </a>
+                </Link>
               </div>
             ))}
           </div>

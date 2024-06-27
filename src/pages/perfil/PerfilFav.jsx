@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 /* Components*/
 import Header from "../../components/Header";
@@ -13,9 +14,36 @@ import logo11 from '../../assets/img2/logo11.avif'
 import cliente from '../../assets/img2/guri.jpg'
 /* Import dos icones*/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCow, faGear, faHeart, faMessage } from "@fortawesome/free-solid-svg-icons";
+import { faCow, faGear, faHeart, faMessage, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 const PerfilFav = () => {
+  const [favorito, setFavorito]= useState(true);
+  const [usuario, setUsuario] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchUsuario = async () => {
+      const user = localStorage.getItem('user');
+
+      console.log(user)
+      if (user) {
+        try {
+          const response = await axios.get(`https://localhost:7097/api/Usuario/${user}`);
+          console.log(response.data)
+
+          setUsuario(response.data);
+        } catch (err) {
+          setError('Erro ao buscar dados do Usuario.');
+          console.error(err);
+        }
+      } else {
+        setError('CNPJ não encontrado no localStorage.');
+      }
+    };
+
+    fetchUsuario();
+  }, []);
+
   return (
     <>
       <Header />
@@ -23,10 +51,14 @@ const PerfilFav = () => {
         <div className="tituloPerfil">Perfil</div>
         <div className="detalhesPerfil">
           <div className="avatarPerfil">
-            <img src={cliente} alt="cliente" />
+          <FontAwesomeIcon icon={faUserCircle} id="user-icon"/>
             <div className="textoPerfil">
             <h5>Meu perfil</h5>
-            <h2>Olá, João Gomes</h2>
+            {usuario && (
+              <div>
+                <h2>Olá, {usuario.nome}</h2>
+              </div>
+            )}
             </div>
           </div>
 

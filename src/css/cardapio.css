@@ -127,6 +127,9 @@ border: none;
 
 }
 
+#cadastrar{
+    width: 50%;
+}
 @media (max-width:600px){
     /* .content-cardapio, .desc-items-cardapio span{
         font-size: 0.6rem;

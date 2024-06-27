@@ -19,9 +19,7 @@ const CardPlano = (props) => {
     </div>
       <p>Total de R${props.valorTitle * 12}/mês colaborados anualmente</p>
     
-      <div className="planoBtn  experiment">
-        <button>Experimentar plano grátis</button>
-      </div>
+      
       <p className="line-plano"></p>
       <p>Com esse plano você pode utilizar funções do nosso site como:</p>
       <div className="vantagens-plano">
@@ -36,7 +34,7 @@ const CardPlano = (props) => {
         </ul>
       </div>
       <div className="planoBtn assinarBtn">
-       <button><Link to={props.linkPagamento} className='planoBtn'>Assinar</Link></button>
+       <button><Link to={props.linkPagamento} className='planoBtn'>{props.assinatura}</Link></button>
       </div>
     </div>
 

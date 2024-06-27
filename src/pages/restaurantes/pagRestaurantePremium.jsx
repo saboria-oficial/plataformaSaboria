@@ -64,11 +64,7 @@ const PagRestaurantePremium = () => {
       <div className="container-premium">
         <div className="pagina-res">
           <Carrosel img1={sorvete1} img2={sorvete2} img3={sorvete3} />
-          <div className="card-carrosel">
-            <h2>Sorveteria XXXX</h2>
-            <h3>Promoções as sextas</h3>
-            <h4>Comida boa é aqui</h4>
-          </div>
+          
           <div className="pag-perfil-res">
             <img src={sorveteria1} alt="" />
             <div>

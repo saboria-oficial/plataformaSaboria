@@ -1,6 +1,3 @@
-
-
-
 :root{
     --amarelo:#ffca3e;
     --amarelo2:#FED356;;
@@ -42,6 +39,7 @@
 }
 .lato {
     font-family: 'Lato', sans-serif;
+    margin-left: 2.5rem;
 }
 .raleway {
     font-family: 'Raleway', sans-serif;
@@ -95,14 +93,14 @@ justify-content: end;
 /* Logo */
 .tituloLogo {
     width: 100%;
-    height: 40rem;
+    height: 30rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('../assets/Curvas/1Prancheta1cópia10.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
 }
 .tituloLogo h2 {
@@ -121,6 +119,7 @@ flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 .logoCompleta2{
 
@@ -184,9 +183,10 @@ flex-direction: column;
 }
 /*icones*/
 .tituloPaleta{
+    margin-top: 0.5rem;
     text-align: center;
     letter-spacing:0.1rem;
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--cinza);
 }
 .sobre-icons{
@@ -201,16 +201,19 @@ flex-direction: column;
     
 }
 .icon-sobre{
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
     width: 100%;
 }
 .sobre-icons h3{
     margin-top: 0.5rem;
     color: var(--cinza);
+    text-transform: uppercase;
+    font-family: 'lato';
     font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -308,6 +311,7 @@ transform: translateX(18%);
     border-radius:  0 10rem 10rem 0 ;
     
 }
+
 .missao h2{
     color: var(--cinza);
 }
@@ -336,6 +340,10 @@ transform: translateX(18%);
     padding: 25px 0;
     margin: 3rem 0 4rem 0;
 }
+.desenvolvedores h2{
+    font-weight: bold;
+}
+
 @media (min-width:2000px){
     .container-dev{
         grid-template-columns: repeat(4,1fr);
@@ -409,7 +417,10 @@ transform: translateX(18%);
     .dev-content div{
         font-size: 2rem;
     }
-    .icon-sobre, .logoSignificado h3, .tituloLogo h2, .divisao2 h2, .identidadeVisual {
+    .icon-sobre{
+        font-size: 3rem;
+    }
+   .logoSignificado h3, .tituloLogo h2, .divisao2 h2, .identidadeVisual {
         font-size: 1.8rem;
     }
     .cardMVV{

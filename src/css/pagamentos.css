@@ -58,6 +58,7 @@
     justify-self: center;
     align-items: center;
     width: 75%;
+    padding: 1rem;
 }
 .cartoes img , .seguranca-pagamentos img{
     width: 100%;

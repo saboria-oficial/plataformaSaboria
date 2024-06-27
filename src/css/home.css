@@ -57,6 +57,7 @@ height: 100%;
    overflow-y: hidden;
 }
 .row-card-gallery{
+    padding: 0 1.2rem;
   display: flex;  
   align-items: center;
   justify-content: space-around;
@@ -123,6 +124,7 @@ font-weight: 650;
     width: 100%;
 
 }
+
 .container-parcerias2{
     padding: 4rem 0rem;
      width: 100%;
@@ -148,7 +150,7 @@ font-weight: 650;
 .container-img-parceria{
    margin-bottom: 2rem;
 }
-    
+
     @media (max-width: 400px) {
         .title-parceria2 {
             font-size: 1.5rem;

@@ -23,7 +23,8 @@ check3={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>} check4={<FontA
 check5={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
 check6={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
 check7={<FontAwesomeIcon icon={faCircleXmark} className="false"></FontAwesomeIcon>}
-linkPagamento="/PagamentosEntrada"
+assinatura="Usar"
+linkPagamento="/"
           />
 
 
@@ -38,6 +39,7 @@ check5={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
 check6={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
 check7={<FontAwesomeIcon icon={faCircleXmark}className="false"></FontAwesomeIcon>}
 linkPagamento="/Pagamentos"
+assinatura="Assinar"
           />
          
 
@@ -54,6 +56,7 @@ vantagem7="Acesso as nossas parcerias"
           check6={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
           check7={<FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon>}
           linkPagamento="/PagamentosChefe"
+          assinatura="Assinar"
           />
         </div>
         <Footer/>

@@ -45,7 +45,8 @@ const Sobre = () => {
       </div>
       <div className="mvv-content ">
         <h2>MISSÃO</h2>
-        <p>Nossa plataforma de geolocalização de restaurantes oferece uma experiência inclusiva e segura, com diversidade e delivery, garantindo a satisfação dos clientes.</p>
+        <p>
+        Geolocalizar restaurantes para assim oferecermos uma experiencia inclusiva e segura, com diversidade, garantindo a sastisfação dos clientes</p>
       </div>
     </div> 
 
@@ -118,7 +119,7 @@ const Sobre = () => {
         <img src={logoAmarelo} alt="logotipo verde" />
       </div>
 <div className="tituloLogo">
-      <h2>Fontes utilizadas</h2>
+      <h2>Fontes Utilizadas</h2>
     </div>
 <div className="fontesUtilizadas">
         <div className="coluna lato">

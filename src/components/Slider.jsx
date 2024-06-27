@@ -21,12 +21,12 @@ const images = [
 
 const links = [
   'https://linktr.ee/calipet',
-  'https://beacons.ai/lifeband',
+  'https://life-band-3a73e.web.app/',
   'http://nutriacess.com.br',
   'https://www.sp.senac.br',
   'https://www.proa.org.br',
   'https://linktr.ee/calipet',
-  'https://beacons.ai/lifeband',
+  'https://life-band-3a73e.web.app/',
   'http://nutriacess.com.br',
   'https://www.sp.senac.br',
   'https://www.proa.org.br',

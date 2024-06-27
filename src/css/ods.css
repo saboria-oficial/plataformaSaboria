@@ -24,11 +24,13 @@
     display: flex;
     justify-content: center;
     border-radius: 0.93rem;
+    
     margin-bottom: 1.25rem;
 }
 .descricao {
+   
     width: 75%;
-    padding: 1.5rem;
+    padding: 1.5rem 0.5rem;
     height: 9rem;
     display: flex;
     align-items: center;
@@ -36,8 +38,9 @@
     border-radius: 0 10rem 0 0;
 }
 .descricao p{
+    width: 95%;
     color: var(--preto);
-    font-weight: 750;
+    font-weight: 500;
 }
 .iconImage {
     width: 9rem;

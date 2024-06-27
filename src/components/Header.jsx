@@ -9,6 +9,7 @@ import {
   faUser,
   faMagnifyingGlass,
   faLanguage,
+  faUserCircle
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -17,6 +18,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+
+import cliente from '../assets/img2/guri.jpg'
 
 const Header = () => {
   const [showTranslate, setShowTranslate] = useState(false);
@@ -63,7 +66,7 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
+    <header>
        <Offcanvas show={show} onHide={handleClose}>
       
         <Offcanvas.Body  style={{padding:"1rem"}}>
@@ -143,6 +146,9 @@ const Header = () => {
                
             
                 <div className="links-navbar">
+                  <li className="icon-header">
+                    <Link to="/perfilFav"><FontAwesomeIcon id="user-header" icon={faUserCircle}/></Link>
+                  </li>
                   <li className="icon-header dropdown">
                     <NavDropdown
                       className="icon-header"
@@ -162,7 +168,8 @@ const Header = () => {
                       className="btn-idioma"
                       onClick={handleToggleTranslate}
                     >
-                      <FontAwesomeIcon icon={faLanguage} variant="primary" onClick={handleShow}/>
+                      <FontAwesomeIcon icon={faLanguage} id="iconeTradutor" variant="primary" onClick={handleShow}/>
+                      <p  onClick={handleShow}>Tradutor</p>
                     </button>
                   </div>
                 </div>
@@ -171,7 +178,7 @@ const Header = () => {
           </Container>
         </Navbar>
       ))}
-    </div>
+    </header>
   );
 };
 

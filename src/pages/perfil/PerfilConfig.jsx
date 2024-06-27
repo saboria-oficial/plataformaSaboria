@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../../css/perfilFav.css";
 import { Link } from "react-router-dom";
 //img
@@ -21,6 +22,31 @@ import {
 
 const PerfilConfig = () => {
   const [senhaVisivel, setSenhaVisivel] = useState(false);
+  const [usuario, setUsuario] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchUsuario = async () => {
+      const user = localStorage.getItem('user');
+
+      console.log(user)
+      if (user) {
+        try {
+          const response = await axios.get(`https://localhost:7097/api/Usuario/${user}`);
+          console.log(response.data)
+
+          setUsuario(response.data);
+        } catch (err) {
+          setError('Erro ao buscar dados do Usuario.');
+          console.error(err);
+        }
+      } else {
+        setError('CNPJ não encontrado no localStorage.');
+      }
+    };
+
+    fetchUsuario();
+  }, []);
 
   const toggleSenhaVisivel = (event) => {
     event.preventDefault();
@@ -34,10 +60,13 @@ const PerfilConfig = () => {
         <h2>Perfil</h2>
         <div className="config-perfil">
           <div className="client-config-info">
-            <img src={cliente} alt="foto cliente" />
             <div className="config-text">
               <p>Meu perfil</p>
-              <h2>Olá, João Lucas</h2>
+              {usuario && (
+              <div>
+                <h2>Olá, {usuario.nome}</h2>
+              </div>
+            ) }
             </div>
           </div>
           {/* <div className="menu-config">
@@ -74,87 +103,51 @@ const PerfilConfig = () => {
         </div>
         <div className="container-form-config">
           <h2>Informações da conta</h2>
-          <form action="">
-            <input
-              type="text"
-              placeholder="Nome"
-              id="nomeCliente"
-              name="nome"
-            />
-            <input
-              type="text"
-              placeholder="Sobrenome"
-              id="sobrenomeCliente"
-              name="sobrenome"
-            />
-            <div className="input-special">
+          {usuario && (
+            <form action="">
               <input
-                type="email"
-                placeholder="Email"
-                id="emailCliente"
-                name="email"
+                type="text"
+                placeholder="Nome"
+                id="nomeCliente"
+                name="nome"
+                value={usuario.nome}
               />
-              <button>
-                <FontAwesomeIcon icon={faLock} />
-              </button>
-            </div>
-            <div className="input-special">
-              <input
-                type="tel"
-                placeholder="Telefone"
-                id="telefoneCliente"
-                name="telefone"
-              />
-              <button>
-                <FontAwesomeIcon icon={faLock} />
-              </button>
-            </div>
-            <input
-              type="text"
-              placeholder="Restrição alimentar"
-              id="restricaoCliente"
-              name="restricao"
-            />
-            <div className="form-genero">
-              <label htmlFor="generoCliente">Gênero</label>
-              <div className="opcoesGenero">
-                <div>
-                  <input
-                    type="radio"
-                    name="generoCliente"
-                    id="femininoCliente"
-                  />
-                  <label>Mulher</label>
-                </div>
-                <div>
-                  <input type="radio" name="generoCliente" id="mulherCliente" />
-                  <label>Homem</label>
-                </div>
-                <div>
-                  <input type="radio" name="generoCliente" id="outroCliente" />
-                  <label>Prefiro não informar</label>
-                </div>
+              <div className="input-special">
+              
+                <input
+                  type="email"
+                  placeholder="Email"
+                  id="emailCliente"
+                  name="email"
+                  value={usuario.email}
+                />
+                <button>
+                  <FontAwesomeIcon icon={faLock} />
+                </button>
               </div>
-            </div>
-            <div className="input-special">
+              <div className="input-special">
+                <input
+                  type="tel"
+                  placeholder="Telefone"
+                  id="telefoneCliente"
+                  name="telefone"
+                  value={usuario.telefone}
+                />
+                <button>
+                  <FontAwesomeIcon icon={faLock} />
+                </button>
+              </div>
               <input
-                type={senhaVisivel ? "text" : "password"}
-                placeholder="Senha"
-                id="senhaCliente"
-                name="senha"
+                type="text"
+                placeholder="Restrição alimentar"
+                id="restricaoCliente"
+                name="restricao"
+                value={usuario.restricao}
               />
-              <button onClick={toggleSenhaVisivel} type="button">
-                <FontAwesomeIcon icon={senhaVisivel ? faEyeSlash : faEye} />
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faLock} />
-              </button>
-            </div>
-           
-          </form>
-        
+            </form>
+          )}
         </div>
-        <button type="submit" className="btn-perfil-config">Alterar Dados</button>
+        {/* <button type="submit" className="btn-perfil-config">Alterar Dados</button> */}
       </div>
       <Footer />
     </div>

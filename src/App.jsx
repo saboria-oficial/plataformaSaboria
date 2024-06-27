@@ -25,9 +25,9 @@ import Pesquisa from "./pages/pesquisa/Pesquisa.jsx";
 import PlanosRes from "./pages/planos/PlanosRes.jsx";
 import Cardapio from "./pages/cardapio/Cardapio.jsx";
 import Pagamentos from "./pages/pagamentos/Pagamentos.jsx";
-import PagamentoEntrada from "./pages/pagamentos/PagamentosEntrada.jsx"
+
 import PagamentoChefe from "./pages/pagamentos/PagamentosChefe.jsx"
-import PagamentoCasa from "./pages/pagamentos/PagamentosCasa.jsx"
+
 import PagamentoOmakase from "./pages/pagamentos/PagamentosOmakase.jsx"
 function App() {
   return (
@@ -59,8 +59,8 @@ function App() {
       <Route path="/cardapio" element={<Cardapio/>}></Route>
       <Route path="/pagamentos" element={<Pagamentos/>}></Route>
       <Route path="/pagamentosChefe" element={<PagamentoChefe/>}></Route>
-      <Route path="/pagamentosEntrada" element={<PagamentoEntrada/>}></Route>
-      <Route path="/pagamentosCasa" element={<PagamentoCasa/>}></Route>
+
+   
       <Route path="/pagamentosOmakase" element={<PagamentoOmakase/>}></Route>
     </Routes>
     </Router>

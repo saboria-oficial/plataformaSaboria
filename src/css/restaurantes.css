@@ -49,19 +49,7 @@ font-weight: bold;
 
 /*pagina restaurantes*/
 
-.card-carrosel{
-   
-    padding: 1rem;
-    background-color: #e6e6e6a4;
-    color: var(--branco);
-    height: 15rem;
-    width: fit-content;
-    border-radius: 1.5rem;
-    text-align: center;
-    transform: translateX(200%) translateY(-150%);
-    font-weight: bold;
-    position: absolute;
-}
+
 .card-carrosel h2{
     font-size: 3rem;
 }

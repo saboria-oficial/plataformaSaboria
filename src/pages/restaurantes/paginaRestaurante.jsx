@@ -42,11 +42,11 @@ const PaginaRestaurante = () => {
       <div className="pagina-res">
         <Carrosel img1={pizza2} img2={pizza1} img3={pizza3} />
         <div className="card-carrosel">
-          <h2>PIZZARIA XXXX</h2>
+          <h2>PIZZARIA ARPA</h2>
 
           <h3>Promoções as sextas</h3>
 
-          <h4>Comida boa é aqui</h4>
+          <h4>Pizza boa é aqui</h4>
         </div>
         <div className="pag-perfil-res">
           <img src={logoPizzaria1} alt="" />
@@ -78,7 +78,7 @@ const PaginaRestaurante = () => {
                 <span>
                   <FontAwesomeIcon icon={faMoneyCheckDollar} />
                 </span>{" "}
-                Forma Pagamento
+                Forma de Pagamento
               </Link>
             </div>
           </div>

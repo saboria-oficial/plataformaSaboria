@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import '../../css/faq.css'
-import faq from '../../assets/img2/FAQimg.svg'
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../css/faq.css';
+import faq from '../../assets/img2/FAQimg.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-
 const Faq = () => {
-
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -48,11 +46,12 @@ const Faq = () => {
 
   return (
     <div>
-      <Header/>
+      <Header />
+      <div className="background-image"></div>
       <h2 id="titulo-faq">AS RESPOSTAS PARA AS SUAS PERGUNTAS:</h2>
       <div className="container-faq">
         <div className="container-faq-img">
-          <img src={faq}  id="faqImg" alt="faq" />
+          <img src={faq} id="faqImg" alt="faq" />
         </div>
         <div className="container-faq-texto">
           {faqs.map((faq, index) => (
@@ -68,7 +67,7 @@ const Faq = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

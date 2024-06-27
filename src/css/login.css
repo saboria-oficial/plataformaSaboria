@@ -30,7 +30,7 @@
   }
 
   .container-login .input-field {
-    max-width: 23.75rem;
+    max-width: 28.75rem;
     width: 100%;
     background-color: #f0f0f0;
     margin: 10px 0;
@@ -49,6 +49,7 @@
     transition: 0.5s;
     font-size: 1.1rem;
     margin-right: 0.6rem;
+    padding-left: 0.3rem;
   }
   
   .container-login .input-field input {
@@ -63,6 +64,7 @@
   
   .container-login .input-field input::placeholder {
     font-weight: 500;
+    color: var(--preto);
  
   }
   
@@ -85,10 +87,13 @@
     border-radius: 3rem;
     color: var(--branco);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 450;
     margin: 10px 0;
     cursor: pointer;
     transition: 0.5s;
+  }
+  #entrar{
+    text-align: center;
   }
   .container-login .cadastro{
     text-align: center;

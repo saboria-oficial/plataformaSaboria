@@ -4,6 +4,9 @@
     color: var(--preto);
 
 }
+#user-icon{
+    font-size: 7rem;
+}
 .containerPerfil{
     width: 100%;
     display: flex;
@@ -15,6 +18,9 @@
     background-repeat: no-repeat;
     background-size: cover;
    
+}
+.restaurantesPerfil .coracao{
+    color: var(--vermelho);
 }
 .tituloPerfil{
     display: flex;
@@ -592,6 +598,3 @@ gap: 10rem;
         font-size:0.8rem;
       }
 }
-
-
-

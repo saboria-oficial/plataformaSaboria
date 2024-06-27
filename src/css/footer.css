@@ -71,6 +71,10 @@ background-color:var(--amarelo);
 .icon-footer:hover  a{
     color: var(--amarelo);
 }
+#politicadePriv{
+    text-decoration: underline;
+    color: var(--preto);
+}
 @media (max-width:800px){
     #container-footer{
         grid-template-columns: repeat(2, 1fr);

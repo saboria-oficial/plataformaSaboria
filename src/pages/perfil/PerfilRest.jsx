@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import SideBar from "../../components/SideBar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -15,13 +16,61 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 import logoPizzaria1 from "../../assets/img2/logoPizzaGenerico.jpg";
 import "../../css/perfilFav.css";
+
 const PerfilRest = () => {
+
+  const [restaurante, setRestaurante] = useState(null);
+  const [error, setError] = useState(null);
+  const [endereco, setEndereco] = useState(null);
+
+  useEffect(() => {
+    const fetchRestaurante = async () => {
+      const user = JSON.parse(localStorage.getItem('res'));
+
+      console.log(user)
+      if (user) {
+        try {
+          const response = await axios.get(`https://localhost:7097/api/Restaurante/${user}`);
+          console.log(response.data)
+
+          setRestaurante(response.data);
+          const enderecoCompleto = await buscarEnderecoViaCEP(response.data.cep);
+          setEndereco(enderecoCompleto);
+        } catch (err) {
+          setError('Erro ao buscar dados do restaurante.');
+          console.error(err);
+        }
+      } else {
+        setError('CNPJ não encontrado no localStorage.');
+      }
+    };
+
+    fetchRestaurante();
+  }, []);
+
+  const buscarEnderecoViaCEP = async (cep) => {
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      if (!response.ok) {
+        throw new Error('Erro ao buscar dados do CEP.');
+      }
+      const data = await response.json();
+      const endereco = `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
+      return endereco;
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+  };
+
   return (
     <>
       <Header />
       <div className="containerResPerfilS">
         <div className="SideBar">
-          <SideBar img={logoPizzaria1} nomeRestaurante="Bom Recheio" />
+          {restaurante && (
+            <SideBar img={logoPizzaria1} nomeRestaurante={restaurante.nome} />
+          )}
         </div>
         <div className="containerResPerfil">
           <div className="tituloResPerfil">
@@ -30,15 +79,16 @@ const PerfilRest = () => {
           <div className="localResPerfil">
             <div className="info-perfil">
               <img src={Pizzaria} alt="Restaurante" />
-              <div className="descriResPerfil">
-                <h2>Bom Recheio</h2>
-                <h3>Rua dos Gusmões, 338, Santa Efigênia</h3>
-                <h3>Onde os Sabores Alcançam as Estrelas!</h3>
-                <h3>
-                  <FontAwesomeIcon id="clock" icon={faClock} /> Aberto de acordo
-                  com o horário de funcionamento
-                </h3>
-              </div>
+              {restaurante && (
+                <div className="descriResPerfil">
+                  <h2>{restaurante.nome}</h2>
+                  <h3>{endereco}</h3>
+                  <h3>
+                    <FontAwesomeIcon id="clock" icon={faClock} /> Aberto de
+                    acordo com o horário de funcionamento
+                  </h3>
+                </div>
+              )}
             </div>
             <div className="EditResPerfil">
               <h2>
@@ -65,26 +115,14 @@ const PerfilRest = () => {
             </div>
             <div className="intoleranciasResPerfil">
               <h2>INTOLERÂNCIAS</h2>
-              <h3>
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                Frutos do mar
-              </h3>
-              <h3>
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                Glúten
-              </h3>
-              <h3>
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                Castanha
-              </h3>
-              <h3>
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                Lactose
-              </h3>
-              <h3>
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                Laticínios
-              </h3>
+              {restaurante && restaurante.intolerancia && (
+                restaurante.intolerancia.split(',').map((item, index) => (
+                  <h3 key={index}>
+                    <FontAwesomeIcon className="circle" icon={faCircle} />
+                    {item.trim()}
+                  </h3>
+                ))
+              )}
             </div>
           </div>
           <div className="localResPerfil ">

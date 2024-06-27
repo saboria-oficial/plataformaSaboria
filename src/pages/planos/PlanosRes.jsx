@@ -37,7 +37,8 @@ const PlanosRes = () => {
               vantagem3="Acesso ao nosso suporte"
               vantagem4="Personalização do seu cardápio"
               vantagem5="Adicionar matéria ao nosso blog"
-              linkPagamento="/PagamentosCasa"/>
+              linkPagamento="/"
+              assinatura="Usar"/>
         
         <CardPlanoRes nome="Menu Omakasê" preco='39.99' 
         icon1={<FontAwesomeIcon 
@@ -56,7 +57,9 @@ const PlanosRes = () => {
                 vantagem3="Acesso ao nosso suporte"
                 vantagem4="Personalização do seu cardápio"
                 vantagem5="Adicionar matéria ao nosso blog"
-                linkPagamento="/PagamentosOmakase"/>
+                linkPagamento="/PagamentosOmakase"
+                assinatura="Assinar"/>
+              
         
         
           </div>

@@ -93,48 +93,24 @@ const LoginRestaurantes = () => {
 
   return (
     <div>
-      <Header />
-      <div className="container-cadastro fundo-restaurantes">
-        <div className="card-cadastro-img">
-          <img src={imagemCadastro} alt="" />
-        </div>
-        <div className="card-cadastro">
-          <h2 className="title">Login!</h2>
+      <Header/>
+    <div className="container-cadastro fundo-restaurantes">
+    <div className="card-cadastro-img">
+  <img src={imagemCadastro} alt=""/>
+</div>
+  <div className="card-cadastro">
+      <h2 className="title">Login!</h2>
+     
+      <form>
 
-          <form>
-            {/* <input type="email" name="email" placeholder="Email" required/> */}
-            <input
-              type="text"
-              name="cnpj"
-              placeholder="CNPJ"
-              required
-              onChange={handleInputChange}
-            />
-            <input
-              type="password"
-              name="senha"
-              placeholder="Senha"
-              required
-              onChange={handleInputChange}
-            />
+          <input type="email" placeholder="Email" required/>
+          <input type="text" placeholder="Cnpj" required/> 
+          <input type="password" placeholder="Senha" required/> 
 
-            <a className="links" href="/redefinir">
-              Esqueceu sua senha?
-            </a>
-            {/* <Link to="/PerfilRes"> */}
-            <button
-              type="button"
-              className="btn btn-dark"
-              id="loginRes"
-              onClick={handleLoginClick}
-            >
-              Entrar
-            </button>
-            {/* </Link>  */}
-          </form>
-          <Link to="/cadastroRes" className="mudarCor">
-            Criar Conta{" "}
-          </Link>
+          <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link> 
+      </form>
+    <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
+
 
           <p>Ou inscreva-se pelas redes sociais</p>
 
@@ -143,18 +119,15 @@ const LoginRestaurantes = () => {
               <a href="">
                 <FontAwesomeIcon icon={faGoogle} className="fa-google" />
               </a>
-              <p>
-                <Link className="links" to="/login">
-                  Login para clientes
-                </Link>
-              </p>
             </div>
-          </div>
-        </div>
       </div>
-      <Footer />
-    </div>
-  );
-};
+
+
+  </div>
+ </div>
+ <Footer/>
+  </div>
+  )
+}
 
 export default LoginRestaurantes;

@@ -18,6 +18,7 @@ import Image3 from "../../assets/img2/carrosel3.jpg";
 // Import dos icones
 
 const Home = () => {
+  //scrolagem
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
 

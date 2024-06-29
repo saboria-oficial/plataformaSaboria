@@ -10,15 +10,15 @@ const FormularioRestaurantes = () => {
     <div>
       <div className="containerFormularioRest">
         <div className="formsRest">
-            <form action='#'>
+            <form action='https://formspree.io/f/xeojjbgn' method='POST'>
                 <h2>Podemos Ajudar?</h2>
 
-                <input type="text" name='nomeRest' id='nomeRest' placeholder='CNPJ'/>
+                <input type="text" name='nome Restaurante:' id='nomeRest' placeholder='CNPJ' required/>
 
-                <input type="email" name='emailRest' id='emailRest' placeholder='Email:'/>
+                <input type="email" name='email Restaurante:' id='emailRest' placeholder='Email:' required/>
                 
-                <textarea name="comentarioRest" id="comentarioRest" rows={8} cols={40} placeholder='Como podemos te ajudar?'></textarea>
-                <Link className="linkin" to="/Enviado"><button type='submit'>Enviar</button></Link>
+                <textarea name="comentario Restaurante:" id="comentarioRest" rows={8} cols={40} placeholder='Como podemos te ajudar?' required></textarea>
+              <button type='submit'>Enviar</button>
             </form>
         </div>
         <div className="imgRest">

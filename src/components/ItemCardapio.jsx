@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 const ItemCardapio = (props) => {
+  //troca de icone e frase pra mostrar a condição do prato
     const [situacao, setSituacao]= useState("Pausa das Vendas");
     const [icone, setIcone]= useState(<FontAwesomeIcon icon={faPause}/>);
     const situacaoPrato = () =>{

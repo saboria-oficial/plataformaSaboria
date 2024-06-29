@@ -1,43 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-//components
+import Swal from 'sweetalert2';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SideBar from "../../components/SideBar";
 import ItemCardapio from "../../components/ItemCardapio";
-import Swal from 'sweetalert2'
-//img
-import imgPrato from '../../assets/img2/fotoIndisponivel.jpg'
-import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
-//css
 import "../../css/cardapio.css";
+
+import imgPrato from '../../assets/img2/fotoIndisponivel.jpg';
+import logoPizzaria1 from '../../assets/img2/logoPizzaGenerico.jpg';
 
 const Cardapio = () => {
   const [produto, setProduto] = useState(null);
   const [error, setError] = useState(null);
-
-  let x = 0;
-  function scroolFun() {
-    document.getElementById("demo").innerHTML = x += 1;
-  }
+  const [imagemRestaurante, setImagemRestaurante] = useState(null);
 
   const [formData, setFormData] = useState({
-    idProduto : "",
-    nome : "",
-    descricao : "",
-    imagem : "",
-    valor : "",
-    restricao : ""
+    idProduto: "",
+    nome: "",
+    descricao: "",
+    foto: "", // Inicialize com uma string vazia
+    valor: "",
+    restricao: "",
   });
 
   useEffect(() => {
     const fetchProduto = async () => {
       try {
         const response = await axios.get(`https://localhost:7097/api/Produto`);
-        console.log(response.data)
-
         setProduto(response.data);
+        
       } catch (err) {
         setError('Erro ao buscar dados do Produto.');
         console.error(err);
@@ -45,6 +38,25 @@ const Cardapio = () => {
     };
 
     fetchProduto();
+
+    const fetchRestaurante = async () => {
+      const user = JSON.parse(localStorage.getItem('res'));
+      if (user) {
+        try {
+          // Requisição para obter a imagem do restaurante
+          const imagemResponse = await axios.get(`https://localhost:7097/api/Restaurante/${user}/imagem`);
+          setImagemRestaurante(imagemResponse.data.imagemUrl); // Supondo que o backend retorna um campo ImagemUrl
+          
+        } catch (err) {
+          setError('Erro ao buscar dados do restaurante.');
+          console.error(err);
+        }
+      } else {
+        setError('CNPJ não encontrado no localStorage.');
+      }
+    };
+
+    fetchRestaurante();
   }, []);
 
   const handleInputChange = (e) => {
@@ -55,25 +67,41 @@ const Cardapio = () => {
     });
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData({
+          ...formData,
+          foto: reader.result, // Armazena a imagem como base64
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleCadastroClick = async () => {
-    const { idProduto, nome, descricao, imagem, valor, restricao } = formData;
+    const { idProduto, nome, descricao, foto, valor, restricao } = formData;
     if (idProduto && nome && descricao && valor) {
       try {
+        const data = new FormData();
+        data.append("idProduto", idProduto);
+        data.append("nome", nome);
+        data.append("descricao", descricao);
+        data.append("valor", valor);
+        data.append("restricao", restricao);
+        if (foto) {
+          // Se a foto for em base64, converte de volta para Blob antes de enviar
+          const blob = await fetch(foto).then(res => res.blob());
+          data.append("foto", blob);
+        }
+
         const response = await fetch("https://localhost:7097/api/Produto", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            idProduto : idProduto,
-            nome : nome,
-            descricao : descricao,
-            imagem : imagem,
-            valor : valor,
-            restricao : restricao
-          }),
+          body: data,
         });
-        console.log(response)
+
         if (response.ok) {
           await Swal.fire({
             position: "top-end",
@@ -82,8 +110,6 @@ const Cardapio = () => {
             showConfirmButton: false,
             timer: 1500
           });
-
-          location.reload();
 
         } else {
           Swal.fire({
@@ -113,10 +139,10 @@ const Cardapio = () => {
     <div>
       <Header />
       <div className="container-cardapio">
-        <SideBar className="asside-cardapio"  img={logoPizzaria1} nomeRestaurante="Bom Recheio"/>
+        <SideBar className="asside-cardapio" img={imagemRestaurante} nomeRestaurante="Bom Recheio" />
         <div className="content-cardapio">
           <div className="scroll-table">
-            <div className="tabela-cardapio" onScroll={scroolFun}>
+            <div className="tabela-cardapio">
               <h2>Cardápio</h2>
               <div className="desc-items-cardapio">
                 <span>Intolerâncias</span>
@@ -127,39 +153,47 @@ const Cardapio = () => {
                 <span>Editar</span>
               </div>
 
-              {produto && (
-                produto.map((item, index) => (
-                  <div className="tabela-cardapio">
-                    <ItemCardapio
-                      intolerancia={item.restricao}
-                      nome={item.nome}
-                      preco={item.valor}
-                      className="tabela-item"
-                    />
-                  </div>
-                ))
-              )}
+              {produto && produto.map((item, index) => (
+                <div className="tabela-cardapio" key={index}>
+                  <ItemCardapio
+                    intolerancia={item.restricao}
+                    nome={item.nome}
+                    preco={item.valor}
+                    className="tabela-item"
+                  />
+                </div>
+              ))}
               <span className="add-cardapio">+ Item</span>
             </div>
           </div>
           <div className="add-prato">
             <div className="prato-img">
-              <img src={imgPrato} alt="" />
+              <label htmlFor="fotoInput">
+                <img src={formData.foto || imgPrato} alt="" />
+                <input
+                  type="file"
+                  id="fotoInput"
+                  name="foto"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  style={{ display: "none" }}
+                />
+              </label>
               <Link id="link-verifique" to="/planoRes">Verifique seu plano</Link>
             </div>
             <div className="prato-desc">
-              <input type="text" placeholder="Id" name="idProduto" id="idProduto" value={formData.idProduto} onChange={handleInputChange}/>
-              <input type="text" placeholder="nome do prato" name="nome" id="nome" value={formData.nome} onChange={handleInputChange}/>
+              <input type="text" placeholder="Id" name="idProduto" id="idProduto" value={formData.idProduto} onChange={handleInputChange} />
+              <input type="text" placeholder="nome do prato" name="nome" id="nome" value={formData.nome} onChange={handleInputChange} />
               <textarea name="descricao" id="descricao" placeholder="descrição do prato" value={formData.descricao} onChange={handleInputChange}></textarea>
-              <input type="number" placeholder="valor" name="valor" id="valor" value={formData.valor} onChange={handleInputChange}/>
-              <input type="text" placeholder="Restrição" name="restricao" id="restricao" value={formData.restricao} onChange={handleInputChange}/>
+              <input type="number" placeholder="valor" name="valor" id="valor" value={formData.valor} onChange={handleInputChange} />
+              <input type="text" placeholder="Restrição" name="restricao" id="restricao" value={formData.restricao} onChange={handleInputChange} />
               <button
                 type="button"
                 className="btn btn-dark"
                 id="cadastrar"
                 onClick={handleCadastroClick}>
                 Cadastrar
-                </button>
+              </button>
             </div>
           </div>
         </div>
@@ -168,4 +202,5 @@ const Cardapio = () => {
     </div>
   );
 };
+
 export default Cardapio;

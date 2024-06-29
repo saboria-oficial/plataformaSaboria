@@ -12,7 +12,7 @@ const Faq = () => {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+//vetorização
   const faqs = [
     {
       question: "Com quais restrições alimentares vocês trabalham?",

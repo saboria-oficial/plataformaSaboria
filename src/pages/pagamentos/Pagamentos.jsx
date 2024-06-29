@@ -16,13 +16,13 @@ const Pagamentos = () => {
   const [loaded, setLoaded] = useState(false);
 
   let paypalRef = useRef();
-
   const product = {
     price: 19.99,
     description: "Plano: Menu Principal",
   }
-
+//api de pagamento
   useEffect(() => {
+
     const script = document.createElement("script");
     const id = "AQdNQQ111WhAEa4UAEgfeH9mf3hTMTAPlY59gPyBhjDWAd6pRpuDXrl0LV8rSUh9IhpQOFXN4Qcafz31"
     script.src = `https://www.paypal.com/sdk/js?currency=BRL&client-id=${id}`

@@ -3,7 +3,7 @@ import '../css/blog.css';
 
 const CardBlog = ({ image, title, texto, isVisible, onShow, onHide }) => {
   const noticiaRef = useRef(null);
-
+//ver visualização das noticias
   useEffect(() => {
     if (noticiaRef.current) {
       noticiaRef.current.style.display = isVisible ? 'flex' : 'none';

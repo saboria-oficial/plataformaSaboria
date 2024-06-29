@@ -21,7 +21,7 @@ const NavbarIntolerancia = () => {
   const [activeLink, setActiveLink] = useState('Laticínios');
   const scrollContainerRef1 = useRef(null);
   const scrollContainerRef2 = useRef(null);
-
+//vetorização do conteudo dos card restaurntes
   const restaurantes = [
     { nome: 'Restaurante A', ingredientes: ['ovo'], img: logo1, imgcomida:bolo3 },
     { nome: 'Restaurante B', ingredientes: ['gluten'], img: logo2, imgcomida:burguer1 },
@@ -42,9 +42,9 @@ const NavbarIntolerancia = () => {
     'Frutos do mar',
     'Soja'
   ];
-
+//filtro de alergias da navbar de intolerncias
   const filteredRestaurants = activeLink === 'none' ? restaurantes : restaurantes.filter(restaurant => !restaurant.ingredientes.includes(activeLink.toLowerCase()));
-
+// scrool
   const handleScroll = (scrollContainer) => {
     scrollContainer.style.scrollBehavior = 'auto';
   };

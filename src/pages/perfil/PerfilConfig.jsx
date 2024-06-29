@@ -21,6 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const PerfilConfig = () => {
+  
   const [senhaVisivel, setSenhaVisivel] = useState(false);
   const [usuario, setUsuario] = useState(null);
   const [error, setError] = useState(null);

@@ -26,6 +26,7 @@ const PaginaRestaurante = () => {
   const [cor, setCor] = useState("");
   const [status, setStatus] = useState("");
   useEffect(() => {
+    //função para mostrar se o restaurante está aberto ou fechado
     const horaAtual = new Date().getHours();
 
     if (horaAtual >= 15 && horaAtual < 24) {

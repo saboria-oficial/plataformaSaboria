@@ -44,6 +44,7 @@ const LoginRestaurantes = () => {
   const handleLoginClick = async () => {
     const { cnpj, senha, chaveSenha } = formData;
     if (cnpj && senha) {
+      console.log(formData)
       try {
         const response = await fetch(
           `https://localhost:7097/api/Restaurante/${cnpj}/${chaveSenha}`,
@@ -55,6 +56,7 @@ const LoginRestaurantes = () => {
           }
         );
         if (response.ok) {
+          console.log(`CNPJ : ${cnpj}`)
           localStorage.setItem("res", cnpj);
 
           await Swal.fire({
@@ -102,25 +104,20 @@ const LoginRestaurantes = () => {
       <h2 className="title">Login!</h2>
      
       <form>
+          <input type="text" placeholder="cnpj" name="cnpj" required onChange={handleInputChange}/> 
+          <input type="password" placeholder="senha" name="senha"  required onChange={handleInputChange}/> 
 
-          <input type="email" placeholder="Email" required/>
-          <input type="text" placeholder="Cnpj" required/> 
-          <input type="password" placeholder="Senha" required/> 
-
-          <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link> 
+          {/* <Link to="/PerfilRes"><input type="submit" id="loginRes" value="Entrar"/></Link>  */}
+          <button
+                    type="button"
+                    className="btn btn-dark"
+                    id="loginRes"
+                    onClick={handleLoginClick}>
+                    Entrar
+                  </button>
       </form>
     <Link to="/cadastroRes" className='mudarCor'>Criar Conta </Link>
 
-
-          <p>Ou inscreva-se pelas redes sociais</p>
-
-          <div className="icons-cadastro">
-            <div className="icon-cadastro">
-              <a href="">
-                <FontAwesomeIcon icon={faGoogle} className="fa-google" />
-              </a>
-            </div>
-      </div>
 
 
   </div>

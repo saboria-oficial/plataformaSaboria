@@ -56,6 +56,7 @@ const Pesquisa = () => {
     Trigo: false,
     Ovos: false,
   });
+  //vetorização
   const [data] = useState([
     {
       logo: logo1,
@@ -170,7 +171,7 @@ const Pesquisa = () => {
       intolerances: ["FrutosDoMar"],
     },
   ]);
-
+//filtro de alergias
   const applyFilters = () => {
     const filtered = data.filter((restaurant) => {
       const intolerances = restaurant.intolerances || [];
@@ -182,7 +183,7 @@ const Pesquisa = () => {
       if (filters.Ovos && !intolerances.includes('Ovos')) return false;
       return true;
     });
-
+//filtro de pesquisa por nome
     return filtered.filter(
       (item) =>
         item.name.toLowerCase().includes(search.toLowerCase()) ||

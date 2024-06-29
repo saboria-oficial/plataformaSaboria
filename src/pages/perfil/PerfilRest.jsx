@@ -3,7 +3,6 @@ import axios from "axios";
 import SideBar from "../../components/SideBar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Pizzaria from "../../assets/img2/logoPizzaGenerico.jpg";
 // icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,29 +12,33 @@ import {
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
-
-import logoPizzaria1 from "../../assets/img2/logoPizzaGenerico.jpg";
+import indisponivel from '../../assets/img2/fotoIndisponivel.jpg';
 import "../../css/perfilFav.css";
 
 const PerfilRest = () => {
-
   const [restaurante, setRestaurante] = useState(null);
   const [error, setError] = useState(null);
   const [endereco, setEndereco] = useState(null);
+  const [imagemRestaurante, setImagemRestaurante] = useState(null);
 
   useEffect(() => {
     const fetchRestaurante = async () => {
       const user = JSON.parse(localStorage.getItem('res'));
-
-      console.log(user)
       if (user) {
         try {
           const response = await axios.get(`https://localhost:7097/api/Restaurante/${user}`);
-          console.log(response.data)
-
+          console.log('Dados do restaurante:', response.data); // Log dos dados do restaurante
           setRestaurante(response.data);
+
+          // Busca o endereço via CEP
           const enderecoCompleto = await buscarEnderecoViaCEP(response.data.cep);
           setEndereco(enderecoCompleto);
+
+          // Requisição para obter a imagem do restaurante
+          const imagemResponse = await axios.get(`https://localhost:7097/api/Restaurante/${user}/imagem`);
+          console.log('URL da imagem:', imagemResponse.data.imagemUrl); // Log da URL da imagem
+          setImagemRestaurante(imagemResponse.data.imagemUrl); // Supondo que o backend retorna um campo ImagemUrl
+          
         } catch (err) {
           setError('Erro ao buscar dados do restaurante.');
           console.error(err);
@@ -68,8 +71,10 @@ const PerfilRest = () => {
       <Header />
       <div className="containerResPerfilS">
         <div className="SideBar">
-          {restaurante && (
-            <SideBar img={logoPizzaria1} nomeRestaurante={restaurante.nome} />
+          {restaurante ? (
+            <SideBar img={imagemRestaurante} nomeRestaurante={restaurante.nome} />
+          ) : (
+            <SideBar img={indisponivel} nomeRestaurante='Restaurante'/>
           )}
         </div>
         <div className="containerResPerfil">
@@ -78,7 +83,9 @@ const PerfilRest = () => {
           </div>
           <div className="localResPerfil">
             <div className="info-perfil">
-              <img src={Pizzaria} alt="Restaurante" />
+               {imagemRestaurante && (
+                <img src={imagemRestaurante} alt="Restaurante" />
+              )}
               {restaurante && (
                 <div className="descriResPerfil">
                   <h2>{restaurante.nome}</h2>

@@ -7,6 +7,7 @@ import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import '../css/home.css';
 
 const CardRestaurante = (props) => {
+  //pintar e trocar o icone de favoritado
   const [favorito, setFavorito]= useState(false);
   const [icone, setIcone]= useState(faHeart);
   const [colorIcone, setcolorIcone] = useState('var(--branco)');

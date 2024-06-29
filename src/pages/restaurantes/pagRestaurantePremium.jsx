@@ -35,6 +35,7 @@ import svt3 from "../../assets/img2/pistache.webp";
 import svt4 from "../../assets/img2/degustacao.webp";
 import svt5 from "../../assets/img2/sorvete5.jpg";
 const PagRestaurantePremium = () => {
+      //função para mostrar se o restaurante está aberto ou fechado
   const [cor, setCor] = useState("");
   const [status, setStatus] = useState("");
   useEffect(() => {

@@ -21,7 +21,7 @@ const Pagamentos = () => {
     price: 39.99,
     description: "Plano: Menu Omakasê",
   }
-
+//api de pagamento
   useEffect(() => {
     const script = document.createElement("script");
     const id = "AQdNQQ111WhAEa4UAEgfeH9mf3hTMTAPlY59gPyBhjDWAd6pRpuDXrl0LV8rSUh9IhpQOFXN4Qcafz31"

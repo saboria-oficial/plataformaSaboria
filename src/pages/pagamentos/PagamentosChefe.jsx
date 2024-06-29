@@ -16,7 +16,7 @@ const Pagamentos = () => {
   const [loaded, setLoaded] = useState(false);
 
   let paypalRef = useRef();
-
+//api de pagamento
   const product = {
     price: 39.99,
     description: "Plano: Menu do Chefe",

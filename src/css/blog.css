@@ -88,13 +88,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 40rem;
-  width: 100%;
+  width: 60%;
   position: absolute;
   padding: 0.5rem;
   top: 25%;
   left: 25%;
-
   z-index: 5;
   border-radius: 2rem;
   transition: all 0.3s ease;
@@ -133,6 +131,8 @@
 }
 .add-prato{
   width: 100%;
+  scale: 1.1;
+  margin: 0.5rem;
 }
 .add-prato, .add-prato form{
   display: flex;
@@ -166,6 +166,7 @@ font-weight: 800;
 color: var(--verde-escuro);
 }
 .add-btn{
+  margin: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;

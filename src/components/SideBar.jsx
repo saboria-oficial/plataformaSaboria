@@ -17,7 +17,7 @@ import {
   faPen,
   faChevronRight
 } from "@fortawesome/free-solid-svg-icons";
-
+//abrir e fechar sidebar
 const botao = () => {
   document.getElementById('open_btn').addEventListener('click', function () {
     document.getElementById('sidebar').classList.toggle('open-sidebar');

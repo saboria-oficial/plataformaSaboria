@@ -23,7 +23,7 @@ import cliente from '../assets/img2/guri.jpg'
 
 const Header = () => {
   const [showTranslate, setShowTranslate] = useState(false);
-
+//api de tradução
   useEffect(() => {
     if (showTranslate) {
       const addScript = () => {

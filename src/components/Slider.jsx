@@ -18,7 +18,7 @@ const images = [
   senac,
   proa,
 ];
-
+//carrosel automático dos parceiros
 const links = [
   'https://linktr.ee/calipet',
   'https://life-band-3a73e.web.app/',

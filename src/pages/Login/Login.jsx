@@ -146,7 +146,7 @@ const Login = () => {
                     <FontAwesomeIcon icon={faLock} className="icone-login"/>
                     <input type="password" name="senha" placeholder="Senha" required value={formData.senha} onChange={handleInputChange}/>
                   </div>
-                  <Link className="link" to="/redefinir">Esqueceu sua senha?</Link>
+                  {/* <Link className="link" to="/redefinir">Esqueceu sua senha?</Link> */}
                   {/* <Link to="/perfilFav"> */}
                     <button
                       type="button"
